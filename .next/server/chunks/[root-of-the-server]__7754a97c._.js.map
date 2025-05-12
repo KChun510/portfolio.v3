@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 76, "column": 0}, "map": {"version":3,"sources":["file:///home/toastycommand/Desktop/portfolio.v3/src/app/api/pullAllGitReposInfo/route.tsx"],"sourcesContent":["import { NextResponse } from 'next/server';\nimport { Octokit } from \"octokit\"\n\nconst octokit = new Octokit({\n\tauth: process.env.GH_Token\n});\n\nexport async function GET() {\n\tconst res = await octokit.request('GET /users/{username}/repos', {\n\t\tusername: 'KChun510',\n\t\tsort: 'updated',\n\t\tdirection: 'desc',\n\t\tper_page: 100,\n\t\theaders: {\n\t\t\t'X-Github-Api-Version': '2022-11-28',\n\t\t},\n\t});\n\n\treturn NextResponse.json(res['data']);\n}\n"],"names":[],"mappings":";;;AAAA;AACA;;;AAEA,MAAM,UAAU,IAAI,oKAAA,CAAA,UAAO,CAAC;IAC3B,MAAM,QAAQ,GAAG,CAAC,QAAQ;AAC3B;AAEO,eAAe;IACrB,MAAM,MAAM,MAAM,QAAQ,OAAO,CAAC,+BAA+B;QAChE,UAAU;QACV,MAAM;QACN,WAAW;QACX,UAAU;QACV,SAAS;YACR,wBAAwB;QACzB;IACD;IAEA,OAAO,gIAAA,CAAA,eAAY,CAAC,IAAI,CAAC,GAAG,CAAC,OAAO;AACrC","debugId":null}}]
+}

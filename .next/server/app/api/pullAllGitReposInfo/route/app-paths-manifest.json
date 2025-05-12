@@ -1,0 +1,3 @@
+{
+  "/api/pullAllGitReposInfo/route": "app/api/pullAllGitReposInfo/route.js"
+}

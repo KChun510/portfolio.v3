@@ -1,0 +1,12 @@
+/* [project]/src/app/Home.css [app-client] (css) */
+.Home {
+  text-align: center;
+  background-image: url("~/src/app/components/bg/bg.gif");
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+
+/*# sourceMappingURL=src_app_Home_8b490aaf.css.map*/
