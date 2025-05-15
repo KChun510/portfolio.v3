@@ -10,40 +10,41 @@ const FirstCont = () => {
         queryFn: async () => await pullGitInfo()
     });
 
-    if (!isLoading) {
-        console.log(repos)
-    }
-
     return (
         <div id='first_cont'>
-            <div className="row mt-1 mx-4 min-vh-75">
-                <div className="col-lg px-auto">
-                    <h1 className="display-1">Kyle Chun</h1>
-                    <h6 className="display-6">Computer Science Student</h6>
-                    <div id='video' className="ratio rounded shadow border border-3 border-dark rounded">
-                        <iframe title='my_video' src="https://drive.google.com/file/d/1ylyMX7dNSRdGZ4AtAJ6ucKKws4FhTnG4/preview" allowFullScreen></iframe>
+            <div className="flex flex-wrap mt-1 mx-4 min-h-[75vh]">
+                <div className="lg:flex-1 px-auto">
+                    <h1 className="text-6xl font-bold">Kyle Chun</h1>
+                    <h6 className="text-2xl font-semibold">Computer Science Student</h6>
+                    <div id='video' className="aspect-w-16 aspect-h-9 rounded shadow border-4 border-black">
+                        <iframe
+                            title='my_video'
+                            src="https://drive.google.com/file/d/1ylyMX7dNSRdGZ4AtAJ6ucKKws4FhTnG4/preview"
+                            allowFullScreen
+                            style={{ width: '100%', height: '100%', border: 'none' }}
+                        ></iframe>
                     </div>
-                    <div className="small_text">
+                    <div className="text-sm">
                         <small>{<b> Uploaded: 06/01/2020  </b>}</small>
                     </div>
-
                 </div>
 
-                <div className="col-md mt-5 px-5">
+                <div className="md:flex-1 mt-5 px-5">
                     <div className="container mt-5 px-auto">
-                        <h5 className="display-5">Projects</h5>
+                        <h5 className="text-3xl font-semibold">Projects</h5>
                     </div>
-                    <div className="passion overflow-auto w-100 ml-3 border border-2 border-dark rounded">
-                        <div className="list-group" id='appending_repos'>
-                            {repos ? repos.map(({ name, des, url, lang }) => <RepoButton key={name} name={name} des={des} url={url} lang={lang} />) : null}
+                    <div className="passion overflow-auto w-full ml-3 border-2 border-black rounded">
+                        <div className="list-group border-black" id='appending_repos' >
+                            {repos ? repos.map(({ name, des, url, lang }) => <RepoButton className="outline-2 outline-offset-2 outline-solid" key={name} name={name} des={des} url={url} lang={lang} />) : null}
                         </div>
                     </div>
-                    <div className="small_text mr-10">
+                    <div className="text-sm mr-10">
                         <small>{isLoading ? <b>Loading Public Projects...</b> : <b> Public Project Count: {repos.length} </b>}</small>
                     </div>
                 </div>
             </div>
         </div>
+
     );
 };
 

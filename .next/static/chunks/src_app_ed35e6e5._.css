@@ -99,41 +99,6 @@ button:hover, button:focus {
 }
 
 
-/* [project]/src/app/first_cont/first_cont.css [app-client] (css) */
-#first_cont {
-  text-align: left;
-  margin-top: 50px;
-}
-
-#video {
-  aspect-ratio: 16 / 9;
-  background-color: #000;
-}
-
-.passion {
-  aspect-ratio: 16 / 9;
-  background-color: #c88cc4;
-  outline: #000;
-  min-height: 40vh;
-}
-
-.small_text {
-  text-align: center;
-}
-
-.menu1 {
-  background-color: #c289c0 !important;
-}
-
-.list-group-item:hover {
-  background-color: #977596;
-}
-
-.passion::-webkit-scrollbar {
-  display: none;
-}
-
-
 /* [project]/src/app/Home.css [app-client] (css) */
 .Home {
   text-align: center;
@@ -145,4 +110,4 @@ button:hover, button:focus {
 }
 
 
-/*# sourceMappingURL=src_app_2a777afe._.css.map*/
+/*# sourceMappingURL=src_app_ed35e6e5._.css.map*/

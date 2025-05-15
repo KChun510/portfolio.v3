@@ -19,7 +19,6 @@ const Home = () => {
         <br></br>
         <SecondCont />
       </QueryClientProvider>
-
     </div>
 
   );

@@ -1,12 +1,14 @@
 import React from 'react';
 import './nav.css';
+import { useState } from 'react';
 
 
 const NavBar = () => {
+  const [dropdownOpen, setDropdownOpen] = useState(false)
   return (
-    <div className="d-flex bd-highlight mb-1 mt-3 mx-5">
-      <div className="me-auto p-2 mt-2 bd-highlight">
-        <svg xmlns="http://www.w3.org/2000/svg" id="icons" fill="currentColor" className="bi bi-cup-hot-fill"
+    <div className="flex justify-between items-center mb-1 mt-3 mx-5">
+      <div className="mr-auto p-2 mt-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width={40} height={40} id="icons" fill="currentColor" className="bi bi-cup-hot-fill"
           viewBox="0 0 16 16">
           <path fillRule="evenodd"
             d="M.5 6a.5.5 0 0 0-.488.608l1.652 7.434A2.5 2.5 0 0 0 4.104 16h5.792a2.5 2.5 0 0 0 2.44-1.958l.131-.59a3 3 0 0 0 1.3-5.854l.221-.99A.5.5 0 0 0 13.5 6H.5ZM13 12.5a2.01 2.01 0 0 1-.316-.025l.867-3.898A2.001 2.001 0 0 1 13 12.5Z" />
@@ -15,7 +17,6 @@ const NavBar = () => {
         </svg>
 
       </div>
-
 
       <div className="px-4 pt-3 bd-highlight">
         <a href="https://www.linkedin.com/in/kyle-c-6507221b1/" className="btn" role="button" target="_blank" rel="noopener noreferrer">
@@ -27,8 +28,7 @@ const NavBar = () => {
         </a>
       </div>
 
-
-      <div className="px-4 pt-3 bd-highlight">
+      <div className="px-4 pt-3 bd-highlight hidden-mobile">
         <a href="https://github.com/KChun510" className="btn" role="button" target="_blank" rel="noopener noreferrer">
           <svg xmlns="http://www.w3.org/2000/svg" width={40} height={40} fill="currentColor" className="bi bi-github"
             viewBox="0 0 16 16">
@@ -40,30 +40,43 @@ const NavBar = () => {
       </div>
 
 
-      <div className="px-4 pt-3 hidden-mobile">
-        <button type="button" className="btn dropdown-toggle" data-bs-toggle="dropdown" >
-          <svg xmlns="http://www.w3.org/2000/svg" width={40} height={40} fill="currentColor" className="bi bi-envelope-fill"
-            viewBox="0 0 16 16">
-            <path
-              d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+      <div className="relative px-4 pt-3 hidden-mobile">
+        <div
+          role="button"
+          className="flex items-center justify-center w-10 h-10 bg-transparent focus:outline-none focus:ring-0"
+          onClick={() => setDropdownOpen(!dropdownOpen)}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width={40}
+            height={40}
+            fill="currentColor"
+            className="bi bi-envelope-fill"
+            viewBox="0 0 16 16"
+          >
+            <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
           </svg>
-        </button>
-        <ul className="dropdown-menu dropdown-menu-end bg-transparent border-0">
-          <li><button className="dropdown-item bg-transparent"> <b>Email:</b> kchun1080@gmail.com </button></li>
-          <a href="https://docs.google.com/document/d/1fzqxueGqjhMUBqfE1Q12z9S2X3bAPbeKIDESDi2UlE4/edit?usp=sharing"
-            className="link-dark" target="_blank" rel="noopener noreferrer">
-            <li><button className="dropdown-item bg-transparent" type="button"> <b>Full resume </b> </button></li>
-          </a>
-        </ul>
-
-
+        </div>
+        {dropdownOpen && (
+          <ul className="absolute right-0 mt-2 w-48">
+            <li className="px-4 py-2 hover:bg-gray-100">
+              <b>Email:</b> kchun1080@gmail.com
+            </li>
+            <li className="px-4 py-2 hover:bg-gray-100">
+              <a
+                href="https://docs.google.com/document/d/1fzqxueGqjhMUBqfE1Q12z9S2X3bAPbeKIDESDi2UlE4/edit?usp=sharing"
+                className="text-gray-700"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <b>Full resume</b>
+              </a>
+            </li>
+          </ul>
+        )}
       </div>
     </div>
-
-
   )
-
 }
-
 
 export default NavBar;
