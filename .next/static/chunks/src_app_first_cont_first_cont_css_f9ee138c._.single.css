@@ -21,7 +21,10 @@
 }
 
 .menu1 {
+  display: block;
   background-color: #c289c0 !important;
+  border-color: #0000 #0000 #000 !important;
+  border-bottom-width: 1px !important;
 }
 
 .list-group-item:hover {

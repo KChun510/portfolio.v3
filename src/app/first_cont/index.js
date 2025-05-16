@@ -4,14 +4,14 @@ import { pullGitInfo } from '../actions';
 import RepoButton from './components/repoButton';
 import { useQuery } from 'react-query';
 
-const FirstCont = () => {
+const FirstCont = ({ id }) => {
     const { data: repos, isLoading } = useQuery({
         queryKey: ['repoData'],
         queryFn: async () => await pullGitInfo()
     });
 
     return (
-        <div id='first_cont'>
+        <div id={id} >
             <div className="flex flex-wrap mt-1 mx-4 min-h-[75vh]">
                 <div className="lg:flex-1 px-auto">
                     <h1 className="text-6xl font-bold">Kyle Chun</h1>
@@ -44,9 +44,7 @@ const FirstCont = () => {
                 </div>
             </div>
         </div>
-
     );
 };
-
 export default FirstCont;
 

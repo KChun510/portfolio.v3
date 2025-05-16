@@ -272,47 +272,51 @@ __turbopack_context__.s({
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$second_cont$2f$components$2f$self_portrait$2e$png$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$src$2f$app$2f$second_cont$2f$components$2f$self_portrait$2e$png__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object$2c$__ecmascript$29$__ = __turbopack_context__.i('[project]/src/app/second_cont/components/self_portrait.png.mjs { IMAGE => "[project]/src/app/second_cont/components/self_portrait.png (static in ecmascript)" } [app-client] (structured image object, ecmascript)');
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-client] (ecmascript)");
+;
 ;
 ;
 ;
 function Info() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "row pt-4",
+        className: "flex flex-row pt-4",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "col-1  hidden-mobile"
+                className: "hidden md:block w-1/12"
             }, void 0, false, {
                 fileName: "[project]/src/app/second_cont/components/info/index.js",
-                lineNumber: 6,
+                lineNumber: 8,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "col",
+                className: "flex-1",
                 id: "info_cont",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h5", {
+                        className: "text-lg font-semibold",
                         children: "Summary :"
                     }, void 0, false, {
                         fileName: "[project]/src/app/second_cont/components/info/index.js",
-                        lineNumber: 8,
+                        lineNumber: 10,
                         columnNumber: 5
                     }, this),
                     "A college student who fell in love with coding. I was born and raised in Oakland, CA, and my in-person mannerisms will reflect that. Growing up, piecing together legos from an enormous miscellaneous bin took hold of my entire childhood. Coding has drawn me in the same way and has replaced my Lego obsession. Instead of picking up random blocks from a bin, I'm now picking up languages, libraries, and frameworks to build my next creation!! Constantly pushing myself to learn new computer science skills to extend my capabilities.",
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                         fileName: "[project]/src/app/second_cont/components/info/index.js",
-                        lineNumber: 10,
+                        lineNumber: 12,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                         fileName: "[project]/src/app/second_cont/components/info/index.js",
-                        lineNumber: 11,
+                        lineNumber: 13,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h6", {
+                        className: "text-md font-medium",
                         children: "Personal Interest :"
                     }, void 0, false, {
                         fileName: "[project]/src/app/second_cont/components/info/index.js",
-                        lineNumber: 12,
+                        lineNumber: 14,
                         columnNumber: 5
                     }, this),
                     "Coding",
@@ -321,18 +325,18 @@ function Info() {
                         width: "16",
                         height: "16",
                         fill: "currentColor",
-                        className: "bi bi-dot",
+                        className: "inline-block ml-1",
                         viewBox: "0 0 16 16",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                             d: "M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
                         }, void 0, false, {
                             fileName: "[project]/src/app/second_cont/components/info/index.js",
-                            lineNumber: 17,
+                            lineNumber: 19,
                             columnNumber: 6
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/second_cont/components/info/index.js",
-                        lineNumber: 15,
+                        lineNumber: 17,
                         columnNumber: 5
                     }, this),
                     "Music",
@@ -341,18 +345,18 @@ function Info() {
                         width: "16",
                         height: "16",
                         fill: "currentColor",
-                        className: "bi bi-dot",
+                        className: "inline-block ml-1",
                         viewBox: "0 0 16 16",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                             d: "M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
                         }, void 0, false, {
                             fileName: "[project]/src/app/second_cont/components/info/index.js",
-                            lineNumber: 23,
+                            lineNumber: 25,
                             columnNumber: 6
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/second_cont/components/info/index.js",
-                        lineNumber: 21,
+                        lineNumber: 23,
                         columnNumber: 5
                     }, this),
                     "Creation",
@@ -361,18 +365,18 @@ function Info() {
                         width: "16",
                         height: "16",
                         fill: "currentColor",
-                        className: "bi bi-dot",
+                        className: "inline-block ml-1",
                         viewBox: "0 0 16 16",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                             d: "M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
                         }, void 0, false, {
                             fileName: "[project]/src/app/second_cont/components/info/index.js",
-                            lineNumber: 28,
+                            lineNumber: 30,
                             columnNumber: 6
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/second_cont/components/info/index.js",
-                        lineNumber: 26,
+                        lineNumber: 28,
                         columnNumber: 5
                     }, this),
                     "Coffee",
@@ -381,18 +385,18 @@ function Info() {
                         width: "16",
                         height: "16",
                         fill: "currentColor",
-                        className: "bi bi-dot",
+                        className: "inline-block ml-1",
                         viewBox: "0 0 16 16",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                             d: "M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
                         }, void 0, false, {
                             fileName: "[project]/src/app/second_cont/components/info/index.js",
-                            lineNumber: 33,
+                            lineNumber: 35,
                             columnNumber: 6
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/second_cont/components/info/index.js",
-                        lineNumber: 31,
+                        lineNumber: 33,
                         columnNumber: 5
                     }, this),
                     "Cars",
@@ -401,48 +405,47 @@ function Info() {
                         width: "16",
                         height: "16",
                         fill: "currentColor",
-                        className: "bi bi-dot",
+                        className: "inline-block ml-1",
                         viewBox: "0 0 16 16",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                             d: "M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
                         }, void 0, false, {
                             fileName: "[project]/src/app/second_cont/components/info/index.js",
-                            lineNumber: 38,
+                            lineNumber: 40,
                             columnNumber: 6
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/second_cont/components/info/index.js",
-                        lineNumber: 36,
+                        lineNumber: 38,
                         columnNumber: 5
                     }, this),
                     "Fitness"
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/second_cont/components/info/index.js",
-                lineNumber: 7,
+                lineNumber: 9,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "hidden-mobile col",
-                id: "img",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                className: "hidden md:block flex-1 w-[50vw] h-[50vh]",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                     src: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$second_cont$2f$components$2f$self_portrait$2e$png$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$src$2f$app$2f$second_cont$2f$components$2f$self_portrait$2e$png__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object$2c$__ecmascript$29$__["default"],
-                    className: "img-thumbnail img1",
-                    alt: "self portrait"
+                    className: "rounded-lg w-full h-full object-contain",
+                    alt: "self portrat"
                 }, void 0, false, {
                     fileName: "[project]/src/app/second_cont/components/info/index.js",
-                    lineNumber: 45,
+                    lineNumber: 46,
                     columnNumber: 5
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/second_cont/components/info/index.js",
-                lineNumber: 44,
+                lineNumber: 45,
                 columnNumber: 4
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/second_cont/components/info/index.js",
-        lineNumber: 5,
+        lineNumber: 7,
         columnNumber: 3
     }, this);
 }
@@ -605,106 +608,115 @@ function Resume() {
         className: "pt-5 pb-5",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("b", {
-                children: " Credit Karma"
+                children: "Credit Karma"
             }, void 0, false, {
+                fileName: "[project]/src/app/second_cont/components/resume/index.js",
+                lineNumber: 6,
+                columnNumber: 4
+            }, this),
+            " - IT Engineer Intern (May 2023 - Aug 2023)",
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                 fileName: "[project]/src/app/second_cont/components/resume/index.js",
                 lineNumber: 7,
                 columnNumber: 4
             }, this),
-            " - IT Engineer Intern   (May 2023 - Aug 2023)",
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
-                fileName: "[project]/src/app/second_cont/components/resume/index.js",
-                lineNumber: 8,
-                columnNumber: 4
-            }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
                 xmlns: "http://www.w3.org/2000/svg",
-                width: "16",
-                height: "16",
-                fill: "currentColor",
-                className: "bi bi-dot",
-                viewBox: "0 0 16 16",
+                className: "w-4 h-4 inline-block text-current",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                     d: "M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
                 }, void 0, false, {
                     fileName: "[project]/src/app/second_cont/components/resume/index.js",
-                    lineNumber: 13,
+                    lineNumber: 10,
                     columnNumber: 5
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/second_cont/components/resume/index.js",
-                lineNumber: 11,
+                lineNumber: 9,
                 columnNumber: 4
             }, this),
-            " Collect data on 200+ terminated employees, using a web crawler built with python.",
+            "Collect data on 200+ terminated employees, using a web crawler built with Python.",
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
+                fileName: "[project]/src/app/second_cont/components/resume/index.js",
+                lineNumber: 13,
+                columnNumber: 4
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                xmlns: "http://www.w3.org/2000/svg",
+                className: "w-4 h-4 inline-block text-current",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                    d: "M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
+                }, void 0, false, {
+                    fileName: "[project]/src/app/second_cont/components/resume/index.js",
+                    lineNumber: 16,
+                    columnNumber: 5
+                }, this)
+            }, void 0, false, {
                 fileName: "[project]/src/app/second_cont/components/resume/index.js",
                 lineNumber: 15,
                 columnNumber: 4
             }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                xmlns: "http://www.w3.org/2000/svg",
-                width: "16",
-                height: "16",
-                fill: "currentColor",
-                className: "bi bi-dot",
-                viewBox: "0 0 16 16",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                    d: "M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
-                }, void 0, false, {
-                    fileName: "[project]/src/app/second_cont/components/resume/index.js",
-                    lineNumber: 19,
-                    columnNumber: 5
-                }, this)
-            }, void 0, false, {
-                fileName: "[project]/src/app/second_cont/components/resume/index.js",
-                lineNumber: 17,
-                columnNumber: 4
-            }, this),
-            " Data cleanup on Inventory & device management systems on 4500+ machines, automation built in python.",
+            "Data cleanup on Inventory & device management systems on 4500+ machines, automation built in Python.",
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                 fileName: "[project]/src/app/second_cont/components/resume/index.js",
-                lineNumber: 22,
+                lineNumber: 19,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
                 xmlns: "http://www.w3.org/2000/svg",
-                width: "16",
-                height: "16",
-                fill: "currentColor",
-                className: "bi bi-dot",
-                viewBox: "0 0 16 16",
+                className: "w-4 h-4 inline-block text-current",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                     d: "M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
                 }, void 0, false, {
                     fileName: "[project]/src/app/second_cont/components/resume/index.js",
-                    lineNumber: 26,
+                    lineNumber: 22,
                     columnNumber: 5
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/second_cont/components/resume/index.js",
-                lineNumber: 24,
+                lineNumber: 21,
                 columnNumber: 4
             }, this),
-            " Automate Inventory system. Using the oomnitza API and barcode scanners.",
+            "Automate Inventory system using the Oomnitza API and barcode scanners.",
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
+                fileName: "[project]/src/app/second_cont/components/resume/index.js",
+                lineNumber: 25,
+                columnNumber: 4
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
+                fileName: "[project]/src/app/second_cont/components/resume/index.js",
+                lineNumber: 26,
+                columnNumber: 4
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("b", {
+                children: "OnPoint Document Outsourcing"
+            }, void 0, false, {
+                fileName: "[project]/src/app/second_cont/components/resume/index.js",
+                lineNumber: 28,
+                columnNumber: 4
+            }, this),
+            " - IT Consultant (Oct 2020 - Sep 2021)",
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                 fileName: "[project]/src/app/second_cont/components/resume/index.js",
                 lineNumber: 29,
                 columnNumber: 4
             }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
-                fileName: "[project]/src/app/second_cont/components/resume/index.js",
-                lineNumber: 30,
-                columnNumber: 4
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("b", {
-                children: " OnPoint Document Outsourcing "
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                xmlns: "http://www.w3.org/2000/svg",
+                className: "w-4 h-4 inline-block text-current",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                    d: "M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
+                }, void 0, false, {
+                    fileName: "[project]/src/app/second_cont/components/resume/index.js",
+                    lineNumber: 32,
+                    columnNumber: 5
+                }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/second_cont/components/resume/index.js",
-                lineNumber: 34,
+                lineNumber: 31,
                 columnNumber: 4
             }, this),
-            " - IT Consultant   (Oct 2020 - Sep 2021)",
+            "Responsible for securing local network and improving its security to meet industry standards.",
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                 fileName: "[project]/src/app/second_cont/components/resume/index.js",
                 lineNumber: 35,
@@ -712,11 +724,7 @@ function Resume() {
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
                 xmlns: "http://www.w3.org/2000/svg",
-                width: "16",
-                height: "16",
-                fill: "currentColor",
-                className: "bi bi-dot",
-                viewBox: "0 0 16 16",
+                className: "w-4 h-4 inline-block text-current",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                     d: "M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
                 }, void 0, false, {
@@ -726,164 +734,123 @@ function Resume() {
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/second_cont/components/resume/index.js",
-                lineNumber: 36,
+                lineNumber: 37,
                 columnNumber: 4
             }, this),
-            "Responsible for securing local network and improving its security to meet industry standards.",
+            "Conduct penetration testing on association's network to identify and address cybersecurity threats.",
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                 fileName: "[project]/src/app/second_cont/components/resume/index.js",
-                lineNumber: 42,
+                lineNumber: 41,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
                 xmlns: "http://www.w3.org/2000/svg",
-                width: "16",
-                height: "16",
-                fill: "currentColor",
-                className: "bi bi-dot",
-                viewBox: "0 0 16 16",
+                className: "w-4 h-4 inline-block text-current",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                     d: "M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
                 }, void 0, false, {
                     fileName: "[project]/src/app/second_cont/components/resume/index.js",
-                    lineNumber: 46,
+                    lineNumber: 44,
                     columnNumber: 5
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/second_cont/components/resume/index.js",
-                lineNumber: 44,
+                lineNumber: 43,
                 columnNumber: 4
             }, this),
-            " Conduct penetration testing on association's network to identify and address cyber security threats.",
+            "Implemented quarterly security checks to identify and address new possible vulnerabilities.",
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                 fileName: "[project]/src/app/second_cont/components/resume/index.js",
-                lineNumber: 49,
+                lineNumber: 47,
                 columnNumber: 4
             }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                xmlns: "http://www.w3.org/2000/svg",
-                width: "16",
-                height: "16",
-                fill: "currentColor",
-                className: "bi bi-dot",
-                viewBox: "0 0 16 16",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                    d: "M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
-                }, void 0, false, {
-                    fileName: "[project]/src/app/second_cont/components/resume/index.js",
-                    lineNumber: 53,
-                    columnNumber: 5
-                }, this)
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
+                fileName: "[project]/src/app/second_cont/components/resume/index.js",
+                lineNumber: 48,
+                columnNumber: 4
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("b", {
+                children: "Technical skills:"
             }, void 0, false, {
+                fileName: "[project]/src/app/second_cont/components/resume/index.js",
+                lineNumber: 50,
+                columnNumber: 4
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                 fileName: "[project]/src/app/second_cont/components/resume/index.js",
                 lineNumber: 51,
                 columnNumber: 4
             }, this),
-            " Implemented quarterly security checks to identify and address new possible vulnerabilities.",
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
-                fileName: "[project]/src/app/second_cont/components/resume/index.js",
-                lineNumber: 55,
-                columnNumber: 4
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
-                fileName: "[project]/src/app/second_cont/components/resume/index.js",
-                lineNumber: 58,
-                columnNumber: 4
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("b", {
-                children: " Technical skills :"
-            }, void 0, false, {
-                fileName: "[project]/src/app/second_cont/components/resume/index.js",
-                lineNumber: 61,
-                columnNumber: 4
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
-                fileName: "[project]/src/app/second_cont/components/resume/index.js",
-                lineNumber: 62,
-                columnNumber: 4
-            }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
                 xmlns: "http://www.w3.org/2000/svg",
-                width: "16",
-                height: "16",
-                fill: "currentColor",
-                className: "bi bi-dot",
-                viewBox: "0 0 16 16",
+                className: "w-4 h-4 inline-block text-current",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                     d: "M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
                 }, void 0, false, {
                     fileName: "[project]/src/app/second_cont/components/resume/index.js",
-                    lineNumber: 65,
+                    lineNumber: 54,
                     columnNumber: 5
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/second_cont/components/resume/index.js",
-                lineNumber: 63,
+                lineNumber: 53,
                 columnNumber: 4
             }, this),
             "Proficient: C++, Python, HTML, JavaScript",
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                 fileName: "[project]/src/app/second_cont/components/resume/index.js",
-                lineNumber: 68,
+                lineNumber: 57,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
                 xmlns: "http://www.w3.org/2000/svg",
-                width: "16",
-                height: "16",
-                fill: "currentColor",
-                className: "bi bi-dot",
-                viewBox: "0 0 16 16",
+                className: "w-4 h-4 inline-block text-current",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                     d: "M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
                 }, void 0, false, {
                     fileName: "[project]/src/app/second_cont/components/resume/index.js",
-                    lineNumber: 72,
+                    lineNumber: 60,
                     columnNumber: 5
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/second_cont/components/resume/index.js",
-                lineNumber: 70,
+                lineNumber: 59,
                 columnNumber: 4
             }, this),
-            "Physical Server Assembly/maintenance, Computer assembly",
+            "Physical Server Assembly/Maintenance, Computer Assembly",
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                 fileName: "[project]/src/app/second_cont/components/resume/index.js",
-                lineNumber: 75,
+                lineNumber: 63,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
                 xmlns: "http://www.w3.org/2000/svg",
-                width: "16",
-                height: "16",
-                fill: "currentColor",
-                className: "bi bi-dot",
-                viewBox: "0 0 16 16",
+                className: "w-4 h-4 inline-block text-current",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                     d: "M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
                 }, void 0, false, {
                     fileName: "[project]/src/app/second_cont/components/resume/index.js",
-                    lineNumber: 79,
+                    lineNumber: 66,
                     columnNumber: 5
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/second_cont/components/resume/index.js",
-                lineNumber: 77,
+                lineNumber: 65,
                 columnNumber: 4
             }, this),
             "Cybersecurity, Networking, Penetration Testing, Network Security",
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                 fileName: "[project]/src/app/second_cont/components/resume/index.js",
-                lineNumber: 84,
+                lineNumber: 69,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                 fileName: "[project]/src/app/second_cont/components/resume/index.js",
-                lineNumber: 85,
+                lineNumber: 70,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "container w-100 h-25 text-center",
+                className: "w-full h-6 text-center",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                     href: "https://docs.google.com/document/d/1fzqxueGqjhMUBqfE1Q12z9S2X3bAPbeKIDESDi2UlE4/edit?usp=sharing",
                     target: "_blank",
@@ -891,20 +858,20 @@ function Resume() {
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                         type: "button",
                         className: "btn btn-outline-primary btn-sm",
-                        children: "Veiw full resume "
+                        children: "View full resume"
                     }, void 0, false, {
                         fileName: "[project]/src/app/second_cont/components/resume/index.js",
-                        lineNumber: 90,
+                        lineNumber: 78,
                         columnNumber: 6
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/app/second_cont/components/resume/index.js",
-                    lineNumber: 88,
+                    lineNumber: 73,
                     columnNumber: 5
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/second_cont/components/resume/index.js",
-                lineNumber: 87,
+                lineNumber: 72,
                 columnNumber: 4
             }, this)
         ]
@@ -960,7 +927,7 @@ const SecondCont = ()=>{
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "row",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "display-4 text-white",
+                    className: "text-4xl font-bold text-white",
                     children: "About me"
                 }, void 0, false, {
                     fileName: "[project]/src/app/second_cont/index.js",
@@ -1211,6 +1178,10 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 const langIcons = {
     CSS: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("small", {
         className: "text",
+        style: {
+            display: 'inline-flex',
+            alignItems: 'center'
+        },
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
                 xmlns: "http://www.w3.org/2000/svg",
@@ -1223,23 +1194,27 @@ const langIcons = {
                     d: "M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
                 }, void 0, false, {
                     fileName: "[project]/src/app/first_cont/components/langIcons/index.js",
-                    lineNumber: 4,
-                    columnNumber: 13
+                    lineNumber: 5,
+                    columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/first_cont/components/langIcons/index.js",
-                lineNumber: 3,
-                columnNumber: 9
+                lineNumber: 4,
+                columnNumber: 13
             }, this),
             "CSS"
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/first_cont/components/langIcons/index.js",
-        lineNumber: 2,
-        columnNumber: 11
+        lineNumber: 3,
+        columnNumber: 9
     }, this),
     JavaScript: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("small", {
         className: "text",
+        style: {
+            display: 'inline-flex',
+            alignItems: 'center'
+        },
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
                 xmlns: "http://www.w3.org/2000/svg",
@@ -1252,23 +1227,27 @@ const langIcons = {
                     d: "M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
                 }, void 0, false, {
                     fileName: "[project]/src/app/first_cont/components/langIcons/index.js",
-                    lineNumber: 10,
-                    columnNumber: 13
+                    lineNumber: 12,
+                    columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/first_cont/components/langIcons/index.js",
-                lineNumber: 9,
-                columnNumber: 9
+                lineNumber: 11,
+                columnNumber: 13
             }, this),
             "JavaScript"
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/first_cont/components/langIcons/index.js",
-        lineNumber: 8,
-        columnNumber: 18
+        lineNumber: 10,
+        columnNumber: 9
     }, this),
     Python: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("small", {
         className: "text",
+        style: {
+            display: 'inline-flex',
+            alignItems: 'center'
+        },
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
                 xmlns: "http://www.w3.org/2000/svg",
@@ -1281,23 +1260,27 @@ const langIcons = {
                     d: "M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
                 }, void 0, false, {
                     fileName: "[project]/src/app/first_cont/components/langIcons/index.js",
-                    lineNumber: 17,
+                    lineNumber: 19,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/first_cont/components/langIcons/index.js",
-                lineNumber: 16,
+                lineNumber: 18,
                 columnNumber: 13
             }, this),
             "Python"
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/first_cont/components/langIcons/index.js",
-        lineNumber: 15,
+        lineNumber: 17,
         columnNumber: 9
     }, this),
     "C++": /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("small", {
         className: "text",
+        style: {
+            display: 'inline-flex',
+            alignItems: 'center'
+        },
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
                 xmlns: "http://www.w3.org/2000/svg",
@@ -1310,23 +1293,27 @@ const langIcons = {
                     d: "M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
                 }, void 0, false, {
                     fileName: "[project]/src/app/first_cont/components/langIcons/index.js",
-                    lineNumber: 24,
+                    lineNumber: 26,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/first_cont/components/langIcons/index.js",
-                lineNumber: 23,
+                lineNumber: 25,
                 columnNumber: 13
             }, this),
             "C++"
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/first_cont/components/langIcons/index.js",
-        lineNumber: 22,
+        lineNumber: 24,
         columnNumber: 9
     }, this),
     HTML: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("small", {
         className: "text",
+        style: {
+            display: 'inline-flex',
+            alignItems: 'center'
+        },
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
                 xmlns: "http://www.w3.org/2000/svg",
@@ -1339,23 +1326,27 @@ const langIcons = {
                     d: "M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
                 }, void 0, false, {
                     fileName: "[project]/src/app/first_cont/components/langIcons/index.js",
-                    lineNumber: 31,
+                    lineNumber: 33,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/first_cont/components/langIcons/index.js",
-                lineNumber: 30,
+                lineNumber: 32,
                 columnNumber: 13
             }, this),
             "HTML"
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/first_cont/components/langIcons/index.js",
-        lineNumber: 29,
+        lineNumber: 31,
         columnNumber: 9
     }, this),
     PHP: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("small", {
         className: "text",
+        style: {
+            display: 'inline-flex',
+            alignItems: 'center'
+        },
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
                 xmlns: "http://www.w3.org/2000/svg",
@@ -1368,23 +1359,27 @@ const langIcons = {
                     d: "M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
                 }, void 0, false, {
                     fileName: "[project]/src/app/first_cont/components/langIcons/index.js",
-                    lineNumber: 38,
+                    lineNumber: 40,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/first_cont/components/langIcons/index.js",
-                lineNumber: 37,
+                lineNumber: 39,
                 columnNumber: 13
             }, this),
             "PHP"
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/first_cont/components/langIcons/index.js",
-        lineNumber: 36,
+        lineNumber: 38,
         columnNumber: 9
     }, this),
     TypeScript: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("small", {
         className: "text",
+        style: {
+            display: 'inline-flex',
+            alignItems: 'center'
+        },
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
                 xmlns: "http://www.w3.org/2000/svg",
@@ -1397,23 +1392,27 @@ const langIcons = {
                     d: "M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
                 }, void 0, false, {
                     fileName: "[project]/src/app/first_cont/components/langIcons/index.js",
-                    lineNumber: 44,
-                    columnNumber: 13
+                    lineNumber: 47,
+                    columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/first_cont/components/langIcons/index.js",
-                lineNumber: 43,
-                columnNumber: 9
+                lineNumber: 46,
+                columnNumber: 13
             }, this),
             "TypeScript"
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/first_cont/components/langIcons/index.js",
-        lineNumber: 42,
-        columnNumber: 18
+        lineNumber: 45,
+        columnNumber: 9
     }, this),
     Lua: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("small", {
         className: "text",
+        style: {
+            display: 'inline-flex',
+            alignItems: 'center'
+        },
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
                 xmlns: "http://www.w3.org/2000/svg",
@@ -1426,23 +1425,27 @@ const langIcons = {
                     d: "M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
                 }, void 0, false, {
                     fileName: "[project]/src/app/first_cont/components/langIcons/index.js",
-                    lineNumber: 50,
-                    columnNumber: 13
+                    lineNumber: 54,
+                    columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/first_cont/components/langIcons/index.js",
-                lineNumber: 49,
-                columnNumber: 9
+                lineNumber: 53,
+                columnNumber: 13
             }, this),
             "Lua"
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/first_cont/components/langIcons/index.js",
-        lineNumber: 48,
-        columnNumber: 11
+        lineNumber: 52,
+        columnNumber: 9
     }, this),
     Shell: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("small", {
         className: "text",
+        style: {
+            display: 'inline-flex',
+            alignItems: 'center'
+        },
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
                 xmlns: "http://www.w3.org/2000/svg",
@@ -1455,23 +1458,27 @@ const langIcons = {
                     d: "M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
                 }, void 0, false, {
                     fileName: "[project]/src/app/first_cont/components/langIcons/index.js",
-                    lineNumber: 56,
-                    columnNumber: 13
+                    lineNumber: 61,
+                    columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/first_cont/components/langIcons/index.js",
-                lineNumber: 55,
-                columnNumber: 9
+                lineNumber: 60,
+                columnNumber: 13
             }, this),
             "Shell"
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/first_cont/components/langIcons/index.js",
-        lineNumber: 54,
-        columnNumber: 13
+        lineNumber: 59,
+        columnNumber: 9
     }, this),
     C: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("small", {
         className: "text",
+        style: {
+            display: 'inline-flex',
+            alignItems: 'center'
+        },
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
                 xmlns: "http://www.w3.org/2000/svg",
@@ -1484,23 +1491,27 @@ const langIcons = {
                     d: "M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
                 }, void 0, false, {
                     fileName: "[project]/src/app/first_cont/components/langIcons/index.js",
-                    lineNumber: 62,
-                    columnNumber: 13
+                    lineNumber: 68,
+                    columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/first_cont/components/langIcons/index.js",
-                lineNumber: 61,
-                columnNumber: 9
+                lineNumber: 67,
+                columnNumber: 13
             }, this),
             "C"
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/first_cont/components/langIcons/index.js",
-        lineNumber: 60,
+        lineNumber: 66,
         columnNumber: 9
     }, this),
     Assembly: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("small", {
         className: "text",
+        style: {
+            display: 'inline-flex',
+            alignItems: 'center'
+        },
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
                 xmlns: "http://www.w3.org/2000/svg",
@@ -1513,23 +1524,27 @@ const langIcons = {
                     d: "M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
                 }, void 0, false, {
                     fileName: "[project]/src/app/first_cont/components/langIcons/index.js",
-                    lineNumber: 68,
-                    columnNumber: 13
+                    lineNumber: 75,
+                    columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/first_cont/components/langIcons/index.js",
-                lineNumber: 67,
-                columnNumber: 9
+                lineNumber: 74,
+                columnNumber: 13
             }, this),
             "Assembly"
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/first_cont/components/langIcons/index.js",
-        lineNumber: 66,
-        columnNumber: 16
+        lineNumber: 73,
+        columnNumber: 9
     }, this),
     PowerShell: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("small", {
         className: "text",
+        style: {
+            display: 'inline-flex',
+            alignItems: 'center'
+        },
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
                 xmlns: "http://www.w3.org/2000/svg",
@@ -1542,20 +1557,20 @@ const langIcons = {
                     d: "M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
                 }, void 0, false, {
                     fileName: "[project]/src/app/first_cont/components/langIcons/index.js",
-                    lineNumber: 74,
-                    columnNumber: 13
+                    lineNumber: 82,
+                    columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/first_cont/components/langIcons/index.js",
-                lineNumber: 73,
-                columnNumber: 9
+                lineNumber: 81,
+                columnNumber: 13
             }, this),
             "PowerShell"
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/first_cont/components/langIcons/index.js",
-        lineNumber: 72,
-        columnNumber: 18
+        lineNumber: 80,
+        columnNumber: 9
     }, this),
     null: null
 };
@@ -1619,13 +1634,23 @@ function RepoButton({ name, des, url, lang }) {
                 lineNumber: 10,
                 columnNumber: 4
             }, this),
-            lang.map((key)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$first_cont$2f$components$2f$langIcons$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                    lang: key
-                }, `${name}+${key}`, false, {
-                    fileName: "[project]/src/app/first_cont/components/repoButton/index.js",
-                    lineNumber: 11,
-                    columnNumber: 21
-                }, this))
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                style: {
+                    display: 'inline-flex',
+                    gap: '8px'
+                },
+                children: lang.map((key)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$first_cont$2f$components$2f$langIcons$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                        lang: key
+                    }, `${name}+${key}`, false, {
+                        fileName: "[project]/src/app/first_cont/components/repoButton/index.js",
+                        lineNumber: 13,
+                        columnNumber: 6
+                    }, this))
+            }, void 0, false, {
+                fileName: "[project]/src/app/first_cont/components/repoButton/index.js",
+                lineNumber: 11,
+                columnNumber: 4
+            }, this)
         ]
     }, name, true, {
         fileName: "[project]/src/app/first_cont/components/repoButton/index.js",
@@ -1879,10 +1904,15 @@ const Home = ()=>{
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$nav$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/src/app/page.tsx",
-                    lineNumber: 16,
+                    lineNumber: 15,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$first_cont$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+                    fileName: "[project]/src/app/page.tsx",
+                    lineNumber: 16,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                     fileName: "[project]/src/app/page.tsx",
                     lineNumber: 17,
                     columnNumber: 9
@@ -1892,25 +1922,20 @@ const Home = ()=>{
                     lineNumber: 18,
                     columnNumber: 9
                 }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
-                    fileName: "[project]/src/app/page.tsx",
-                    lineNumber: 19,
-                    columnNumber: 9
-                }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$second_cont$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/src/app/page.tsx",
-                    lineNumber: 20,
+                    lineNumber: 19,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/page.tsx",
-            lineNumber: 15,
+            lineNumber: 14,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/app/page.tsx",
-        lineNumber: 14,
+        lineNumber: 13,
         columnNumber: 5
     }, this);
 };

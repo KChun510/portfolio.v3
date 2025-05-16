@@ -8,7 +8,11 @@ function RepoButton({ name, des, url, lang }) {
 				<h5 className='mb-1 text'> {name} </h5>
 			</div>
 			<p className='mb-1'>{des ? des : "No description given."}</p>
-			{lang.map(key => <CreateIcon key={`${name}+${key}`} lang={key} />)}
+			<div style={{ display: 'inline-flex', gap: '8px' }}>
+				{lang.map(key => (
+					<CreateIcon key={`${name}+${key}`} lang={key} />
+				))}
+			</div>
 		</a>
 	)
 }

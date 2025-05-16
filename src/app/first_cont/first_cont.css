@@ -18,8 +18,13 @@
     text-align: center;
 }
 
-.menu1 {
-    background-color: #c289c0 !important;
+.menu1{
+    background-color:#c289c0 !important;
+    border-color: transparent !important;
+    border-bottom-width: 1px !important;
+    border-bottom-color: black !important;
+    display: block; /* Ensures the element spans the full width */
+
 }
 
 .list-group-item:hover {

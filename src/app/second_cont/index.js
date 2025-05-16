@@ -6,15 +6,15 @@ import Info from './components/info'
 import Creds from './components/creds'
 import Resume from './components/resume'
 
-const SecondCont = () => {
+const SecondCont = ({ id }) => {
     const [activeTab, setActiveTab] = useState('info'); // Set the initial activeTab state to 'home'
     const handleTabClick = useCallback((tab) => {
         setActiveTab(tab);
     }, [setActiveTab]);
     return (
-        <div id="second_cont">
+        <div id={id}>
             <div className='row'>
-                <div className='display-4 text-white'>About me</div>
+                <div className='text-4xl font-bold text-white'>About me</div>
             </div>
             <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
                 <button className={`flex-items ${activeTab === 'info' ? 'activeButton' : ''}`} onClick={() => handleTabClick('info')}>

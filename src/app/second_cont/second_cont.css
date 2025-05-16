@@ -2,7 +2,6 @@
     height: 100%;
 }
 
-
 #second_cont{
     margin-top: 160px;
     min-height: 100vh;
@@ -17,12 +16,12 @@
 #creds_Resume{
     text-aligh: center;
     padding-top: 50px;
-
 }
 
-#img{
-height: 40vh;
-width: 40vh;
+#img {
+    height: 10vh; /* Dynamic height */
+    width: 10vw;  /* Dynamic width */
+    position: relative; /* Required for next/image layout="fill" */
 }
 
 @media (max-width: 750px) {

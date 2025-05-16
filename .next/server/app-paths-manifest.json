@@ -1,5 +1,4 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
   "/api/excractRepoLang/route": "app/api/excractRepoLang/route.js",
   "/api/pullAllGitReposInfo/route": "app/api/pullAllGitReposInfo/route.js",
   "/api/readfile/route": "app/api/readfile/route.js",

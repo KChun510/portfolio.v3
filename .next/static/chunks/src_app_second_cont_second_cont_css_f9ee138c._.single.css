@@ -20,8 +20,9 @@
 }
 
 #img {
-  width: 40vh;
-  height: 40vh;
+  width: 10vw;
+  height: 10vh;
+  position: relative;
 }
 
 @media (width <= 750px) {

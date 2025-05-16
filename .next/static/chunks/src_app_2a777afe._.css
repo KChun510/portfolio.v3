@@ -54,8 +54,9 @@
 }
 
 #img {
-  width: 40vh;
-  height: 40vh;
+  width: 10vw;
+  height: 10vh;
+  position: relative;
 }
 
 @media (width <= 750px) {
@@ -122,7 +123,10 @@ button:hover, button:focus {
 }
 
 .menu1 {
+  display: block;
   background-color: #c289c0 !important;
+  border-color: #0000 #0000 #000 !important;
+  border-bottom-width: 1px !important;
 }
 
 .list-group-item:hover {
@@ -137,7 +141,7 @@ button:hover, button:focus {
 /* [project]/src/app/Home.css [app-client] (css) */
 .Home {
   text-align: center;
-  background-image: url("../media/bg.9e453519.gif");
+  background-image: url("../media/better_better_dark_city.0ae3c5a6.png");
   background-size: cover;
   margin: 0;
   padding: 0;
