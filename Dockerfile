@@ -23,10 +23,10 @@ FROM node:18-alpine
 WORKDIR /app
 
 # Copy production build artifacts
-COPY --from=builder /app/src/app/public ./public
-COPY --from=builder /app/src/app/.next ./.next
-COPY --from=builder /app/src/app/node_modules ./node_modules
-COPY --from=builder /app/src/app/package.json ./package.json
+COPY --from=builder /app/public ./public
+COPY --from=builder /app/.next ./.next
+COPY --from=builder /app/node_modules ./node_modules
+COPY --from=builder /app/package.json ./package.json
 
 ENV NODE_ENV=production
 EXPOSE 3000
