@@ -16,7 +16,10 @@ export async function GET(req: NextRequest) {
 		// Return the JSON data as a response
 		return NextResponse.json(jsonData, { status: 200 });
 	} catch (error) {
-		// Handle errors (e.g., file not found or JSON parsing error)
-		return NextResponse.json({ error: error.message }, { status: 500 });
+		if (error instanceof Error) {
+			// Handle errors (e.g., file not found or JSON parsing error)
+			return NextResponse.json({ error: error.message }, { status: 500 });
+		}
+		return NextResponse.json({ error: "Unknown error" }, { status: 500 });
 	}
 }
