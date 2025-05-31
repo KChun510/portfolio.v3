@@ -30,6 +30,6 @@ COPY --from=builder /app/package.json ./package.json
 
 ENV NODE_ENV=production
 EXPOSE 3000
-CMD ["npx", "next", "start", "-H", "0.0.0.0"]
+CMD ["npx", "next", "start", "-H", "127.0.0.1"]
 #CMD ["npm", "start"]
 
