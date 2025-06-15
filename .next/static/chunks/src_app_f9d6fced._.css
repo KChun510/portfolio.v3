@@ -49,9 +49,8 @@
   height: 100%;
 }
 
-#second_cont {
+#aboutMe_cont {
   min-height: 100vh;
-  margin-top: 160px;
 }
 
 #info_cont {
@@ -67,7 +66,7 @@
 
 #img {
   width: 10vw;
-  height: 10vh;
+  height: 20vh;
   position: relative;
 }
 
@@ -153,17 +152,14 @@ button:hover, button:focus {
 /* [project]/src/app/music_cont/music_cont.css [app-client] (css) */
 #music_cont {
   text-align: left;
-  margin-top: 50px;
 }
 
-#video {
-  aspect-ratio: 16 / 9;
-  background-color: #000;
+.custom_bg {
+  background-color: #00000080;
 }
 
-.passion {
+.songList {
   aspect-ratio: 16 / 9;
-  background-color: #c88cc4;
   outline: #000;
   min-height: 40vh;
 }
@@ -172,18 +168,11 @@ button:hover, button:focus {
   text-align: center;
 }
 
-.menu1 {
-  display: block;
-  background-color: #c289c0 !important;
-  border-color: #0000 #0000 #000 !important;
-  border-bottom-width: 1px !important;
-}
-
 .list-group-item:hover {
   background-color: #977596;
 }
 
-.passion::-webkit-scrollbar {
+.songList::-webkit-scrollbar {
   display: none;
 }
 

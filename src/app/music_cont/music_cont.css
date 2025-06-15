@@ -1,16 +1,14 @@
 #music_cont{
     text-align: left;
-    margin-top: 50px; 
-}
-#video{
-    aspect-ratio: 16/9;
-    background-color: black;
 }
 
-.passion{
+.custom_bg{
+      background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+}
+
+.songList{
     aspect-ratio: 16/9;
     outline: black;
-    background-color: #c88cc4;
     min-height: 40vh;
 }
 
@@ -18,20 +16,11 @@
     text-align: center;
 }
 
-.menu1{
-    background-color:#c289c0 !important;
-    border-color: transparent !important;
-    border-bottom-width: 1px !important;
-    border-bottom-color: black !important;
-    display: block; /* Ensures the element spans the full width */
-
-}
-
 .list-group-item:hover {
     background-color: #977596;
 }
 
-.passion::-webkit-scrollbar {
+.songList::-webkit-scrollbar {
     display: none;
 }
 

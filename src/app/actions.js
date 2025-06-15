@@ -42,6 +42,18 @@ async function readJSONFile() {
   }
 }
 
+export const get_top_items = async () => {
+  try {
+    const res = await fetch('/api/spotify/get_top_items', {
+      method: "GET"
+    })
+    const data = await res.json()
+    return data
+  } catch (err) {
+    console.error(err)
+  }
+}
+
 export const get_playlist = async () => {
   try {
     const res = await fetch('/api/spotify/get_playlist',

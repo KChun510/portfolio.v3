@@ -1,6 +1,7 @@
 import { get_local_token } from './json_actions'
-import { CurrentSongData, SpotifyCurrentlyPlayingResponse, SpotifyPlaylist } from './types';
+import { CurrentSongData, filtered_top_data, SpotifyCurrentlyPlayingResponse, SpotifyPlaylist, topTracks } from './types';
 const playlist_id = '1w7opBRG814H7CMZaMOCN7'
+
 
 export async function add_track_to_playlist() {
 	try {
@@ -178,8 +179,6 @@ export async function extract_data_curr_song(data: SpotifyCurrentlyPlayingRespon
 	let song_name: string | null = null;
 	let song_direct_link: string | null = null
 
-	console.log(data)
-
 	if (item_data) {
 		song_artists = item_data.artists
 		song_cover_art = item_data.album.images
@@ -192,7 +191,39 @@ export async function extract_data_curr_song(data: SpotifyCurrentlyPlayingRespon
 	}
 }
 
+export async function get_top_items(): Promise<filtered_top_data[] | null> {
+	try {
+		const token_data = await get_local_token();
+		const url = new URL(`https://api.spotify.com/v1/me/top/tracks`)
+		url.searchParams.append("type", "tracks")
+		url.searchParams.append("time_range", "medium_term")
+		url.searchParams.append("limit", "10")
+
+		const res = await fetch(url, {
+			method: "GET",
+			headers: {
+				'Authorization': 'Bearer ' + token_data.access_token,
+			}
+		})
+
+		if (!res.ok) {
+			console.error(`Error: ${res.status} ${res.statusText}`)
+			return null
+		}
+		const data: topTracks[] = (await res.json()).items
+		const filteredData = data.map(({ name, external_urls, artists, album }) => ({
+			name, external_urls, artists, album
+		}))
+		return filteredData
+
+	} catch (err) {
+		console.error('Failed to get top items: ', err)
+		return null
+	}
+}
+
 (async function main() {
+	//console.log(await get_top_items())
 	//console.log(await get_current_track())
 	//console.log(await get_playlist())
 	//console.log(await search_spotify())

@@ -16,7 +16,7 @@ async function oauth() {
 
 	app.get('/login', function(req, res) {
 		const state = generateRandomString(16);
-		const scope = 'playlist-modify-public user-read-currently-playing';
+		const scope = 'playlist-modify-public user-read-currently-playing user-top-read';
 
 		const authUrl = 'https://accounts.spotify.com/authorize?' +
 			queryString.stringify({

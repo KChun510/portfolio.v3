@@ -1,10 +1,10 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
   "/api/excractRepoLang/route": "app/api/excractRepoLang/route.js",
   "/api/pullAllGitReposInfo/route": "app/api/pullAllGitReposInfo/route.js",
   "/api/readfile/route": "app/api/readfile/route.js",
   "/api/spotify/get_current_track/route": "app/api/spotify/get_current_track/route.js",
   "/api/spotify/get_playlist/route": "app/api/spotify/get_playlist/route.js",
+  "/api/spotify/get_top_items/route": "app/api/spotify/get_top_items/route.js",
   "/api/writefile/route": "app/api/writefile/route.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
   "/page": "app/page.js"

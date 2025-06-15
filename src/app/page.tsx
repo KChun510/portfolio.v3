@@ -3,7 +3,7 @@ import React from "react";
 import { QueryClient, QueryClientProvider } from 'react-query';
 import NavBar from './components/nav'
 import './Home.css';
-import SecondCont from './second_cont'
+import AboutMeCont from './aboutMe_cont'
 import FirstCont from './first_cont'
 import HeroCont from './hero_cont';
 import MusicCont from './music_cont';
@@ -20,9 +20,10 @@ const Home = () => {
         </div>
         <FirstCont id="first_cont" />
         <br />
-        <SecondCont id="second_cont" />
-        <br />
         <MusicCont id="music_cont" />
+        <br />
+        <AboutMeCont id="aboutMe_cont" />
+        <br />
       </QueryClientProvider>
     </div>
   );

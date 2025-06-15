@@ -12,7 +12,7 @@ function SongButton({ className = '', song_name, song_url, album_cover, artists_
 		<div key={song_name} className={`flex items-center gap-4 ${className}`}>
 			{/* Album Cover */}
 			<div className="w-[100px] shrink-0">
-				<Image src={album_cover[1].url} height={100} width={100} alt="album logo" />
+				<Image className='rounded' src={album_cover[1].url} height={100} width={100} alt="album logo" />
 			</div>
 
 			{/* Song Info */}

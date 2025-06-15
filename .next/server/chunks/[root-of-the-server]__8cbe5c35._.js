@@ -120,6 +120,7 @@ __turbopack_context__.s({
     "extract_data_curr_song": (()=>extract_data_curr_song),
     "get_current_track": (()=>get_current_track),
     "get_playlist": (()=>get_playlist),
+    "get_top_items": (()=>get_top_items),
     "remove_track_from_playlist": (()=>remove_track_from_playlist),
     "search_spotify": (()=>search_spotify)
 });
@@ -274,7 +275,6 @@ async function extract_data_curr_song(data) {
     let song_duration = null;
     let song_name = null;
     let song_direct_link = null;
-    console.log(data);
     if (item_data) {
         song_artists = item_data.artists;
         song_cover_art = item_data.album.images;
@@ -293,7 +293,38 @@ async function extract_data_curr_song(data) {
         song_direct_link
     };
 }
+async function get_top_items() {
+    try {
+        const token_data = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$spotify_utils$2f$json_actions$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["get_local_token"])();
+        const url = new URL(`https://api.spotify.com/v1/me/top/tracks`);
+        url.searchParams.append("type", "tracks");
+        url.searchParams.append("time_range", "medium_term");
+        url.searchParams.append("limit", "10");
+        const res = await fetch(url, {
+            method: "GET",
+            headers: {
+                'Authorization': 'Bearer ' + token_data.access_token
+            }
+        });
+        if (!res.ok) {
+            console.error(`Error: ${res.status} ${res.statusText}`);
+            return null;
+        }
+        const data = (await res.json()).items;
+        const filteredData = data.map(({ name, external_urls, artists, album })=>({
+                name,
+                external_urls,
+                artists,
+                album
+            }));
+        return filteredData;
+    } catch (err) {
+        console.error('Failed to get top items: ', err);
+        return null;
+    }
+}
 (async function main() {
+//console.log(await get_top_items())
 //console.log(await get_current_track())
 //console.log(await get_playlist())
 //console.log(await search_spotify())
