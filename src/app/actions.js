@@ -8,7 +8,7 @@ const pullAllGitReposInfo = async () => {
   } catch (e) {
     console.log(e)
   }
-};
+}
 
 const extractRepoLang = async (repoName) => {
   try {
@@ -42,6 +42,32 @@ async function readJSONFile() {
   }
 }
 
+export const get_playlist = async () => {
+  try {
+    const res = await fetch('/api/spotify/get_playlist',
+      {
+        method: "GET"
+      })
+    const data = await res.json()
+    return data
+  } catch (e) {
+    console.error(e)
+  }
+}
+
+export const get_currTrack = async () => {
+  try {
+    const res = await fetch('/api/spotify/get_current_track',
+      {
+        method: "GET"
+      })
+    const data = await res.json()
+    return data
+  } catch (e) {
+    console.error(e)
+  }
+}
+
 export const writeJSONFile = async () => {
   let repoArr = []  /* I.e: {repo_name : [description, url, lang's]} */
   const allGitInfo = await pullAllGitReposInfo()
@@ -70,9 +96,9 @@ export const writeJSONFile = async () => {
 
 export async function pullGitInfo() {
   const allGitInfo = await readJSONFile()
+  writeJSONFile()
   return allGitInfo
 }
 
-writeJSONFile()
 
 

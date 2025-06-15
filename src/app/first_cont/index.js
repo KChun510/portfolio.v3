@@ -12,10 +12,10 @@ const FirstCont = ({ id }) => {
 
     return (
         <div id={id} >
-            <div className="flex flex-wrap mt-1 mx-4 min-h-[75vh]">
-                <div className="lg:flex-1 px-auto">
-                    <h1 className="text-6xl font-bold">Kyle Chun</h1>
-                    <h6 className="text-2xl font-semibold">Computer Science Student</h6>
+            <div className="flex flex-col lg:flex-row flex-wrap mt-1 mx-4 min-h-[75vh]">
+                <div className="w-full lg:w-1/2 px-4 mb-6 lg:mb-0">
+                    <h1 className="text-6xl font-bold">Projects</h1>
+                    <h6 className="text-2xl font-semibold">Live builds & diagrams </h6>
                     <div id='video' className="aspect-w-16 aspect-h-9 rounded shadow border-4 border-black">
                         <iframe
                             title='my_video'
@@ -29,9 +29,9 @@ const FirstCont = ({ id }) => {
                     </div>
                 </div>
 
-                <div className="md:flex-1 mt-5 px-5">
+                <div className="w-full lg:w-1/2 px-4 mt-5">
                     <div className="container mt-5 px-auto">
-                        <h5 className="text-3xl font-semibold">Projects</h5>
+                        <h5 className="text-3xl font-semibold">Public Repositorys</h5>
                     </div>
                     <div className="passion overflow-auto w-full ml-3 border-2 border-black rounded">
                         <div className="list-group border-black" id='appending_repos' >

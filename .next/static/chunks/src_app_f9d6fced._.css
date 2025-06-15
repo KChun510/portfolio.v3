@@ -1,0 +1,191 @@
+/* [project]/src/app/components/nav/nav.css [app-client] (css) */
+.nav {
+  text-align: left;
+  background-color: #0000;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.nav li {
+  margin-left: 50px;
+  padding-top: 30px;
+  font-size: 15px;
+  display: inline-block;
+}
+
+#icons {
+  width: 50px;
+  height: 50px;
+}
+
+#icons_paired {
+  width: 40px;
+  height: 40px;
+  margin-left: 40px;
+}
+
+@media (width <= 750px) {
+  .hidden-mobile {
+    display: none;
+  }
+}
+
+
+/* [project]/src/app/Home.css [app-client] (css) */
+.Home {
+  text-align: center;
+  background-image: url("../media/better_better_dark_city.0ae3c5a6.png");
+  background-position: 50% 10%;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+
+/* [project]/src/app/second_cont/second_cont.css [app-client] (css) */
+.img1 {
+  height: 100%;
+}
+
+#second_cont {
+  min-height: 100vh;
+  margin-top: 160px;
+}
+
+#info_cont {
+  text-align: left;
+  padding-top: 50px;
+  padding-bottom: 10px;
+}
+
+#creds_Resume {
+  text-aligh: center;
+  padding-top: 50px;
+}
+
+#img {
+  width: 10vw;
+  height: 10vh;
+  position: relative;
+}
+
+@media (width <= 750px) {
+  button:hover, button:focus {
+    box-shadow: none !important;
+    background-color: #0000 !important;
+    border: none !important;
+  }
+
+  .hidden-mobile {
+    display: none;
+  }
+}
+
+button:hover, button:focus {
+  background-color: #00000080;
+}
+
+.button {
+  border-radius: 50%;
+}
+
+.flex-items {
+  color: #fff;
+  background-color: #0000;
+  border: none;
+  border-bottom: 1px solid;
+  justify-content: left;
+  width: 15%;
+  margin: 40px;
+  font-size: larger;
+  display: inline-block;
+}
+
+.display {
+  color: #fff;
+  background-color: #000000e6;
+  width: 95vw;
+  height: auto;
+  min-height: 50vh;
+}
+
+
+/* [project]/src/app/first_cont/first_cont.css [app-client] (css) */
+#first_cont {
+  text-align: left;
+  margin-top: 50px;
+}
+
+#video {
+  aspect-ratio: 16 / 9;
+  background-color: #000;
+}
+
+.passion {
+  aspect-ratio: 16 / 9;
+  background-color: #c88cc4;
+  outline: #000;
+  min-height: 40vh;
+}
+
+.small_text {
+  text-align: center;
+}
+
+.menu1 {
+  display: block;
+  background-color: #c289c0 !important;
+  border-color: #0000 #0000 #000 !important;
+  border-bottom-width: 1px !important;
+}
+
+.list-group-item:hover {
+  background-color: #977596;
+}
+
+.passion::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* [project]/src/app/music_cont/music_cont.css [app-client] (css) */
+#music_cont {
+  text-align: left;
+  margin-top: 50px;
+}
+
+#video {
+  aspect-ratio: 16 / 9;
+  background-color: #000;
+}
+
+.passion {
+  aspect-ratio: 16 / 9;
+  background-color: #c88cc4;
+  outline: #000;
+  min-height: 40vh;
+}
+
+.small_text {
+  text-align: center;
+}
+
+.menu1 {
+  display: block;
+  background-color: #c289c0 !important;
+  border-color: #0000 #0000 #000 !important;
+  border-bottom-width: 1px !important;
+}
+
+.list-group-item:hover {
+  background-color: #977596;
+}
+
+.passion::-webkit-scrollbar {
+  display: none;
+}
+
+
+/*# sourceMappingURL=src_app_f9d6fced._.css.map*/

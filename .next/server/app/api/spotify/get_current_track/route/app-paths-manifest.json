@@ -1,0 +1,3 @@
+{
+  "/api/spotify/get_current_track/route": "app/api/spotify/get_current_track/route.js"
+}

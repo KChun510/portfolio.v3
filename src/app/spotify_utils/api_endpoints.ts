@@ -1,0 +1,204 @@
+import { get_local_token } from './json_actions'
+import { CurrentSongData, SpotifyCurrentlyPlayingResponse, SpotifyPlaylist } from './types';
+const playlist_id = '1w7opBRG814H7CMZaMOCN7'
+
+export async function add_track_to_playlist() {
+	try {
+		const token_data = await get_local_token();
+		const url = new URL(`https://api.spotify.com/v1/playlists/${playlist_id}/tracks`)
+
+		const res = await fetch(url, {
+			method: 'POST',
+			headers: {
+				'Authorization': 'Bearer ' + token_data.access_token,
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify({
+				uris: ["spotify:track:4iV5W9uYEdYUVa79Axb7Rh"]
+			})
+		})
+		if (!res.ok) {
+			console.error(`Error: ${res.status} ${res.statusText}`)
+			return false
+		}
+		console.log(`Success, track added to playlist`)
+		return true
+
+	} catch (err) {
+		console.error('Failed to add to playlist: ', err)
+		return false
+
+	}
+}
+
+export async function remove_track_from_playlist() {
+	try {
+		const token_data = await get_local_token();
+		const url = new URL(`https://api.spotify.com/v1/playlists/${playlist_id}/tracks`)
+
+
+		const res = await fetch(url, {
+			method: 'DELETE',
+			headers: {
+				'Authorization': 'Bearer ' + token_data.access_token,
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify({
+				tracks: [
+					{
+						uri: "spotify:track:4iV5W9uYEdYUVa79Axb7Rh"
+					}
+				]
+			})
+		})
+		if (!res.ok) {
+			console.error(`Error: ${res.status} ${res.statusText}`)
+			return false
+		}
+		console.log(`Success, track removed from playlist`)
+		return true
+	} catch (err) {
+		console.error('Failed to remove from playlist: ', err)
+		return false
+	}
+}
+
+export async function search_spotify() {
+	const token_data = await get_local_token();
+	const search_q = 'gorillaz'
+	const type = 'track'
+	const market = 'US'
+	const limit = '10'
+
+	const url = new URL(`https://api.spotify.com/v1/search?`)
+	url.searchParams.append('q', search_q)
+	url.searchParams.append('type', type)
+	url.searchParams.append('market', market)
+	url.searchParams.append('limit', limit)
+
+	try {
+		const res = await fetch(url, {
+			method: 'GET',
+			headers: {
+				'Authorization': 'Bearer ' + token_data.access_token
+			}
+		})
+
+		if (!res.ok) {
+			console.error(`Error: ${res.status} ${res.statusText}`)
+			return null
+		}
+		const data = await res.json()
+		return data.tracks.items
+
+	} catch (err) {
+		console.error('Failed to fetch search: ', err)
+		return null
+	}
+}
+
+export async function get_playlist() {
+	try {
+
+		const token_data = await get_local_token();
+		const market = 'US'
+
+		const url = new URL(`https://api.spotify.com/v1/playlists/${playlist_id}`);
+		url.searchParams.append('market', market)
+
+		const res = await fetch(url, {
+			method: 'GET',
+			headers: {
+				'Authorization': 'Bearer ' + token_data.access_token
+			}
+		})
+		if (!res.ok) {
+			console.error(`Error: ${res.status} ${res.statusText}`)
+			return null
+		}
+		const data: SpotifyPlaylist = await res.json()
+		const song_data = data.tracks.items
+
+		const final_song_data = song_data.map(elem => ({
+			song_name: elem.track.name,
+			song_url: elem.track.external_urls,
+			album_cover: elem.track.album.images,
+			artists_data: elem.track.artists,
+		}))
+
+		return final_song_data
+
+	} catch (err) {
+		console.error('Failed to fetch playlist: ', err)
+		return null
+	}
+}
+
+export async function get_current_track(): Promise<CurrentSongData | null> {
+	try {
+		const token_data = await get_local_token();
+		const market = 'US'
+		const url = new URL('https://api.spotify.com/v1/me/player/currently-playing');
+		url.searchParams.append('market', market);
+
+		const res = await fetch(url.toString(), {
+			method: 'GET',
+			headers: {
+				'Authorization': 'Bearer ' + token_data.access_token
+			},
+		})
+		if (!res.ok) {
+			console.error(`Error: ${res.status} ${res.statusText}`)
+			return null
+		}
+		const data: SpotifyCurrentlyPlayingResponse = await res.json()
+		const final_data = await extract_data_curr_song(data)
+		return final_data
+
+	} catch (err) {
+		console.error('Failed to fetch current track: ', err)
+		return null
+	}
+}
+
+export async function extract_data_curr_song(data: SpotifyCurrentlyPlayingResponse): Promise<CurrentSongData> {
+	const progress_ms: number | null = data.progress_ms
+	const is_playing = data.is_playing
+	const item_data = data.item
+	let song_artists: {
+		external_urls: { spotify: string };
+		href: string;
+		id: string;
+		name: string;
+		type: string;
+		uri: string;
+	}[] | null = null;
+	let song_cover_art: { height: number; url: string; width: number }[] | null = null;
+	let song_duration: number | null = null;
+	let song_name: string | null = null;
+	let song_direct_link: string | null = null
+
+	console.log(data)
+
+	if (item_data) {
+		song_artists = item_data.artists
+		song_cover_art = item_data.album.images
+		song_duration = item_data.duration_ms
+		song_name = item_data.name
+		song_direct_link = item_data.external_urls.spotify
+	}
+	return {
+		is_playing, progress_ms, item_data, song_artists, song_cover_art, song_duration, song_name, song_direct_link
+	}
+}
+
+(async function main() {
+	//console.log(await get_current_track())
+	//console.log(await get_playlist())
+	//console.log(await search_spotify())
+	//await add_track_to_playlist()
+	//await remove_track_from_playlist()
+})()
+
+
+

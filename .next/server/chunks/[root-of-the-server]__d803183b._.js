@@ -96,9 +96,16 @@ async function GET(req) {
             status: 200
         });
     } catch (error) {
-        // Handle errors (e.g., file not found or JSON parsing error)
+        if (error instanceof Error) {
+            // Handle errors (e.g., file not found or JSON parsing error)
+            return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({
+                error: error.message
+            }, {
+                status: 500
+            });
+        }
         return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({
-            error: error.message
+            error: "Unknown error"
         }, {
             status: 500
         });

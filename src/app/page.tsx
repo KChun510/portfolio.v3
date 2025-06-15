@@ -6,6 +6,7 @@ import './Home.css';
 import SecondCont from './second_cont'
 import FirstCont from './first_cont'
 import HeroCont from './hero_cont';
+import MusicCont from './music_cont';
 
 const queryClient = new QueryClient()
 
@@ -20,6 +21,8 @@ const Home = () => {
         <FirstCont id="first_cont" />
         <br />
         <SecondCont id="second_cont" />
+        <br />
+        <MusicCont id="music_cont" />
       </QueryClientProvider>
     </div>
   );

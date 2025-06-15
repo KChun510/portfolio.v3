@@ -1,1 +1,4 @@
 node_modules/
+**/token_data.json
+**/.env
+
