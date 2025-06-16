@@ -234,14 +234,4 @@ export async function get_top_items(): Promise<filtered_top_data[] | null> {
 	}
 }
 
-(async function main() {
-	console.log(await get_top_items())
-	//console.log(await get_current_track())
-	//console.log(await get_playlist())
-	//console.log(await search_spotify())
-	//await add_track_to_playlist()
-	//await remove_track_from_playlist()
-})()
-
-
 
