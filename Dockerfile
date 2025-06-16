@@ -5,7 +5,7 @@ FROM node:18-slim AS builder
 WORKDIR /app
 
 # Copy next.config.js and package info first
-COPY package*.json next.config.js ./
+COPY package*.json next.config.ts ./
 RUN npm install
 
 # Copy the rest of the source
