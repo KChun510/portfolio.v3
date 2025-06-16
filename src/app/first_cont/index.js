@@ -16,7 +16,7 @@ const FirstCont = ({ id }) => {
             <div className="flex flex-col lg:flex-row flex-wrap mt-1 ml-2 min-h-[75vh]">
                 <div className="w-full lg:w-1/2 px-4 mb-6 lg:mb-0">
                     <h6 className="text-3xl font-semibold ml-1">Live builds & diagrams </h6>
-                    <div id='video' className="aspect-w-16 aspect-h-9 rounded shadow border-4 border-black">
+                    <div id='work_showcase' className="aspect-w-16 aspect-h-9 rounded shadow border-4 border-black">
                         <iframe
                             title='my_video'
                             src="https://drive.google.com/file/d/1ylyMX7dNSRdGZ4AtAJ6ucKKws4FhTnG4/preview"

@@ -897,7 +897,7 @@ const AboutMeCont = ({ id })=>{
     ]);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         id: id,
-        className: "mt-10",
+        className: "mt-20",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "row",
@@ -1655,7 +1655,7 @@ const FirstCont = ({ id })=>{
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                id: "video",
+                                id: "work_showcase",
                                 className: "aspect-w-16 aspect-h-9 rounded shadow border-4 border-black",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("iframe", {
                                     title: "my_video",
@@ -2033,21 +2033,51 @@ function SongButton({ className = '', song_name, song_url, album_cover, artists_
                         lineNumber: 20,
                         columnNumber: 5
                     }, this),
-                    artists_data.map(({ external_urls, name })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                            href: external_urls.spotify,
-                            target: "_blank",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h5", {
-                                children: name
-                            }, void 0, false, {
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "flex flex-row flex-wrap space-x-1",
+                        children: artists_data ? artists_data.map(({ external_urls, name }, index)=>index === artists_data.length - 1 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                href: external_urls.spotify,
+                                target: "_blank",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h5", {
+                                    children: name
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/music_cont/components/songButton/index.tsx",
+                                    lineNumber: 24,
+                                    columnNumber: 173
+                                }, this)
+                            }, name, false, {
                                 fileName: "[project]/src/app/music_cont/components/songButton/index.tsx",
-                                lineNumber: 23,
-                                columnNumber: 111
-                            }, this)
-                        }, name, false, {
+                                lineNumber: 24,
+                                columnNumber: 114
+                            }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                href: external_urls.spotify,
+                                target: "_blank",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h5", {
+                                    children: [
+                                        name,
+                                        ","
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/src/app/music_cont/components/songButton/index.tsx",
+                                    lineNumber: 24,
+                                    columnNumber: 254
+                                }, this)
+                            }, name, false, {
+                                fileName: "[project]/src/app/music_cont/components/songButton/index.tsx",
+                                lineNumber: 24,
+                                columnNumber: 195
+                            }, this)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h5", {
+                            children: "No Artist"
+                        }, void 0, false, {
                             fileName: "[project]/src/app/music_cont/components/songButton/index.tsx",
-                            lineNumber: 23,
-                            columnNumber: 52
-                        }, this))
+                            lineNumber: 24,
+                            columnNumber: 279
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/music_cont/components/songButton/index.tsx",
+                        lineNumber: 23,
+                        columnNumber: 5
+                    }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/music_cont/components/songButton/index.tsx",
@@ -2065,25 +2095,25 @@ function SongButton({ className = '', song_name, song_url, album_cover, artists_
                             strokeWidth: .8
                         }, void 0, false, {
                             fileName: "[project]/src/app/music_cont/components/songButton/index.tsx",
-                            lineNumber: 29,
+                            lineNumber: 31,
                             columnNumber: 6
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h5", {
                             children: "Added By: Un-named"
                         }, void 0, false, {
                             fileName: "[project]/src/app/music_cont/components/songButton/index.tsx",
-                            lineNumber: 30,
+                            lineNumber: 32,
                             columnNumber: 6
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/music_cont/components/songButton/index.tsx",
-                    lineNumber: 28,
+                    lineNumber: 30,
                     columnNumber: 5
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/music_cont/components/songButton/index.tsx",
-                lineNumber: 27,
+                lineNumber: 29,
                 columnNumber: 4
             }, this)
         ]
@@ -2135,7 +2165,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$imag
 ;
 const CurrSongPreview = ({ className = '', is_playing, progress_ms, song_artists, song_cover_art, song_duration, song_name, song_direct_link })=>{
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: `flex items-start gap-4 ${className}`,
+        className: `flex flex-row items-start gap-4 ${className}`,
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "w-[100px] shrink-0",
@@ -2156,7 +2186,7 @@ const CurrSongPreview = ({ className = '', is_playing, progress_ms, song_artists
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "w-64",
+                className: "w-full",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                         href: song_direct_link ?? undefined,
@@ -2181,26 +2211,50 @@ const CurrSongPreview = ({ className = '', is_playing, progress_ms, song_artists
                         lineNumber: 17,
                         columnNumber: 5
                     }, this),
-                    song_artists ? song_artists.map(({ external_urls, name })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                            href: external_urls.spotify,
-                            target: "_blank",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h5", {
-                                children: name
-                            }, void 0, false, {
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "flex flex-row flex-wrap space-x-1",
+                        children: song_artists ? song_artists.map(({ external_urls, name }, index)=>index === song_artists.length - 1 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                href: external_urls.spotify,
+                                target: "_blank",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h5", {
+                                    children: name
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/music_cont/components/currSongPreview/index.tsx",
+                                    lineNumber: 21,
+                                    columnNumber: 173
+                                }, this)
+                            }, name, false, {
                                 fileName: "[project]/src/app/music_cont/components/currSongPreview/index.tsx",
-                                lineNumber: 20,
-                                columnNumber: 126
-                            }, this)
-                        }, name, false, {
+                                lineNumber: 21,
+                                columnNumber: 114
+                            }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                href: external_urls.spotify,
+                                target: "_blank",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h5", {
+                                    children: [
+                                        name,
+                                        ","
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/src/app/music_cont/components/currSongPreview/index.tsx",
+                                    lineNumber: 21,
+                                    columnNumber: 254
+                                }, this)
+                            }, name, false, {
+                                fileName: "[project]/src/app/music_cont/components/currSongPreview/index.tsx",
+                                lineNumber: 21,
+                                columnNumber: 195
+                            }, this)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h5", {
+                            children: "No Artist"
+                        }, void 0, false, {
                             fileName: "[project]/src/app/music_cont/components/currSongPreview/index.tsx",
-                            lineNumber: 20,
-                            columnNumber: 67
-                        }, this)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h5", {
-                        children: "No Artist"
+                            lineNumber: 21,
+                            columnNumber: 279
+                        }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/music_cont/components/currSongPreview/index.tsx",
                         lineNumber: 20,
-                        columnNumber: 149
+                        columnNumber: 5
                     }, this)
                 ]
             }, void 0, true, {
@@ -2267,38 +2321,68 @@ function TopItem({ className = '', name, external_urls, album, artists }) {
                                     children: name
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/music_cont/components/topItem/index.tsx",
-                                    lineNumber: 24,
+                                    lineNumber: 23,
                                     columnNumber: 10
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/music_cont/components/topItem/index.tsx",
-                                lineNumber: 24,
+                                lineNumber: 23,
                                 columnNumber: 7
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/music_cont/components/topItem/index.tsx",
-                            lineNumber: 23,
+                            lineNumber: 22,
                             columnNumber: 6
                         }, this),
-                        artists.map(({ external_urls, name })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                href: external_urls.spotify,
-                                target: "_blank",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h5", {
-                                    children: name
-                                }, void 0, false, {
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "flex flex-row flex-wrap space-x-1",
+                            children: artists ? artists.map(({ external_urls, name }, index)=>index === artists.length - 1 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                    href: external_urls.spotify,
+                                    target: "_blank",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h5", {
+                                        children: name
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/music_cont/components/topItem/index.tsx",
+                                        lineNumber: 26,
+                                        columnNumber: 159
+                                    }, this)
+                                }, name, false, {
                                     fileName: "[project]/src/app/music_cont/components/topItem/index.tsx",
-                                    lineNumber: 28,
-                                    columnNumber: 8
-                                }, this)
-                            }, name, false, {
+                                    lineNumber: 26,
+                                    columnNumber: 100
+                                }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                    href: external_urls.spotify,
+                                    target: "_blank",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h5", {
+                                        children: [
+                                            name,
+                                            ","
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/app/music_cont/components/topItem/index.tsx",
+                                        lineNumber: 26,
+                                        columnNumber: 240
+                                    }, this)
+                                }, name, false, {
+                                    fileName: "[project]/src/app/music_cont/components/topItem/index.tsx",
+                                    lineNumber: 26,
+                                    columnNumber: 181
+                                }, this)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h5", {
+                                children: "No Artist"
+                            }, void 0, false, {
                                 fileName: "[project]/src/app/music_cont/components/topItem/index.tsx",
-                                lineNumber: 27,
-                                columnNumber: 7
-                            }, this))
+                                lineNumber: 26,
+                                columnNumber: 265
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "[project]/src/app/music_cont/components/topItem/index.tsx",
+                            lineNumber: 25,
+                            columnNumber: 6
+                        }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/music_cont/components/topItem/index.tsx",
-                    lineNumber: 22,
+                    lineNumber: 21,
                     columnNumber: 5
                 }, this)
             ]

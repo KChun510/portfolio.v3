@@ -107,6 +107,8 @@ button:hover, button:focus {
 
 .display {
   background-color: #000000e6;
+  width: 95vw;
+  min-height: 50vh;
 }
 
 
@@ -116,7 +118,7 @@ button:hover, button:focus {
   margin-top: 50px;
 }
 
-#video {
+#work_showcase {
   aspect-ratio: 16 / 9;
   background-color: #000;
 }

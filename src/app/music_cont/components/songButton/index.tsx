@@ -20,7 +20,9 @@ function SongButton({ className = '', song_name, song_url, album_cover, artists_
 				<a href={song_url} target="_blank" rel="noopener noreferrer">
 					<b><h1 className="text-xl">{song_name}</h1></b>
 				</a>
-				{artists_data.map(({ external_urls, name }) => <a href={external_urls.spotify} target='_blank' key={name}><h5>{name}</h5></a>)}
+				<div className="flex flex-row flex-wrap space-x-1">
+					{artists_data ? artists_data.map(({ external_urls, name }, index) => (index === (artists_data.length - 1) ? <a href={external_urls.spotify} target='_blank' key={name}><h5>{name}</h5></a> : <a href={external_urls.spotify} target='_blank' key={name}><h5>{name},</h5></a>)) : <h5>No Artist</h5>}
+				</div>
 			</div>
 
 			{/* User Info */}
