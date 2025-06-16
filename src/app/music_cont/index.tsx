@@ -24,12 +24,6 @@ const MusicCont = ({ id }: { id: string }) => {
     queryFn: async () => await get_top_items()
   });
 
-  if (!isLoadingPlaylist && !isLoadingCurr && !isLoadingTopItems) {
-    console.log(currTrack)
-    console.log(playListSongs)
-    console.log(topItems)
-  }
-
   return (
     <div id={id}>
       <h1 className="text-6xl font-bold ml-8">Music ♫</h1>

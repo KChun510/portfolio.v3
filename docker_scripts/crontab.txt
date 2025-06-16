@@ -1,5 +1,5 @@
-*/55 * * * * /app/node_modules/.bin/tsx /app/src/app/spotify_utils/refresh_token.ts >> /var/log/cron.log 2>&1
+*/55 * * * * npx tsx /app/src/app/spotify_utils/refresh_token.ts >> /var/log/cron.log 2>&1
 
-
+*/55 * * * * npx tsx /home/toastycommand/Desktop/portfolio.v3/src/app/gh_utils/update_gh_cache.ts >> /home/toastycommand/cronlog.txt 2>&1
 
 
