@@ -1,3 +1,7 @@
+# The cron-job loaded into container, does not get full path var.
+# Must set the path, so that cron can use npx tsx command.
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
 */55 * * * * npx tsx /app/src/app/spotify_utils/refresh_token.ts >> /var/log/cron.log 2>&1
 
 */55 * * * * npx tsx /home/toastycommand/Desktop/portfolio.v3/src/app/gh_utils/update_gh_cache.ts >> /home/toastycommand/cronlog.txt 2>&1
