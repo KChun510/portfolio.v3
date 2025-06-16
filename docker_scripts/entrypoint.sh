@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Start cron
-crond
+cron
 
 # Optional: log cron status
 echo "Cron started..."

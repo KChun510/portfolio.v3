@@ -10,7 +10,7 @@ const __dirname = path.dirname(__filename);
 // Always resolve relative to the current file
 const tokenPath = path.join(__dirname, 'token_data.json');
 
-export async function get_local_token(): Promise<token_res> {
+export async function get_local_token(): Promise<token_res | null> {
 	const file_cont = await fs.readFile(tokenPath, 'utf8');
 	return file_cont ? JSON.parse(file_cont) : null;
 }

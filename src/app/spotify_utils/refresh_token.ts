@@ -8,13 +8,13 @@ async function refresh_token() {
 	const client_secret = process.env.SPOTIFY_CLIENT_SECRET!;
 
 	const token_data = await get_local_token();
-	const refresh_token = token_data.refresh_token;
-
-	if (!refresh_token) {
-		throw new Error('No refresh token found');
-	}
 
 	try {
+		if (!token_data) {
+			throw new Error('Unable to read token data from file');
+		}
+		const refresh_token = token_data.refresh_token;
+
 		const tokenRes = await fetch('https://accounts.spotify.com/api/token', {
 			method: 'POST',
 			headers: {

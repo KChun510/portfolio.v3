@@ -7,9 +7,11 @@ import path from 'path';
 dotenv.config({ path: path.resolve(__dirname, '../../../.env') });
 
 async function oauth() {
-	const client_id = process.env.SPOTIFY_CLIENT_ID!;
-	const client_secret = process.env.SPOTIFY_CLIENT_SECRET!;
-	const redirect_uri = process.env.REDIRECT_URI!;
+	const client_id = process.env.SPOTIFY_CLIENT_ID!
+	const client_secret = process.env.SPOTIFY_CLIENT_SECRET!
+	const redirect_uri = process.env.NODE_ENV === 'production' ? process.env.PROD_REDIRECT_URI! : process.env.LOCAL_REDIRECT_URI!
+	const newRedirect = redirect_uri.replace(/callback$/, 'login');
+
 
 	const app = express();
 	let server: ReturnType<typeof app.listen>
@@ -72,7 +74,7 @@ async function oauth() {
 	});
 
 	server = app.listen(8888, () => {
-		console.log('OAuth server running at http://127.0.0.1:8888/login');
+		console.log(`OAuth server running at ${newRedirect}`);
 	});
 }
 

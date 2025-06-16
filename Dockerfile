@@ -1,48 +1,48 @@
 # Stage 1: Build
-FROM node:18-alpine AS builder
+FROM node:18-slim AS builder
 
-# Set working directory inside container
+# Set working directory
 WORKDIR /app
 
-# Copy only the necessary files
+# Install dependencies
 COPY package*.json ./
-
-# Install deps
 RUN npm install
 
-# Copy everything
+# Copy the rest of the source
 COPY . .
 
-# Change directory to your app root and build
+# Build the Next.js app
 WORKDIR /app/src/app
 RUN npm run build
 
 # Stage 2: Production container
-FROM node:18-alpine
+FROM node:18-slim
 
 WORKDIR /app
 
-# Install cron
-RUN apk update && apk add --no-cache cronie
+# Install cron and clean up
+RUN apt-get update && apt-get install -y cron && rm -rf /var/lib/apt/lists/*
+
+# Create cron log file
+RUN touch /var/log/cron.log
 
 # Copy production build artifacts
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/package.json ./package.json
-
-# Copy over cron setup
 COPY --from=builder /app/src /app/src
-COPY ./docker_scripts/crontab.txt /etc/crontabs/root
+
+# Copy cron and startup scripts
+COPY ./docker_scripts/crontab.txt /etc/cron.d/my-cron
 COPY ./docker_scripts/entrypoint.sh /entrypoint.sh
 
-# Set perms on sh
+# Set permissions
+RUN chmod 0644 /etc/cron.d/my-cron && crontab /etc/cron.d/my-cron
 RUN chmod +x /entrypoint.sh
 
 ENV NODE_ENV=production
 EXPOSE 3000
 
 CMD ["/entrypoint.sh"]
-#CMD ["npx", "next", "start", "-H", "0.0.0.0"]
-#CMD ["npm", "start"]
 

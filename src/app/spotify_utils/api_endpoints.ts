@@ -4,9 +4,12 @@ const playlist_id = '1w7opBRG814H7CMZaMOCN7'
 
 
 export async function add_track_to_playlist() {
+	const token_data = await get_local_token();
+	const url = new URL(`https://api.spotify.com/v1/playlists/${playlist_id}/tracks`)
 	try {
-		const token_data = await get_local_token();
-		const url = new URL(`https://api.spotify.com/v1/playlists/${playlist_id}/tracks`)
+		if (!token_data) {
+			throw new Error("Unable to get access token from file")
+		}
 
 		const res = await fetch(url, {
 			method: 'POST',
@@ -33,11 +36,12 @@ export async function add_track_to_playlist() {
 }
 
 export async function remove_track_from_playlist() {
+	const token_data = await get_local_token();
+	const url = new URL(`https://api.spotify.com/v1/playlists/${playlist_id}/tracks`)
 	try {
-		const token_data = await get_local_token();
-		const url = new URL(`https://api.spotify.com/v1/playlists/${playlist_id}/tracks`)
-
-
+		if (!token_data) {
+			throw new Error("Unable to get access token from file")
+		}
 		const res = await fetch(url, {
 			method: 'DELETE',
 			headers: {
@@ -78,6 +82,9 @@ export async function search_spotify() {
 	url.searchParams.append('limit', limit)
 
 	try {
+		if (!token_data) {
+			throw new Error("Unable to get access token from file")
+		}
 		const res = await fetch(url, {
 			method: 'GET',
 			headers: {
@@ -99,14 +106,14 @@ export async function search_spotify() {
 }
 
 export async function get_playlist() {
+	const token_data = await get_local_token();
+	const market = 'US'
+	const url = new URL(`https://api.spotify.com/v1/playlists/${playlist_id}`);
+	url.searchParams.append('market', market)
 	try {
-
-		const token_data = await get_local_token();
-		const market = 'US'
-
-		const url = new URL(`https://api.spotify.com/v1/playlists/${playlist_id}`);
-		url.searchParams.append('market', market)
-
+		if (!token_data) {
+			throw new Error("Unable to get access token from file")
+		}
 		const res = await fetch(url, {
 			method: 'GET',
 			headers: {
@@ -136,12 +143,14 @@ export async function get_playlist() {
 }
 
 export async function get_current_track(): Promise<CurrentSongData | null> {
+	const token_data = await get_local_token();
+	const market = 'US'
+	const url = new URL('https://api.spotify.com/v1/me/player/currently-playing');
+	url.searchParams.append('market', market);
 	try {
-		const token_data = await get_local_token();
-		const market = 'US'
-		const url = new URL('https://api.spotify.com/v1/me/player/currently-playing');
-		url.searchParams.append('market', market);
-
+		if (!token_data) {
+			throw new Error("Unable to get access token from file")
+		}
 		const res = await fetch(url.toString(), {
 			method: 'GET',
 			headers: {
@@ -192,13 +201,16 @@ export async function extract_data_curr_song(data: SpotifyCurrentlyPlayingRespon
 }
 
 export async function get_top_items(): Promise<filtered_top_data[] | null> {
-	try {
-		const token_data = await get_local_token();
-		const url = new URL(`https://api.spotify.com/v1/me/top/tracks`)
-		url.searchParams.append("type", "tracks")
-		url.searchParams.append("time_range", "medium_term")
-		url.searchParams.append("limit", "10")
+	const token_data = await get_local_token();
+	const url = new URL(`https://api.spotify.com/v1/me/top/tracks`)
+	url.searchParams.append("type", "tracks")
+	url.searchParams.append("time_range", "medium_term")
+	url.searchParams.append("limit", "10")
 
+	try {
+		if (!token_data) {
+			throw new Error("Unable to get access token from file")
+		}
 		const res = await fetch(url, {
 			method: "GET",
 			headers: {
@@ -223,7 +235,7 @@ export async function get_top_items(): Promise<filtered_top_data[] | null> {
 }
 
 (async function main() {
-	//console.log(await get_top_items())
+	console.log(await get_top_items())
 	//console.log(await get_current_track())
 	//console.log(await get_playlist())
 	//console.log(await search_spotify())
