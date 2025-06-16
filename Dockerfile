@@ -21,7 +21,7 @@ FROM node:18-slim
 WORKDIR /app
 
 # Install cron and clean up
-RUN apt-get update && apt-get install -y cron && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y cron vim && rm -rf /var/lib/apt/lists/*
 
 # Create cron log file
 RUN touch /var/log/cron.log
