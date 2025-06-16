@@ -36,21 +36,24 @@
 .Home {
   text-align: center;
   background-image: url("../media/better_better_dark_city.0ae3c5a6.png");
-  background-position: 50% 10%;
+  background-position: 50% 20%;
   background-size: cover;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
   overflow: hidden;
+}
+
+@media (width <= 640px) {
+  .Home {
+    background-position: 50% -350px;
+  }
 }
 
 
 /* [project]/src/app/aboutMe_cont/aboutMe_cont.css [app-client] (css) */
 .img1 {
   height: 100%;
-}
-
-#aboutMe_cont {
-  min-height: 100vh;
 }
 
 #info_cont {
@@ -103,11 +106,7 @@ button:hover, button:focus {
 }
 
 .display {
-  color: #fff;
   background-color: #000000e6;
-  width: 95vw;
-  height: auto;
-  min-height: 50vh;
 }
 
 
@@ -122,10 +121,9 @@ button:hover, button:focus {
   background-color: #000;
 }
 
-.passion {
+.gh_repos {
   aspect-ratio: 16 / 9;
-  background-color: #c88cc4;
-  outline: #000;
+  background-color: #332e2e;
   min-height: 40vh;
 }
 
@@ -133,18 +131,17 @@ button:hover, button:focus {
   text-align: center;
 }
 
-.menu1 {
+.repo_buttons {
   display: block;
-  background-color: #c289c0 !important;
   border-color: #0000 #0000 #000 !important;
   border-bottom-width: 1px !important;
 }
 
-.list-group-item:hover {
-  background-color: #977596;
+.repo_buttons:hover {
+  background-color: #5c5656;
 }
 
-.passion::-webkit-scrollbar {
+.gh_repos::-webkit-scrollbar {
   display: none;
 }
 
@@ -161,15 +158,10 @@ button:hover, button:focus {
 .songList {
   aspect-ratio: 16 / 9;
   outline: #000;
-  min-height: 40vh;
 }
 
 .small_text {
   text-align: center;
-}
-
-.list-group-item:hover {
-  background-color: #977596;
 }
 
 .songList::-webkit-scrollbar {

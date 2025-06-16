@@ -2203,12 +2203,12 @@ const CurrSongPreview = ({ className = '', is_playing, progress_ms, song_artists
                     alt: "album logo"
                 }, void 0, false, {
                     fileName: "[project]/src/app/music_cont/components/currSongPreview/index.tsx",
-                    lineNumber: 13,
+                    lineNumber: 14,
                     columnNumber: 5
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/music_cont/components/currSongPreview/index.tsx",
-                lineNumber: 12,
+                lineNumber: 13,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2221,20 +2221,20 @@ const CurrSongPreview = ({ className = '', is_playing, progress_ms, song_artists
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("b", {
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
                                 className: "text-xl",
-                                children: song_name
+                                children: song_name ?? "Not listing to music"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/music_cont/components/currSongPreview/index.tsx",
-                                lineNumber: 17,
+                                lineNumber: 18,
                                 columnNumber: 9
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/music_cont/components/currSongPreview/index.tsx",
-                            lineNumber: 17,
+                            lineNumber: 18,
                             columnNumber: 6
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/music_cont/components/currSongPreview/index.tsx",
-                        lineNumber: 16,
+                        lineNumber: 17,
                         columnNumber: 5
                     }, this),
                     song_artists ? song_artists.map(({ external_urls, name })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -2244,30 +2244,30 @@ const CurrSongPreview = ({ className = '', is_playing, progress_ms, song_artists
                                 children: name
                             }, void 0, false, {
                                 fileName: "[project]/src/app/music_cont/components/currSongPreview/index.tsx",
-                                lineNumber: 19,
+                                lineNumber: 20,
                                 columnNumber: 126
                             }, this)
                         }, name, false, {
                             fileName: "[project]/src/app/music_cont/components/currSongPreview/index.tsx",
-                            lineNumber: 19,
+                            lineNumber: 20,
                             columnNumber: 67
                         }, this)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h5", {
                         children: "No Current Artist"
                     }, void 0, false, {
                         fileName: "[project]/src/app/music_cont/components/currSongPreview/index.tsx",
-                        lineNumber: 19,
+                        lineNumber: 20,
                         columnNumber: 149
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/music_cont/components/currSongPreview/index.tsx",
-                lineNumber: 15,
+                lineNumber: 16,
                 columnNumber: 4
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/music_cont/components/currSongPreview/index.tsx",
-        lineNumber: 11,
+        lineNumber: 12,
         columnNumber: 3
     }, this);
 };

@@ -9,15 +9,10 @@
 .songList{
     aspect-ratio: 16/9;
     outline: black;
-    min-height: 40vh;
 }
 
 .small_text{
     text-align: center;
-}
-
-.list-group-item:hover {
-    background-color: #977596;
 }
 
 .songList::-webkit-scrollbar {

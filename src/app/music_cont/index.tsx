@@ -27,6 +27,7 @@ const MusicCont = ({ id }: { id: string }) => {
   return (
     <div id={id}>
       <h1 className="text-6xl font-bold ml-8">Music ♫</h1>
+
       <div className="flex flex-col lg:flex-row items-stretch mt-1 mx-4 pb-6 rounded-lg">
         {/* Left column */}
         <div className="w-full lg:w-4/6 px-4 mb-6 flex flex-col">

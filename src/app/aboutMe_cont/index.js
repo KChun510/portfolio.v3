@@ -6,13 +6,13 @@ import Info from './components/info'
 import Creds from './components/creds'
 import Resume from './components/resume'
 
-const SecondCont = ({ id }) => {
+const AboutMeCont = ({ id }) => {
     const [activeTab, setActiveTab] = useState('info'); // Set the initial activeTab state to 'home'
     const handleTabClick = useCallback((tab) => {
         setActiveTab(tab);
     }, [setActiveTab]);
     return (
-        <div id={id}>
+        <div id={id} className="mt-10">
             <div className='row'>
                 <div className='text-4xl font-bold text-white'>About me</div>
             </div>
@@ -46,7 +46,7 @@ const SecondCont = ({ id }) => {
 
 
 
-export default SecondCont;
+export default AboutMeCont;
 
 
 

@@ -2,10 +2,6 @@
     height: 100%;
 }
 
-#aboutMe_cont{
-    min-height: 100vh;
-}
-
 #info_cont{
     text-align: left;
     padding-top: 50px;
@@ -50,7 +46,6 @@ button:focus{
     border-radius: 50%;
 }
 
-
 .flex-items {
     display: inline-block;
     background-color: transparent;
@@ -64,11 +59,7 @@ button:focus{
 }
 
 .display{
-    color: white;
     background-color: rgba(0, 0, 0, 0.9); ;
-    width: 95vw ;
-    min-height: 50vh;
-    height: auto;
 }
 
 

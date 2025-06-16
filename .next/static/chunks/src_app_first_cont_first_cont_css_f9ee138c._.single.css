@@ -9,10 +9,9 @@
   background-color: #000;
 }
 
-.passion {
+.gh_repos {
   aspect-ratio: 16 / 9;
-  background-color: #c88cc4;
-  outline: #000;
+  background-color: #332e2e;
   min-height: 40vh;
 }
 
@@ -20,18 +19,17 @@
   text-align: center;
 }
 
-.menu1 {
+.repo_buttons {
   display: block;
-  background-color: #c289c0 !important;
   border-color: #0000 #0000 #000 !important;
   border-bottom-width: 1px !important;
 }
 
-.list-group-item:hover {
-  background-color: #977596;
+.repo_buttons:hover {
+  background-color: #5c5656;
 }
 
-.passion::-webkit-scrollbar {
+.gh_repos::-webkit-scrollbar {
   display: none;
 }
 

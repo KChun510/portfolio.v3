@@ -2,5 +2,5 @@
   "version": 3,
   "sources": [],
   "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/app/music_cont/music_cont.css"],"sourcesContent":["#music_cont{\n    text-align: left;\n}\n\n.custom_bg{\n      background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */\n}\n\n.songList{\n    aspect-ratio: 16/9;\n    outline: black;\n    min-height: 40vh;\n}\n\n.small_text{\n    text-align: center;\n}\n\n.list-group-item:hover {\n    background-color: #977596;\n}\n\n.songList::-webkit-scrollbar {\n    display: none;\n}\n\n\n\n"],"names":[],"mappings":"AAAA;;;;AAIA;;;;AAIA;;;;;;AAMA;;;;AAIA;;;;AAIA"}}]
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/app/music_cont/music_cont.css"],"sourcesContent":["#music_cont{\n    text-align: left;\n}\n\n.custom_bg{\n      background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */\n}\n\n.songList{\n    aspect-ratio: 16/9;\n    outline: black;\n}\n\n.small_text{\n    text-align: center;\n}\n\n.songList::-webkit-scrollbar {\n    display: none;\n}\n\n\n\n"],"names":[],"mappings":"AAAA;;;;AAIA;;;;AAIA;;;;;AAKA;;;;AAIA"}}]
 }

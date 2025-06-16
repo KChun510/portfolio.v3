@@ -7,10 +7,9 @@
     background-color: black;
 }
 
-.passion{
+.gh_repos{
     aspect-ratio: 16/9;
-    outline: black;
-    background-color: #c88cc4;
+    background-color: #332E2E;
     min-height: 40vh;
 }
 
@@ -18,20 +17,18 @@
     text-align: center;
 }
 
-.menu1{
-    background-color:#c289c0 !important;
+.repo_buttons{
     border-color: transparent !important;
     border-bottom-width: 1px !important;
     border-bottom-color: black !important;
     display: block; /* Ensures the element spans the full width */
-
 }
 
-.list-group-item:hover {
-    background-color: #977596;
+.repo_buttons:hover {
+    background-color: #5C5656;
 }
 
-.passion::-webkit-scrollbar {
+.gh_repos::-webkit-scrollbar {
     display: none;
 }
 

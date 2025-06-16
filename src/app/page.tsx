@@ -18,12 +18,17 @@ const Home = () => {
         <div className="min-h-screen flex flex-col justify-between">
           <HeroCont />
         </div>
-        <FirstCont id="first_cont" />
-        <br />
-        <MusicCont id="music_cont" />
-        <br />
-        <AboutMeCont id="aboutMe_cont" />
-        <br />
+        <div className="min-h-screen">
+          <FirstCont id="first_cont" />
+        </div>
+
+        <div className="min-h-screen">
+          <MusicCont id="music_cont" />
+        </div>
+
+        <div className="min-h-screen">
+          <AboutMeCont id="aboutMe_cont" />
+        </div>
       </QueryClientProvider>
     </div>
   );
