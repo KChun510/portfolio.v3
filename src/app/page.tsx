@@ -12,25 +12,32 @@ const queryClient = new QueryClient()
 
 const Home = () => {
   return (
-    <div className="Home flex flex-col">
+    <div className="Home flex flex-col relative overflow-hidden">
       <QueryClientProvider client={queryClient}>
         <NavBar />
-        <div className="min-h-screen flex flex-col justify-between">
+
+        {/* Hero Section */}
+        <div className="pb-24 md:min-h-screen md:py-0">
           <HeroCont />
         </div>
-        <div className="min-h-screen">
+
+        {/* FirstCont Section */}
+        <div className="py-24 md:min-h-screen md:py-0">
           <FirstCont id="first_cont" />
         </div>
 
-        <div className="min-h-screen">
+        {/* MusicCont Section */}
+        <div className="py-24 md:min-h-screen md:py-0">
           <MusicCont id="music_cont" />
         </div>
 
-        <div className="min-h-screen">
+        {/* AboutMeCont Section */}
+        <div className="py-24 md:min-h-screen md:py-0">
           <AboutMeCont id="aboutMe_cont" />
         </div>
       </QueryClientProvider>
     </div>
+
   );
 }
 

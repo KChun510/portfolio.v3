@@ -12,6 +12,10 @@
   outline: #000;
 }
 
+.topTenList::-webkit-scrollbar {
+  display: none;
+}
+
 .small_text {
   text-align: center;
 }

@@ -1,18 +1,24 @@
 .Home {
-  text-align: center; 
+  text-align: center;
   background-image: url('./components/bg/better_better_dark_city.png');
   background-size: cover;
-  background-position: 50% 20%; /* Adjust placement */
-  min-height: 100vh; 
-  padding:0 ;
+  background-repeat: no-repeat;
+  background-position: 50% 20%;
+  padding: 0;
   margin: 0;
-  overflow: hidden;
 }
 
+/* Desktop only */
+@media (min-width: 768px) {
+  .Home {
+    min-height: 100vh;
+  }
+}
+
+/* Mobile adjustments */
 @media (max-width: 640px) {
   .Home {
     background-position: 50% -350px; /* Pull background image down */
   }
 }
-
 

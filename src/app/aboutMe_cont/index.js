@@ -12,31 +12,47 @@ const AboutMeCont = ({ id }) => {
         setActiveTab(tab);
     }, [setActiveTab]);
     return (
-        <div id={id} className="mt-20">
+        <div id={id} className="mt-50 md:min-h-screen md:mt-20">
+            {/* Title Row */}
             <div className='row'>
                 <div className='text-4xl font-bold text-white'>About me</div>
             </div>
-            <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
-                <button className={`flex-items ${activeTab === 'info' ? 'activeButton' : ''}`} onClick={() => handleTabClick('info')}>
+
+            {/* Tabs */}
+            <div className="flex justify-center">
+                <button
+                    className={`flex-items ${activeTab === 'info' ? 'activeButton' : ''}`}
+                    onClick={() => handleTabClick('info')}
+                >
                     <h5>Information</h5>
                 </button>
-                <button className={`flex-items ${activeTab === 'creds' ? 'activeButton' : ''}`} onClick={() => handleTabClick('creds')}>
+                <button
+                    className={`flex-items ${activeTab === 'creds' ? 'activeButton' : ''}`}
+                    onClick={() => handleTabClick('creds')}
+                >
                     <h5>Credentials</h5>
                 </button>
-                <button className={`flex-items ${activeTab === 'resume' ? 'activeButton' : ''}`} onClick={() => handleTabClick('resume')}>
+                <button
+                    className={`flex-items ${activeTab === 'resume' ? 'activeButton' : ''}`}
+                    onClick={() => handleTabClick('resume')}
+                >
                     <h5>Resume</h5>
                 </button>
             </div>
 
-            <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px', width: '100%', height: "40%" }}>
-                <div className='display' style={{ display: activeTab === 'info' ? 'block' : 'none', padding: '10px' }}>
+            {/* Content */}
+            <div className="flex justify-center w-full">
+                <div className={`display ${activeTab === 'info' ? 'block' : 'hidden'} p-4`}>
                     <Info />
                 </div>
-                <div id="creds_resume" className='display' style={{ display: activeTab === 'creds' ? 'block' : 'none' }}>
+                <div
+                    className={`display ${activeTab === 'creds' ? 'block' : 'hidden'} p-4`}
+                >
                     <Creds />
                 </div>
-
-                <div id="creds_resume" className='display' style={{ display: activeTab === 'resume' ? 'block' : 'none' }}>
+                <div
+                    className={`display ${activeTab === 'resume' ? 'block' : 'hidden'} p-4`}
+                >
                     <Resume />
                 </div>
             </div>

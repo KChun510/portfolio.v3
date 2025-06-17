@@ -2,8 +2,12 @@
 import './first_cont.css';
 import { useQuery } from 'react-query';
 import { pullGitInfo } from '../actions';
+import dynamic from 'next/dynamic';
 import RepoButton from './components/repoButton';
-import WorkShowcase from './components/work_showcase';
+
+const WorkShowcase = dynamic(() => import('./components/work_showcase'), {
+    ssr: false, // disables server-side rendering for this component
+});
 
 const FirstCont = ({ id }) => {
 

@@ -1,1 +1,9 @@
-{}
+{
+  "[project]/src/app/first_cont/components/work_showcase/index.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/src/app/first_cont/components/work_showcase/index.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/_1a129555._.js",
+      "static/chunks/src_app_first_cont_components_work_showcase_index_tsx_43d8a78a._.js"
+    ]
+  }
+}
