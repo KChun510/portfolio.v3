@@ -1,7 +1,9 @@
 import { Octokit } from "octokit"
 import { repo_obj } from "./types";
+import dotenv from 'dotenv'
 import fs from 'fs';
 import path from 'path';
+dotenv.config({ path: path.resolve(__dirname, '../../../.env') })
 
 const octokit = new Octokit({
 	auth: process.env.GH_Token
@@ -9,7 +11,7 @@ const octokit = new Octokit({
 
 const writeFile = async (repoArr: repo_obj[]) => {
 	try {
-		const filePath = path.join(process.cwd(), 'src', 'app', 'caching', 'gitQueryLog.json');
+		const filePath = path.join(process.cwd(), '../', 'caching', 'gitQueryLog.json');
 		const dirPath = path.dirname(filePath);
 		// Ensure the directory exists (if not, create it)
 		if (!fs.existsSync(dirPath)) {

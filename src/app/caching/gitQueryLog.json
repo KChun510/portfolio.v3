@@ -1,300 +1,310 @@
 [
   {
+    "name": "MediaMind",
+    "des": "An automated system used for content generation and posting. ",
+    "url": "https://github.com/KChun510/MediaMind",
+    "lang": {
+      "TypeScript": 212492,
+      "JavaScript": 50300,
+      "Shell": 17535
+    }
+  },
+  {
     "name": "Embedded_Software_c",
     "des": "UCI Class, CS 145: Embedded Software",
     "url": "https://github.com/KChun510/Embedded_Software_c",
-    "lang": [
-      "C"
-    ]
+    "lang": {
+      "C": 77266
+    }
   },
   {
     "name": "LeetCode_Solutions",
     "des": "A collection of all my leet code solved problems.",
     "url": "https://github.com/KChun510/LeetCode_Solutions",
-    "lang": [
-      "Python",
-      "C++",
-      "JavaScript"
-    ]
+    "lang": {
+      "Python": 40531,
+      "C++": 2943,
+      "JavaScript": 1059
+    }
   },
   {
     "name": "nvim",
     "des": "Personal NeoVim Config",
     "url": "https://github.com/KChun510/nvim",
-    "lang": [
-      "Lua"
-    ]
+    "lang": {
+      "Lua": 43707
+    }
   },
   {
     "name": "Mass_Un-assign_Jamf",
     "des": "\"Jamf\" device management system. Using python and selenium library, un-assign users from laptops in mass. 50+ un-assign <1min.",
     "url": "https://github.com/KChun510/Mass_Un-assign_Jamf",
-    "lang": [
-      "Python"
-    ]
+    "lang": {
+      "Python": 3950
+    }
   },
   {
     "name": "FileFlow",
     "des": "A lightweight, command-line tool for managing and processing file queues efficiently. Designed for simplicity, flexibility, and integration into existing workflows.",
     "url": "https://github.com/KChun510/FileFlow",
-    "lang": [
-      "Shell"
-    ]
+    "lang": {
+      "Shell": 5009
+    }
   },
   {
     "name": "UCI_cPP_Prep",
     "des": "Collection of work in CPP from studies at UCI. (ICS 45 and 46)",
     "url": "https://github.com/KChun510/UCI_cPP_Prep",
-    "lang": [
-      "C++",
-      "Makefile",
-      "C"
-    ]
+    "lang": {
+      "C++": 13529,
+      "Makefile": 1105,
+      "C": 82
+    }
   },
   {
     "name": "MediaCheck",
     "des": "MediaCheck uses Google Gemini to check videos for quality and compliance. It ensures content meets guidelines and has no errors before publishing.",
     "url": "https://github.com/KChun510/MediaCheck",
-    "lang": [
-      "TypeScript"
-    ]
+    "lang": {
+      "TypeScript": 2359
+    }
   },
   {
     "name": "GrayHat_Studies",
     "des": "Journey of deeper understanding...",
     "url": "https://github.com/KChun510/GrayHat_Studies",
-    "lang": [
-      "PowerShell",
-      "Python",
-      "C",
-      "HCL",
-      "Assembly",
-      "Shell",
-      "Makefile",
-      "Rust",
-      "Dockerfile",
-      "HTML",
-      "JavaScript"
-    ]
+    "lang": {
+      "PowerShell": 2868904,
+      "Python": 216592,
+      "C": 214171,
+      "HCL": 51927,
+      "Assembly": 36358,
+      "Shell": 10697,
+      "Makefile": 5992,
+      "Rust": 3659,
+      "Dockerfile": 1670,
+      "HTML": 1465,
+      "JavaScript": 1386
+    }
   },
   {
     "name": "wezterm",
     "des": "Public config for Wezterm.",
     "url": "https://github.com/KChun510/wezterm",
-    "lang": [
-      "Lua"
-    ]
+    "lang": {
+      "Lua": 964
+    }
   },
   {
     "name": "Twitch-API-TS-Node",
     "des": "Quick Start Guide/ boiler plate code to get you started making API request to Twitch.  Including Automatic OAuth 2.0 Access Token Refreshing.",
     "url": "https://github.com/KChun510/Twitch-API-TS-Node",
-    "lang": [
-      "TypeScript"
-    ]
+    "lang": {
+      "TypeScript": 3569
+    }
   },
   {
     "name": "Quality-Of-Life-Bash-Scripts",
     "des": "In the pursuit of eliminating mouse usage, these scripts were created.",
     "url": "https://github.com/KChun510/Quality-Of-Life-Bash-Scripts",
-    "lang": [
-      "Shell"
-    ]
+    "lang": {
+      "Shell": 664
+    }
   },
   {
     "name": "TermTris_Tetris-In-the-CLI",
     "des": "A recreation of Tetris that runs in a Terminal/Command Prompt!",
     "url": "https://github.com/KChun510/TermTris_Tetris-In-the-CLI",
-    "lang": [
-      "Python"
-    ]
+    "lang": {
+      "Python": 17885
+    }
   },
   {
     "name": "Precision",
     "des": "A web application thats engineered to produce quick and precise response's, using natural language to sql.",
     "url": "https://github.com/KChun510/Precision",
-    "lang": [
-      "JavaScript",
-      "TypeScript",
-      "CSS",
-      "HTML"
-    ]
+    "lang": {
+      "JavaScript": 12368,
+      "TypeScript": 9841,
+      "CSS": 3393,
+      "HTML": 476
+    }
   },
   {
     "name": "Web-Assets",
     "des": "Assets used on personal website.",
     "url": "https://github.com/KChun510/Web-Assets",
-    "lang": []
+    "lang": {}
   },
   {
     "name": "Cpp-Linked-List-Practice",
     "des": "As part of my exam prep, taking time to get a understanding of cPP linked list.",
     "url": "https://github.com/KChun510/Cpp-Linked-List-Practice",
-    "lang": [
-      "C++"
-    ]
+    "lang": {
+      "C++": 4727
+    }
   },
   {
     "name": "Node.JS-SQLITE-Connector",
     "des": "A simple connector, from Node.JS to local SQLDB. Contains two files, for appending to two separate tables.",
     "url": "https://github.com/KChun510/Node.JS-SQLITE-Connector",
-    "lang": [
-      "TypeScript"
-    ]
+    "lang": {
+      "TypeScript": 2976
+    }
   },
   {
     "name": "TS_FastFoodItem_Scraper",
     "des": "Needed test data for a side project. Using TypeScript + selenium, I scraped Wendy's, BurgerKing, and TacoBell for menu/item data.",
     "url": "https://github.com/KChun510/TS_FastFoodItem_Scraper",
-    "lang": [
-      "TypeScript"
-    ]
+    "lang": {
+      "TypeScript": 14425
+    }
   },
   {
     "name": "itToolset_GUI",
     "des": "A GUI, with JAMF api calls in the background. Developed to abstract the code from querying data in JAMF. Meant to give non-coders on the team ability to pull sorted data.",
     "url": "https://github.com/KChun510/itToolset_GUI",
-    "lang": [
-      "Python"
-    ]
+    "lang": {
+      "Python": 4582
+    }
   },
   {
     "name": "Dungeon-Mini-Game",
     "des": "Using CPP classes, I created a turn based game. Player Vs. Creature, text based game in terminal.",
     "url": "https://github.com/KChun510/Dungeon-Mini-Game",
-    "lang": [
-      "C++"
-    ]
+    "lang": {
+      "C++": 5596
+    }
   },
   {
     "name": "Pandas_CSV_School_Data",
     "des": "CSV files used for my Ed_Plan_Builder website, contains data on school transfer requirements. ",
     "url": "https://github.com/KChun510/Pandas_CSV_School_Data",
-    "lang": []
+    "lang": {}
   },
   {
     "name": "BankingCalculator",
     "des": "A simple app, that calculates Interest rates on different types of loans.",
     "url": "https://github.com/KChun510/BankingCalculator",
-    "lang": [
-      "Python"
-    ]
+    "lang": {
+      "Python": 7116
+    }
   },
   {
     "name": "Breathing",
     "des": "A web-page component, with a breath in and breath out animation. Used for \"Bee like coders\" hackathon.",
     "url": "https://github.com/KChun510/Breathing",
-    "lang": [
-      "HTML",
-      "JavaScript"
-    ]
+    "lang": {
+      "HTML": 3849,
+      "JavaScript": 1201
+    }
   },
   {
     "name": "Persnoal_Website_v1",
     "des": "First Iteration of my personal website. ",
     "url": "https://github.com/KChun510/Persnoal_Website_v1",
-    "lang": [
-      "HTML"
-    ]
+    "lang": {
+      "HTML": 24758
+    }
   },
   {
     "name": "Dice_Game",
     "des": "Python Object Oriented Programming Class project. Turn based dice rolling game.",
     "url": "https://github.com/KChun510/Dice_Game",
-    "lang": [
-      "Python"
-    ]
+    "lang": {
+      "Python": 31267
+    }
   },
   {
     "name": "Ants_Game",
     "des": "Python Object Oriented Programming Class project. Plant Vs. Zombies style game.",
     "url": "https://github.com/KChun510/Ants_Game",
-    "lang": [
-      "Python"
-    ]
+    "lang": {
+      "Python": 45071
+    }
   },
   {
     "name": "Get_Jamf_asset_status",
     "des": "\"Jamf\" - Device Management System. Written in python and using selenium library, navigate through JAMF's UI and gather asset statuses rapidly, search asset by serial number. ",
     "url": "https://github.com/KChun510/Get_Jamf_asset_status",
-    "lang": [
-      "Python"
-    ]
+    "lang": {
+      "Python": 3889
+    }
   },
   {
     "name": "Get_Oomnitza_Status",
     "des": "\"Oomnitza\" - Enterprise Technology Management. Written in python using the selenium library, navigate through Oomnitza UI to collect asset statuses.  ",
     "url": "https://github.com/KChun510/Get_Oomnitza_Status",
-    "lang": [
-      "Python"
-    ]
+    "lang": {
+      "Python": 2693
+    }
   },
   {
     "name": "Ed_Plan_Builder_v2",
     "des": "Ed_Plan_Builder, an edd plan builder for college transfer students. Inform students on the transfer process and build the most effective transfer plan.",
     "url": "https://github.com/KChun510/Ed_Plan_Builder_v2",
-    "lang": [
-      "JavaScript",
-      "CSS",
-      "HTML"
-    ]
+    "lang": {
+      "JavaScript": 24295,
+      "CSS": 2521,
+      "HTML": 2327
+    }
   },
   {
     "name": "Ed_Plan_Builder_v1",
     "des": "Ed_Plan_Builder, an edd plan builder for college transfer students. Inform students on the transfer process and build the most effective transfer plan. ",
     "url": "https://github.com/KChun510/Ed_Plan_Builder_v1",
-    "lang": [
-      "HTML",
-      "JavaScript"
-    ]
+    "lang": {
+      "HTML": 22068,
+      "JavaScript": 3478
+    }
   },
   {
     "name": "Inventory_Scanner",
     "des": "Using a Barcode Scanner combined with python, this script allows you to check if the asset is in your inventory system. Import inventory assets Via csv, and use any barcode scanner. ",
     "url": "https://github.com/KChun510/Inventory_Scanner",
-    "lang": [
-      "Python"
-    ]
+    "lang": {
+      "Python": 1330
+    }
   },
   {
     "name": "Bee-Like-Coders-Hackathon",
     "des": "Landing page for BeeLikeCoderz hackathon ",
     "url": "https://github.com/KChun510/Bee-Like-Coders-Hackathon",
-    "lang": [
-      "HTML",
-      "JavaScript"
-    ]
+    "lang": {
+      "HTML": 21785,
+      "JavaScript": 4215
+    }
   },
   {
     "name": "Hackathon_CSV_BeeLikeCoders",
     "des": "CSV File containing physical activities in bay area, Workouts videos, and Healthy/Easy Recipes",
     "url": "https://github.com/KChun510/Hackathon_CSV_BeeLikeCoders",
-    "lang": []
+    "lang": {}
   },
   {
     "name": "Automatic_Switch",
     "des": "Got an itch to do real machine programming. The following scripts are meant for control of servo motors.",
     "url": "https://github.com/KChun510/Automatic_Switch",
-    "lang": [
-      "Python"
-    ]
+    "lang": {
+      "Python": 3854
+    }
   },
   {
     "name": "Facial-Recognition",
     "des": "A c++ project, utilizing the open CV library.",
     "url": "https://github.com/KChun510/Facial-Recognition",
-    "lang": [
-      "C++"
-    ]
+    "lang": {
+      "C++": 3310163
+    }
   },
   {
     "name": "EnvironmentTrivia",
     "des": "Ecohacks project 2022",
     "url": "https://github.com/KChun510/EnvironmentTrivia",
-    "lang": [
-      "HTML",
-      "JavaScript",
-      "CSS"
-    ]
+    "lang": {
+      "HTML": 17871,
+      "JavaScript": 11492,
+      "CSS": 5261
+    }
   }
 ]
