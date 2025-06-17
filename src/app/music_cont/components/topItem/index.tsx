@@ -10,12 +10,12 @@ type TopItemProps = filtered_top_data & {
 function TopItem({ className = '', name, external_urls, album, artists }: TopItemProps) {
 	return (
 		// Outer border with full width
-		<div className={`w-full border-b border-black ${className}`}>
+		<div className={`w-full ${className}`}>
 			{/* Padded inner content */}
 			<div className="flex items-center gap-4 py-2">
 				{/* Album Cover */}
-				<div className="w-[100px] shrink-0">
-					<Image className="rounded" src={album.images[1].url} height={100} width={100} alt="album logo" />
+				<div className="relative w-[50px] h-[50px] md:w-[100px] md:h-[100px] shrink-0">
+					<Image className="rounded" src={album.images[1].url} fill alt="album logo" />
 				</div>
 				{/* Song Info */}
 				<div className="w-full">

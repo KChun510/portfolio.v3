@@ -25,21 +25,19 @@ const MusicCont = ({ id }: { id: string }) => {
   });
 
   return (
-    <div id={id} className="md:min-h-screen">
-      <h1 className="text-6xl font-bold ml-8">Music ♫</h1>
-
-      <div className="flex flex-col lg:flex-row flex-wrap mt-1 mx-4 pb-6 rounded-lg">
+    <div id={id} className="md:min-h-screen md:scroll-mt-32">
+      <h1 className="text-6xl font-bold mx-2 mb-1 md:ml-6">Music ♫</h1>
+      <div className="flex flex-col md:flex-row flex-wrap mx-2 md:mx-6 rounded-lg">
         {/* Left column */}
-        <div className="w-full lg:w-4/6 px-4 mb-6 flex flex-col box-border">
-          <SearchBar className="w-full mb-6" />
-
-          <div className="songList custom_bg overflow-auto w-full border-2 border-black rounded-lg flex-1">
+        <div className="w-full w-1/2 md:w-4/6 flex flex-col max-h-[75vh]">
+          <SearchBar className="w-full mb-2" />
+          <div className="songList custom_bg overflow-auto w-full border-2 border-transparent rounded-lg flex-1">
             <div className="list-group border-black">
               {!isLoadingPlaylist && playListSongs
                 ? playListSongs.map(({ song_name, song_url, album_cover, artists_data }) => (
                   <SongButton
                     key={song_name}
-                    className="border-b-[.5px] border-white py-2 px-2 break-words"
+                    className="py-2 px-2 break-words"
                     song_name={song_name}
                     song_url={song_url}
                     album_cover={album_cover}
@@ -52,22 +50,27 @@ const MusicCont = ({ id }: { id: string }) => {
         </div>
 
         {/* Right column */}
-        <div className="custom_bg w-full lg:w-2/6 px-4 mb-6 flex flex-col box-border">
-          <div className="songList flex flex-col flex-1 min-h-0 border-2 border-black rounded-lg">
-            <div className="px-2 py-2 flex flex-col h-full">
-              <h2 className="text-4xl font-bold mb-2">Currently in ear</h2>
-              <div className="rounded-lg bg-[#332E2E] w-full p-4 mb-4 text-white">
+        <div className="w-full md:w-2/6 md:pl-4 mb-6 flex flex-col h-[75vh]">
+          {/* Make sure this fills available height */}
+          <div className="flex flex-col flex-1 h-full">
+            <div className="py-2 flex flex-col flex-1 h-full md:px-2 md:py-0">
+              <h2 className="text-4xl font-bold mb-1">In My Ears</h2>
+
+              {/* First content block */}
+              <div className="rounded-lg custom_bg w-full p-4 mb-4 text-white">
                 {!isLoadingCurr && currTrack ? <CurrSongPreview {...currTrack} /> : null}
               </div>
 
-              <h2 className="text-4xl font-bold mb-2">My top 10</h2>
-              <div className="topTenList rounded-lg bg-[#332E2E] w-full text-white overflow-auto flex-1 min-h-[200px] max-h-[60vh]">
-                <div className="list-group border-black w-full">
+              <h2 className="text-4xl font-bold mb-2">Top 10 Most Played</h2>
+
+              {/* Second block: make scrollable if long */}
+              <div className="topTenList custom_bg border-transparent border-2 rounded-lg w-full text-white overflow-auto flex-1 mb-1">
+                <div className="list-group w-full">
                   {!isLoadingTopItems && topItems
                     ? topItems.map((elem) => (
                       <TopItem
                         key={elem.name}
-                        className="w-full border-b border-black py-2 px-2 break-words"
+                        className="w-full py-2 px-2 break-words"
                         {...elem}
                       />
                     ))
@@ -77,6 +80,7 @@ const MusicCont = ({ id }: { id: string }) => {
             </div>
           </div>
         </div>
+
       </div>
     </div>
   );

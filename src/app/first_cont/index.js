@@ -4,7 +4,6 @@ import { useQuery } from 'react-query';
 import { pullGitInfo } from '../actions';
 import dynamic from 'next/dynamic';
 import RepoButton from './components/repoButton';
-import { useEffect } from 'react';
 
 const WorkShowcase = dynamic(() => import('./components/work_showcase'), {
     ssr: false, // disables server-side rendering for this component
@@ -17,23 +16,14 @@ const FirstCont = ({ id }) => {
         queryFn: async () => await pullGitInfo()
     });
 
-    console.log(repos)
-
-    useEffect(() => {
-        if (!isLoading) {
-            console.error("Logging from first cont")
-            console.log(repos)
-        }
-    }, [repos, isLoading])
-
     return (
         <div id={id}>
-            <h1 className="text-6xl font-bold ml-7">Projects</h1>
-            <div className="flex flex-col lg:flex-row flex-wrap mt-1 ml-2 min-h-[75vh]">
+            <h1 className="text-6xl font-bold ml-2.5 md:ml-6">Projects</h1>
+            <div className="flex flex-col lg:flex-row flex-wrap mt-1 md:mx-2 min-h-[75vh]">
                 <WorkShowcase />
-                <div className="w-full lg:w-1/2 px-4 ">
+                <div className="w-full lg:w-1/2 px-2 md:px-4 ">
                     <div className="px-auto">
-                        <h5 className="text-3xl font-semibold ml-1">Public Repositorys</h5>
+                        <h5 className="text-3xl font-semibold">Public Repositorys</h5>
                     </div>
                     <div className="gh_repos overflow-auto w-full border-1 border-black rounded">
                         <div>

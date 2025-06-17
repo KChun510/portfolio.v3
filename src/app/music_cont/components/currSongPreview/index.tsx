@@ -10,8 +10,8 @@ const CurrSongPreview = ({ className = '', is_playing, progress_ms, song_artists
 }: CurrSongProps) => {
 	return (
 		<div className={`flex flex-row items-start gap-4 ${className}`}>
-			<div className="w-[100px] shrink-0">
-				<Image className="rounded" src={song_cover_art ? song_cover_art[1].url : blank_album_cover} height={100} width={100} alt="album logo" />
+			<div className="relative w-[50px] h-[50px] md:w-[100px] md:h-[100px] shrink-0">
+				<Image className="rounded" src={song_cover_art ? song_cover_art[1].url : blank_album_cover} fill alt="album logo" />
 			</div>
 			<div className="w-full">
 				<a href={song_direct_link ?? undefined} target="_blank" rel="noopener noreferrer">

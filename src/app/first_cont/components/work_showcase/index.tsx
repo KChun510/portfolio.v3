@@ -18,8 +18,8 @@ const WorkShowcase = () => {
 	}, [playSlide])
 
 	return (
-		<div className="w-full lg:w-1/2 px-4 mb-6 lg:mb-0" onClick={(e) => setSlideState(0)}>
-			<h6 className="text-3xl font-semibold ml-1">Live builds & diagrams </h6>
+		<div className="w-full lg:w-1/2 px-3 mb-6 md:px-4 md:mb-0" onClick={(e) => setSlideState(0)}>
+			<h6 className="text-3xl font-semibold">Builds in Action</h6>
 			<div id='work_showcase' className="aspect-w-16 aspect-h-9 rounded shadow border-1 border-white">
 				{slides[index]}
 			</div>

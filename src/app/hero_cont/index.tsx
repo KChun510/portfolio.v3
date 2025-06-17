@@ -1,5 +1,9 @@
 const scrollToSection = (sectionId: string) => {
-	document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+	const isMobile = window.innerWidth <= 768; // Tailwind's md breakpoint is 768px
+	document.getElementById(sectionId)?.scrollIntoView({
+		behavior: 'smooth',
+		block: isMobile ? 'start' : 'center',
+	});
 };
 
 const HeroCont = () => {
@@ -12,9 +16,10 @@ const HeroCont = () => {
 				</div>
 			</div>
 			<div className="mx-6 flex space-x-4">
-				<button className="bg-[#302c2c] hover:bg-[#4a4545] text-white font-bold py-2 px-4 rounded" onClick={() => scrollToSection('first_cont')}> Projects </button>
-				<button className="bg-[#302c2c] hover:bg-[#4a4545] text-white font-bold py-2 px-4 rounded" onClick={() => scrollToSection('aboutMe_cont')}> About Me </button>
-				<button className="bg-[#302c2c] hover:bg-[#4a4545] text-white font-bold py-2 px-4 rounded" onClick={() => scrollToSection('music_cont')}> Suggest a song </button>
+				<button className="bg-[#302c2c] hover:bg-[#4a4545] text-white font-bold py-2 px-4 rounded text-sm md:text-base" onClick={() => scrollToSection('first_cont')}> Projects </button>
+				<button className="bg-[#302c2c] hover:bg-[#4a4545] text-white font-bold py-2 px-4 rounded text-sm md:text-base" onClick={() => scrollToSection('music_cont')}> Suggest a song </button>
+				<button className="bg-[#302c2c] hover:bg-[#4a4545] text-white font-bold py-2 px-4 rounded text-sm md:text-base" onClick={() => scrollToSection('aboutMe_cont')}> About Me </button>
+
 			</div>
 		</div>
 	)

@@ -12,7 +12,7 @@ const AboutMeCont = ({ id }) => {
         setActiveTab(tab);
     }, [setActiveTab]);
     return (
-        <div id={id} className="mt-50 md:min-h-screen md:mt-20">
+        <div id={id}>
             {/* Title Row */}
             <div className='row'>
                 <div className='text-4xl font-bold text-white'>About me</div>
