@@ -4,6 +4,7 @@ import { useQuery } from 'react-query';
 import { pullGitInfo } from '../actions';
 import dynamic from 'next/dynamic';
 import RepoButton from './components/repoButton';
+import { useEffect } from 'react';
 
 const WorkShowcase = dynamic(() => import('./components/work_showcase'), {
     ssr: false, // disables server-side rendering for this component
@@ -15,6 +16,15 @@ const FirstCont = ({ id }) => {
         queryKey: ['repoData'],
         queryFn: async () => await pullGitInfo()
     });
+
+    console.log(repos)
+
+    useEffect(() => {
+        if (!isLoading) {
+            console.error("Logging from first cont")
+            console.log(repos)
+        }
+    }, [repos, isLoading])
 
     return (
         <div id={id}>
