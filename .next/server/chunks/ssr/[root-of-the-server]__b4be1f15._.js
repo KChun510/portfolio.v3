@@ -901,7 +901,7 @@ const AboutMeCont = ({ id })=>{
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "row",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "text-4xl font-bold text-white",
+                    className: "text-4xl font-bold text-white justify-center",
                     children: "About me"
                 }, void 0, false, {
                     fileName: "[project]/src/app/aboutMe_cont/index.js",
@@ -914,13 +914,13 @@ const AboutMeCont = ({ id })=>{
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex justify-center",
+                className: "flex flex-row space-x-3 md:space-x-20 m-10 md:m-10 justify-center",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                        className: `flex-items ${activeTab === 'info' ? 'activeButton' : ''}`,
-                        onClick: ()=>handleTabClick('info'),
+                        className: `flex-items ${activeTab === 'creds' ? 'activeButton' : ''}`,
+                        onClick: ()=>handleTabClick('creds'),
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h5", {
-                            children: "Information"
+                            children: "Credentials"
                         }, void 0, false, {
                             fileName: "[project]/src/app/aboutMe_cont/index.js",
                             lineNumber: 27,
@@ -932,10 +932,10 @@ const AboutMeCont = ({ id })=>{
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                        className: `flex-items ${activeTab === 'creds' ? 'activeButton' : ''}`,
-                        onClick: ()=>handleTabClick('creds'),
+                        className: `flex-items ${activeTab === 'info' ? 'activeButton' : ''}`,
+                        onClick: ()=>handleTabClick('info'),
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h5", {
-                            children: "Credentials"
+                            children: "Information"
                         }, void 0, false, {
                             fileName: "[project]/src/app/aboutMe_cont/index.js",
                             lineNumber: 33,
@@ -1519,6 +1519,7 @@ __turbopack_context__.s({
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$first_cont$2f$components$2f$langIcons$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/app/first_cont/components/langIcons/index.js [app-ssr] (ecmascript)");
+'use client';
 ;
 ;
 ;
@@ -1541,17 +1542,17 @@ function RepoButton({ name, des, url, lang }) {
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/first_cont/components/repoButton/index.js",
-                        lineNumber: 8,
+                        lineNumber: 9,
                         columnNumber: 8
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/app/first_cont/components/repoButton/index.js",
-                    lineNumber: 8,
+                    lineNumber: 9,
                     columnNumber: 5
                 }, this)
             }, name, false, {
                 fileName: "[project]/src/app/first_cont/components/repoButton/index.js",
-                lineNumber: 7,
+                lineNumber: 8,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1559,7 +1560,7 @@ function RepoButton({ name, des, url, lang }) {
                 children: des ? des : "No description given."
             }, void 0, false, {
                 fileName: "[project]/src/app/first_cont/components/repoButton/index.js",
-                lineNumber: 10,
+                lineNumber: 11,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1568,18 +1569,18 @@ function RepoButton({ name, des, url, lang }) {
                         lang: key
                     }, `${name}+${key}`, false, {
                         fileName: "[project]/src/app/first_cont/components/repoButton/index.js",
-                        lineNumber: 13,
+                        lineNumber: 14,
                         columnNumber: 6
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/src/app/first_cont/components/repoButton/index.js",
-                lineNumber: 11,
+                lineNumber: 12,
                 columnNumber: 4
             }, this)
         ]
     }, name, true, {
         fileName: "[project]/src/app/first_cont/components/repoButton/index.js",
-        lineNumber: 6,
+        lineNumber: 7,
         columnNumber: 3
     }, this);
 }
@@ -1626,7 +1627,7 @@ const FirstCont = ({ id })=>{
         id: id,
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                className: "text-6xl font-bold ml-6",
+                className: "text-6xl font-bold ml-2.5 md:ml-6",
                 children: "Projects"
             }, void 0, false, {
                 fileName: "[project]/src/app/first_cont/index.js",
@@ -1634,7 +1635,7 @@ const FirstCont = ({ id })=>{
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex flex-col lg:flex-row flex-wrap mt-1 ml-2 min-h-[75vh]",
+                className: "flex flex-col lg:flex-row flex-wrap mt-1 md:mx-2 min-h-[75vh]",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(WorkShowcase, {}, void 0, false, {
                         fileName: "[project]/src/app/first_cont/index.js",
@@ -1642,12 +1643,12 @@ const FirstCont = ({ id })=>{
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "w-full lg:w-1/2 px-4 ",
+                        className: "w-full lg:w-1/2 px-2 md:px-4 ",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "px-auto",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h5", {
-                                    className: "text-3xl font-semibold ml-1",
+                                    className: "text-3xl font-semibold",
                                     children: "Public Repositorys"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/first_cont/index.js",
@@ -1744,9 +1745,10 @@ __turbopack_context__.s({
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 ;
 const scrollToSection = (sectionId)=>{
+    const isMobile = window.innerWidth <= 768; // Tailwind's md breakpoint is 768px
     document.getElementById(sectionId)?.scrollIntoView({
         behavior: 'smooth',
-        block: 'center'
+        block: isMobile ? 'start' : 'center'
     });
 };
 const HeroCont = ()=>{
@@ -1762,7 +1764,7 @@ const HeroCont = ()=>{
                             children: "Kyle Chun"
                         }, void 0, false, {
                             fileName: "[project]/src/app/hero_cont/index.tsx",
-                            lineNumber: 10,
+                            lineNumber: 14,
                             columnNumber: 6
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h6", {
@@ -1770,18 +1772,18 @@ const HeroCont = ()=>{
                             children: "Oakland-Born engineer. Building systems that echo the pace of the city."
                         }, void 0, false, {
                             fileName: "[project]/src/app/hero_cont/index.tsx",
-                            lineNumber: 11,
+                            lineNumber: 15,
                             columnNumber: 6
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/hero_cont/index.tsx",
-                    lineNumber: 9,
+                    lineNumber: 13,
                     columnNumber: 5
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/hero_cont/index.tsx",
-                lineNumber: 8,
+                lineNumber: 12,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1793,7 +1795,7 @@ const HeroCont = ()=>{
                         children: " Projects "
                     }, void 0, false, {
                         fileName: "[project]/src/app/hero_cont/index.tsx",
-                        lineNumber: 15,
+                        lineNumber: 19,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1802,7 +1804,7 @@ const HeroCont = ()=>{
                         children: " Suggest a song "
                     }, void 0, false, {
                         fileName: "[project]/src/app/hero_cont/index.tsx",
-                        lineNumber: 16,
+                        lineNumber: 20,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1811,19 +1813,19 @@ const HeroCont = ()=>{
                         children: " About Me "
                     }, void 0, false, {
                         fileName: "[project]/src/app/hero_cont/index.tsx",
-                        lineNumber: 17,
+                        lineNumber: 21,
                         columnNumber: 5
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/hero_cont/index.tsx",
-                lineNumber: 14,
+                lineNumber: 18,
                 columnNumber: 4
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/hero_cont/index.tsx",
-        lineNumber: 7,
+        lineNumber: 11,
         columnNumber: 3
     }, this);
 };
@@ -1845,13 +1847,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$aboutMe_cont$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/app/aboutMe_cont/index.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$first_cont$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/app/first_cont/index.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$hero_cont$2f$index$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/app/hero_cont/index.tsx [app-ssr] (ecmascript)");
-(()=>{
-    const e = new Error("Cannot find module './music_cont'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
 'use client';
-;
 ;
 ;
 ;
@@ -1899,30 +1895,16 @@ const Home = ()=>{
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "py-24 md:min-h-screen md:py-0",
-                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(MusicCont, {
-                        id: "music_cont"
-                    }, void 0, false, {
-                        fileName: "[project]/src/app/page.tsx",
-                        lineNumber: 31,
-                        columnNumber: 11
-                    }, this)
-                }, void 0, false, {
-                    fileName: "[project]/src/app/page.tsx",
-                    lineNumber: 30,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "py-24 md:min-h-screen md:py-0",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$aboutMe_cont$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                         id: "aboutMe_cont"
                     }, void 0, false, {
                         fileName: "[project]/src/app/page.tsx",
-                        lineNumber: 36,
+                        lineNumber: 33,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/app/page.tsx",
-                    lineNumber: 35,
+                    lineNumber: 32,
                     columnNumber: 9
                 }, this)
             ]

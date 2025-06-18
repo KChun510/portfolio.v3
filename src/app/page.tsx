@@ -1,12 +1,13 @@
 'use client'
 import React from "react";
+import dynamic from 'next/dynamic';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import NavBar from './components/nav'
 import './Home.css';
 import AboutMeCont from './aboutMe_cont'
 import FirstCont from './first_cont'
 import HeroCont from './hero_cont';
-import MusicCont from './music_cont';
+const MusicCont = dynamic(() => import('./music_cont'), { ssr: false });
 
 const queryClient = new QueryClient()
 
@@ -35,6 +36,7 @@ const Home = () => {
         <div className="py-24 md:min-h-screen md:py-0">
           <AboutMeCont id="aboutMe_cont" />
         </div>
+
       </QueryClientProvider>
     </div>
 
@@ -42,3 +44,6 @@ const Home = () => {
 }
 
 export default Home;
+
+
+

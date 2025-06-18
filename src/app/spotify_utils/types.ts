@@ -202,9 +202,8 @@ export type topTracks = {
 	uri: string;
 }
 
-export type filtered_top_data = {
-	name: string,
-	external_urls: { spotify: string };
+export type filtered_data_basic = {
+	name: string;
 	artists: {
 		external_urls: { spotify: string };
 		href: string;
@@ -228,4 +227,18 @@ export type filtered_top_data = {
 		uri: string;
 	};
 }
+
+export type filtered_top_data = filtered_data_basic & {
+	external_urls: { spotify: string };
+}
+
+export type filtered_search_data = filtered_data_basic & {
+	uri: string;
+}
+
+
+
+
+
+
 

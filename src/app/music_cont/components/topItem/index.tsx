@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import { User } from 'lucide-react';
 import { filtered_top_data } from '@/app/spotify_utils/types';
 
 type TopItemProps = filtered_top_data & {

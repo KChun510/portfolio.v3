@@ -2,8 +2,16 @@
   "[project]/src/app/first_cont/components/work_showcase/index.tsx [app-client] (ecmascript, next/dynamic entry)": {
     "id": "[project]/src/app/first_cont/components/work_showcase/index.tsx [app-client] (ecmascript, next/dynamic entry)",
     "files": [
-      "static/chunks/_1a129555._.js",
-      "static/chunks/src_app_first_cont_components_work_showcase_index_tsx_43d8a78a._.js"
+      "static/chunks/_988af074._.js",
+      "static/chunks/src_app_first_cont_components_work_showcase_index_tsx_75ee56c0._.js"
+    ]
+  },
+  "[project]/src/app/music_cont/index.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/src/app/music_cont/index.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/src_app_music_cont_music_cont_6962e91a.css",
+      "static/chunks/_d110ae2d._.js",
+      "static/chunks/src_app_music_cont_index_tsx_75ee56c0._.js"
     ]
   }
 }

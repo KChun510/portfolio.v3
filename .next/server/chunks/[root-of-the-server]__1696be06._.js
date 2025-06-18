@@ -215,7 +215,14 @@ async function search_spotify() {
             return null;
         }
         const data = await res.json();
-        return data.tracks.items;
+        const track_data = data.tracks.items;
+        const filtered_data = track_data.map(({ name, album, artists, uri })=>({
+                name,
+                album,
+                artists,
+                uri
+            }));
+        return filtered_data;
     } catch (err) {
         console.error('Failed to fetch search: ', err);
         return null;
@@ -341,6 +348,9 @@ async function get_top_items() {
         return null;
     }
 }
+(async function main() {
+//console.log(await search_spotify())
+})();
 }}),
 "[project]/src/app/api/spotify/get_top_items/route.tsx [app-route] (ecmascript)": ((__turbopack_context__) => {
 "use strict";

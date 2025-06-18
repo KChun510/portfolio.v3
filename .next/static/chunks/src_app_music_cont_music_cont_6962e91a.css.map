@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file:///home/toastycommand/Desktop/portfolio.v3/src/app/music_cont/music_cont.css"],"sourcesContent":["#music_cont{\n    text-align: left;\n}\n\n.custom_bg{\n    background-color: rgba(51, 46, 46, 0.5); \n    /*background-color: rgba(255, 255, 255, 0.5);*/\n    /*background-color: rgba(0, 0, 0, 0.5); */\n}\n\n.songList{\n    aspect-ratio: 16/9;\n    outline: black;\n}\n\n.topTenList::-webkit-scrollbar{\n    display: none;\n}\n\n.small_text{\n    text-align: center;\n}\n\n.songList::-webkit-scrollbar {\n    display: none;\n}\n\n.modal_songList::-webkit-scrollbar {\n    display: none;\n}\n\n\n\n\n"],"names":[],"mappings":"AAAA;;;;AAIA;;;;AAMA;;;;;AAKA;;;;AAIA;;;;AAIA;;;;AAIA","debugId":null}}]
+}

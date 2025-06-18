@@ -21,19 +21,19 @@
 }
 
 @media (width <= 750px) {
-  button:hover, button:focus {
+  .hidden-mobile {
+    display: none;
+  }
+
+  button:focus {
     box-shadow: none !important;
     background-color: #0000 !important;
     border: none !important;
   }
-
-  .hidden-mobile {
-    display: none;
-  }
 }
 
-button:hover, button:focus {
-  background-color: #00000080;
+button:hover {
+  background-color: #332e2e80;
 }
 
 .button {
@@ -43,13 +43,11 @@ button:hover, button:focus {
 .flex-items {
   color: #fff;
   background-color: #0000;
-  border: none;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid #fff;
   justify-content: left;
-  width: 15%;
-  margin: 40px;
+  padding-left: 1rem;
+  padding-right: 1rem;
   font-size: larger;
-  display: inline-block;
 }
 
 .display {

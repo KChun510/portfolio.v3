@@ -14,6 +14,22 @@ async function readJSONFile() {
   }
 }
 
+export const search_items = async () => {
+  try {
+    const res = await fetch('/api/spotify/search_spotify', {
+      method: "POST",
+      headers: {
+        'Content-type': 'application/json'
+      },
+      body: JSON.stringify("test")
+    })
+    const data = await res.json()
+    return data
+  } catch (e) {
+    console.error(e)
+  }
+}
+
 export const get_top_items = async () => {
   try {
     const res = await fetch('/api/spotify/get_top_items', {

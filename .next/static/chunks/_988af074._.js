@@ -395,11 +395,11 @@ const WorkShowcase = ()=>{
         playSlide
     ]);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "w-full lg:w-1/2 px-4 mb-6 lg:mb-0",
+        className: "w-full lg:w-1/2 px-3 mb-6 md:px-4 md:mb-0",
         onClick: (e)=>setSlideState(0),
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h6", {
-                className: "text-3xl font-semibold ml-1",
+                className: "text-3xl font-semibold",
                 children: "Builds in Action"
             }, void 0, false, {
                 fileName: "[project]/src/app/first_cont/components/work_showcase/index.tsx",

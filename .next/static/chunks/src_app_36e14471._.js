@@ -904,7 +904,6 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$aboutMe_cont$2
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$aboutMe_cont$2f$components$2f$resume$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/app/aboutMe_cont/components/resume/index.js [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
-'use client';
 ;
 ;
 ;
@@ -927,36 +926,21 @@ const AboutMeCont = ({ id })=>{
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "row",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "text-4xl font-bold text-white",
+                    className: "text-4xl font-bold text-white justify-center",
                     children: "About me"
                 }, void 0, false, {
                     fileName: "[project]/src/app/aboutMe_cont/index.js",
-                    lineNumber: 18,
+                    lineNumber: 17,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/aboutMe_cont/index.js",
-                lineNumber: 17,
+                lineNumber: 16,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex justify-center",
+                className: "flex flex-row space-x-3 md:space-x-20 m-10 md:m-10 justify-center",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                        className: `flex-items ${activeTab === 'info' ? 'activeButton' : ''}`,
-                        onClick: ()=>handleTabClick('info'),
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h5", {
-                            children: "Information"
-                        }, void 0, false, {
-                            fileName: "[project]/src/app/aboutMe_cont/index.js",
-                            lineNumber: 27,
-                            columnNumber: 21
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/src/app/aboutMe_cont/index.js",
-                        lineNumber: 23,
-                        columnNumber: 17
-                    }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                         className: `flex-items ${activeTab === 'creds' ? 'activeButton' : ''}`,
                         onClick: ()=>handleTabClick('creds'),
@@ -964,12 +948,27 @@ const AboutMeCont = ({ id })=>{
                             children: "Credentials"
                         }, void 0, false, {
                             fileName: "[project]/src/app/aboutMe_cont/index.js",
-                            lineNumber: 33,
+                            lineNumber: 26,
                             columnNumber: 21
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/aboutMe_cont/index.js",
-                        lineNumber: 29,
+                        lineNumber: 22,
+                        columnNumber: 17
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        className: `flex-items ${activeTab === 'info' ? 'activeButton' : ''}`,
+                        onClick: ()=>handleTabClick('info'),
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h5", {
+                            children: "Information"
+                        }, void 0, false, {
+                            fileName: "[project]/src/app/aboutMe_cont/index.js",
+                            lineNumber: 32,
+                            columnNumber: 21
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/aboutMe_cont/index.js",
+                        lineNumber: 28,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -979,18 +978,18 @@ const AboutMeCont = ({ id })=>{
                             children: "Resume"
                         }, void 0, false, {
                             fileName: "[project]/src/app/aboutMe_cont/index.js",
-                            lineNumber: 39,
+                            lineNumber: 38,
                             columnNumber: 21
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/aboutMe_cont/index.js",
-                        lineNumber: 35,
+                        lineNumber: 34,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/aboutMe_cont/index.js",
-                lineNumber: 22,
+                lineNumber: 21,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1000,48 +999,48 @@ const AboutMeCont = ({ id })=>{
                         className: `display ${activeTab === 'info' ? 'block' : 'hidden'} p-4`,
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$aboutMe_cont$2f$components$2f$info$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                             fileName: "[project]/src/app/aboutMe_cont/index.js",
-                            lineNumber: 46,
+                            lineNumber: 45,
                             columnNumber: 21
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/aboutMe_cont/index.js",
-                        lineNumber: 45,
+                        lineNumber: 44,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: `display ${activeTab === 'creds' ? 'block' : 'hidden'} p-4`,
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$aboutMe_cont$2f$components$2f$creds$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                             fileName: "[project]/src/app/aboutMe_cont/index.js",
-                            lineNumber: 51,
+                            lineNumber: 50,
                             columnNumber: 21
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/aboutMe_cont/index.js",
-                        lineNumber: 48,
+                        lineNumber: 47,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: `display ${activeTab === 'resume' ? 'block' : 'hidden'} p-4`,
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$aboutMe_cont$2f$components$2f$resume$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                             fileName: "[project]/src/app/aboutMe_cont/index.js",
-                            lineNumber: 56,
+                            lineNumber: 55,
                             columnNumber: 21
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/aboutMe_cont/index.js",
-                        lineNumber: 53,
+                        lineNumber: 52,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/aboutMe_cont/index.js",
-                lineNumber: 44,
+                lineNumber: 43,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/aboutMe_cont/index.js",
-        lineNumber: 15,
+        lineNumber: 14,
         columnNumber: 9
     }, this);
 };
@@ -1553,6 +1552,7 @@ __turbopack_context__.s({
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$first_cont$2f$components$2f$langIcons$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/app/first_cont/components/langIcons/index.js [app-client] (ecmascript)");
+'use client';
 ;
 ;
 ;
@@ -1575,17 +1575,17 @@ function RepoButton({ name, des, url, lang }) {
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/first_cont/components/repoButton/index.js",
-                        lineNumber: 8,
+                        lineNumber: 9,
                         columnNumber: 8
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/app/first_cont/components/repoButton/index.js",
-                    lineNumber: 8,
+                    lineNumber: 9,
                     columnNumber: 5
                 }, this)
             }, name, false, {
                 fileName: "[project]/src/app/first_cont/components/repoButton/index.js",
-                lineNumber: 7,
+                lineNumber: 8,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1593,7 +1593,7 @@ function RepoButton({ name, des, url, lang }) {
                 children: des ? des : "No description given."
             }, void 0, false, {
                 fileName: "[project]/src/app/first_cont/components/repoButton/index.js",
-                lineNumber: 10,
+                lineNumber: 11,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1602,18 +1602,18 @@ function RepoButton({ name, des, url, lang }) {
                         lang: key
                     }, `${name}+${key}`, false, {
                         fileName: "[project]/src/app/first_cont/components/repoButton/index.js",
-                        lineNumber: 13,
+                        lineNumber: 14,
                         columnNumber: 6
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/src/app/first_cont/components/repoButton/index.js",
-                lineNumber: 11,
+                lineNumber: 12,
                 columnNumber: 4
             }, this)
         ]
     }, name, true, {
         fileName: "[project]/src/app/first_cont/components/repoButton/index.js",
-        lineNumber: 6,
+        lineNumber: 7,
         columnNumber: 3
     }, this);
 }
@@ -2320,12 +2320,12 @@ function TopItem({ className = '', name, external_urls, album, artists }) {
                         alt: "album logo"
                     }, void 0, false, {
                         fileName: "[project]/src/app/music_cont/components/topItem/index.tsx",
-                        lineNumber: 18,
+                        lineNumber: 17,
                         columnNumber: 6
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/app/music_cont/components/topItem/index.tsx",
-                    lineNumber: 17,
+                    lineNumber: 16,
                     columnNumber: 5
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2341,17 +2341,17 @@ function TopItem({ className = '', name, external_urls, album, artists }) {
                                     children: name
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/music_cont/components/topItem/index.tsx",
-                                    lineNumber: 23,
+                                    lineNumber: 22,
                                     columnNumber: 10
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/music_cont/components/topItem/index.tsx",
-                                lineNumber: 23,
+                                lineNumber: 22,
                                 columnNumber: 7
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/music_cont/components/topItem/index.tsx",
-                            lineNumber: 22,
+                            lineNumber: 21,
                             columnNumber: 6
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2363,12 +2363,12 @@ function TopItem({ className = '', name, external_urls, album, artists }) {
                                         children: name
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/music_cont/components/topItem/index.tsx",
-                                        lineNumber: 26,
+                                        lineNumber: 25,
                                         columnNumber: 159
                                     }, this)
                                 }, name, false, {
                                     fileName: "[project]/src/app/music_cont/components/topItem/index.tsx",
-                                    lineNumber: 26,
+                                    lineNumber: 25,
                                     columnNumber: 100
                                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                     href: external_urls.spotify,
@@ -2380,40 +2380,40 @@ function TopItem({ className = '', name, external_urls, album, artists }) {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/music_cont/components/topItem/index.tsx",
-                                        lineNumber: 26,
+                                        lineNumber: 25,
                                         columnNumber: 240
                                     }, this)
                                 }, name, false, {
                                     fileName: "[project]/src/app/music_cont/components/topItem/index.tsx",
-                                    lineNumber: 26,
+                                    lineNumber: 25,
                                     columnNumber: 181
                                 }, this)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h5", {
                                 children: "No Artist"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/music_cont/components/topItem/index.tsx",
-                                lineNumber: 26,
+                                lineNumber: 25,
                                 columnNumber: 265
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/music_cont/components/topItem/index.tsx",
-                            lineNumber: 25,
+                            lineNumber: 24,
                             columnNumber: 6
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/music_cont/components/topItem/index.tsx",
-                    lineNumber: 21,
+                    lineNumber: 20,
                     columnNumber: 5
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/music_cont/components/topItem/index.tsx",
-            lineNumber: 15,
+            lineNumber: 14,
             columnNumber: 4
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/app/music_cont/components/topItem/index.tsx",
-        lineNumber: 13,
+        lineNumber: 12,
         columnNumber: 3
     }, this));
 }
@@ -2443,7 +2443,6 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$music_cont$2f$
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$music_cont$2f$components$2f$topItem$2f$index$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/app/music_cont/components/topItem/index.tsx [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
-'use client';
 ;
 ;
 ;
@@ -2486,7 +2485,7 @@ const MusicCont = ({ id })=>{
                 children: "Music ♫"
             }, void 0, false, {
                 fileName: "[project]/src/app/music_cont/index.tsx",
-                lineNumber: 29,
+                lineNumber: 28,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2499,7 +2498,7 @@ const MusicCont = ({ id })=>{
                                 className: "w-full mb-2"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/music_cont/index.tsx",
-                                lineNumber: 33,
+                                lineNumber: 32,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2514,23 +2513,23 @@ const MusicCont = ({ id })=>{
                                             artists_data: artists_data
                                         }, song_name, false, {
                                             fileName: "[project]/src/app/music_cont/index.tsx",
-                                            lineNumber: 38,
+                                            lineNumber: 37,
                                             columnNumber: 19
                                         }, this)) : null
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/music_cont/index.tsx",
-                                    lineNumber: 35,
+                                    lineNumber: 34,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/music_cont/index.tsx",
-                                lineNumber: 34,
+                                lineNumber: 33,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/music_cont/index.tsx",
-                        lineNumber: 32,
+                        lineNumber: 31,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2545,7 +2544,7 @@ const MusicCont = ({ id })=>{
                                         children: "In My Ears"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/music_cont/index.tsx",
-                                        lineNumber: 57,
+                                        lineNumber: 56,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2554,12 +2553,12 @@ const MusicCont = ({ id })=>{
                                             ...currTrack
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/music_cont/index.tsx",
-                                            lineNumber: 61,
+                                            lineNumber: 60,
                                             columnNumber: 48
                                         }, this) : null
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/music_cont/index.tsx",
-                                        lineNumber: 60,
+                                        lineNumber: 59,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -2567,7 +2566,7 @@ const MusicCont = ({ id })=>{
                                         children: "Top 10 Most Played"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/music_cont/index.tsx",
-                                        lineNumber: 64,
+                                        lineNumber: 63,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2579,45 +2578,45 @@ const MusicCont = ({ id })=>{
                                                     ...elem
                                                 }, elem.name, false, {
                                                     fileName: "[project]/src/app/music_cont/index.tsx",
-                                                    lineNumber: 71,
+                                                    lineNumber: 70,
                                                     columnNumber: 23
                                                 }, this)) : null
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/music_cont/index.tsx",
-                                            lineNumber: 68,
+                                            lineNumber: 67,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/music_cont/index.tsx",
-                                        lineNumber: 67,
+                                        lineNumber: 66,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/music_cont/index.tsx",
-                                lineNumber: 56,
+                                lineNumber: 55,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/music_cont/index.tsx",
-                            lineNumber: 55,
+                            lineNumber: 54,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/music_cont/index.tsx",
-                        lineNumber: 53,
+                        lineNumber: 52,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/music_cont/index.tsx",
-                lineNumber: 30,
+                lineNumber: 29,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/music_cont/index.tsx",
-        lineNumber: 28,
+        lineNumber: 27,
         columnNumber: 5
     }, this);
 };
@@ -2671,19 +2670,19 @@ const Home = ()=>{
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$nav$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/src/app/page.tsx",
-                    lineNumber: 17,
+                    lineNumber: 19,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "pb-24 md:min-h-screen md:py-0",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$hero_cont$2f$index$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                         fileName: "[project]/src/app/page.tsx",
-                        lineNumber: 21,
+                        lineNumber: 23,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/app/page.tsx",
-                    lineNumber: 20,
+                    lineNumber: 22,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2692,12 +2691,12 @@ const Home = ()=>{
                         id: "first_cont"
                     }, void 0, false, {
                         fileName: "[project]/src/app/page.tsx",
-                        lineNumber: 26,
+                        lineNumber: 28,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/app/page.tsx",
-                    lineNumber: 25,
+                    lineNumber: 27,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2706,12 +2705,12 @@ const Home = ()=>{
                         id: "music_cont"
                     }, void 0, false, {
                         fileName: "[project]/src/app/page.tsx",
-                        lineNumber: 31,
+                        lineNumber: 33,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/app/page.tsx",
-                    lineNumber: 30,
+                    lineNumber: 32,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2720,23 +2719,23 @@ const Home = ()=>{
                         id: "aboutMe_cont"
                     }, void 0, false, {
                         fileName: "[project]/src/app/page.tsx",
-                        lineNumber: 36,
+                        lineNumber: 38,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/app/page.tsx",
-                    lineNumber: 35,
+                    lineNumber: 37,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/page.tsx",
-            lineNumber: 16,
+            lineNumber: 18,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/app/page.tsx",
-        lineNumber: 15,
+        lineNumber: 17,
         columnNumber: 5
     }, this);
 };

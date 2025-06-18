@@ -378,23 +378,18 @@ const WorkShowcase = ()=>{
     const [playSlide, setSlideState] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(1);
     const prev = ()=>setIndex((curr)=>curr === 0 ? __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$first_cont$2f$components$2f$work_showcase$2f$slides$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].length - 1 : curr - 1);
     const next = ()=>setIndex((curr)=>curr === __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$first_cont$2f$components$2f$work_showcase$2f$slides$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].length - 1 ? 0 : ++curr);
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
-        "WorkShowcase.useEffect": ()=>{
-            if (playSlide) {
-                const interval = setInterval({
-                    "WorkShowcase.useEffect.interval": ()=>{
-                        next();
-                    }
-                }["WorkShowcase.useEffect.interval"], 15000);
-                return ({
-                    "WorkShowcase.useEffect": ()=>clearInterval(interval)
-                })["WorkShowcase.useEffect"];
-            }
-        }
-    }["WorkShowcase.useEffect"], [
-        playSlide
-    ]);
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+    /*
+
+	useEffect(() => {
+		if (playSlide) {
+			const interval = setInterval(() => {
+				next()
+			}, 15000)
+			return () => clearInterval(interval)
+		}
+	}, [playSlide])
+
+	*/ return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "w-full lg:w-1/2 px-3 mb-6 md:px-4 md:mb-0",
         onClick: (e)=>setSlideState(0),
         children: [
@@ -403,7 +398,7 @@ const WorkShowcase = ()=>{
                 children: "Builds in Action"
             }, void 0, false, {
                 fileName: "[project]/src/app/first_cont/components/work_showcase/index.tsx",
-                lineNumber: 22,
+                lineNumber: 26,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -412,7 +407,7 @@ const WorkShowcase = ()=>{
                 children: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$first_cont$2f$components$2f$work_showcase$2f$slides$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"][index]
             }, void 0, false, {
                 fileName: "[project]/src/app/first_cont/components/work_showcase/index.tsx",
-                lineNumber: 23,
+                lineNumber: 27,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -425,12 +420,12 @@ const WorkShowcase = ()=>{
                             className: "hover:[color:#332E2E]"
                         }, void 0, false, {
                             fileName: "[project]/src/app/first_cont/components/work_showcase/index.tsx",
-                            lineNumber: 28,
+                            lineNumber: 32,
                             columnNumber: 6
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/first_cont/components/work_showcase/index.tsx",
-                        lineNumber: 27,
+                        lineNumber: 31,
                         columnNumber: 5
                     }, this),
                     __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$first_cont$2f$components$2f$work_showcase$2f$slides$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].map((item, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -443,14 +438,14 @@ const WorkShowcase = ()=>{
                                     color: index === i ? "#332E2E" : "white"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/first_cont/components/work_showcase/index.tsx",
-                                    lineNumber: 30,
+                                    lineNumber: 34,
                                     columnNumber: 114
                                 }, this),
                                 " "
                             ]
                         }, `dots + ${i}`, true, {
                             fileName: "[project]/src/app/first_cont/components/work_showcase/index.tsx",
-                            lineNumber: 30,
+                            lineNumber: 34,
                             columnNumber: 30
                         }, this)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -460,28 +455,28 @@ const WorkShowcase = ()=>{
                             className: "hover:[color:#332E2E]"
                         }, void 0, false, {
                             fileName: "[project]/src/app/first_cont/components/work_showcase/index.tsx",
-                            lineNumber: 32,
+                            lineNumber: 36,
                             columnNumber: 6
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/first_cont/components/work_showcase/index.tsx",
-                        lineNumber: 31,
+                        lineNumber: 35,
                         columnNumber: 5
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/first_cont/components/work_showcase/index.tsx",
-                lineNumber: 26,
+                lineNumber: 30,
                 columnNumber: 4
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/first_cont/components/work_showcase/index.tsx",
-        lineNumber: 21,
+        lineNumber: 25,
         columnNumber: 3
     }, this);
 };
-_s(WorkShowcase, "30BSHsczmLILjxchCWpk6sZ0A3o=");
+_s(WorkShowcase, "kZCYgJbmf/hXKzep9GLm5jEFH48=");
 _c = WorkShowcase;
 const __TURBOPACK__default__export__ = WorkShowcase;
 var _c;

@@ -1,3 +1,4 @@
+'use client'
 import CreateIcon from "../langIcons"
 import '../../first_cont.css'
 

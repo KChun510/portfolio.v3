@@ -1,5 +1,5 @@
 import { get_local_token } from './json_actions'
-import { CurrentSongData, filtered_top_data, SpotifyCurrentlyPlayingResponse, SpotifyPlaylist, topTracks } from './types';
+import { CurrentSongData, filtered_search_data, filtered_top_data, SpotifyCurrentlyPlayingResponse, SpotifyPlaylist, topTracks } from './types';
 const playlist_id = '1w7opBRG814H7CMZaMOCN7'
 
 
@@ -68,7 +68,7 @@ export async function remove_track_from_playlist() {
 	}
 }
 
-export async function search_spotify() {
+export async function search_spotify(): Promise<filtered_search_data[] | null> {
 	const token_data = await get_local_token();
 	const search_q = 'gorillaz'
 	const type = 'track'
@@ -97,8 +97,9 @@ export async function search_spotify() {
 			return null
 		}
 		const data = await res.json()
-		return data.tracks.items
-
+		const track_data: topTracks[] = data.tracks.items
+		const filtered_data = track_data.map(({ name, album, artists, uri }) => ({ name, album, artists, uri }))
+		return filtered_data
 	} catch (err) {
 		console.error('Failed to fetch search: ', err)
 		return null
@@ -233,5 +234,9 @@ export async function get_top_items(): Promise<filtered_top_data[] | null> {
 		return null
 	}
 }
+
+(async function main() {
+	//console.log(await search_spotify())
+})()
 
 
