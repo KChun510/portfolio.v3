@@ -12,7 +12,7 @@ const WorkShowcase = () => {
 		if (playSlide) {
 			const interval = setInterval(() => {
 				next()
-			}, 15000)
+			}, 10000)
 			return () => clearInterval(interval)
 		}
 	}, [playSlide])
