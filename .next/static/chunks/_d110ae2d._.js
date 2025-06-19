@@ -61,7 +61,7 @@ const SearchBar = ({ className = '', readonly = false, inputMode = "text", value
                         inputMode: inputMode,
                         id: "default-search",
                         className: "text-base block w-full p-4 ps-10 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500",
-                        placeholder: "Sugest a Song Here!",
+                        placeholder: "Suggest a Song Here!",
                         value: value,
                         onChange: (e)=>onChange(e.target.value),
                         onClick: onClick,

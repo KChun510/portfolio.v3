@@ -23,7 +23,7 @@ const FirstCont = ({ id }) => {
                 <WorkShowcase />
                 <div className="w-full lg:w-1/2 px-2 md:px-4 ">
                     <div className="px-auto">
-                        <h5 className="text-3xl font-semibold">Public Repositorys</h5>
+                        <h5 className="text-3xl font-semibold">Public Repositories</h5>
                     </div>
                     <div className="gh_repos overflow-auto w-full border-1 border-black rounded">
                         <div>
