@@ -156,6 +156,24 @@ export type CurrentSongData = {
 	song_direct_link: string | null;
 };
 
+export type songPickModalProps = {
+	className?: string | null;
+	song_name: string | null;
+	song_artists: {
+		external_urls: { spotify: string };
+		href: string;
+		id: string;
+		name: string;
+		type: string;
+		uri: string;
+	}[] | null;
+
+	song_cover_art: {
+		height: number;
+		url: string;
+		width: number;
+	}[] | null;
+}
 
 export type topTracks = {
 	album: {
@@ -234,6 +252,10 @@ export type filtered_top_data = filtered_data_basic & {
 
 export type filtered_search_data = filtered_data_basic & {
 	uri: string;
+}
+
+export type CurrSongProps = CurrentSongData & {
+	className?: string
 }
 
 

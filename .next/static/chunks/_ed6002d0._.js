@@ -465,7 +465,7 @@ const WorkShowcase = ()=>{
                     "WorkShowcase.useEffect.interval": ()=>{
                         next();
                     }
-                }["WorkShowcase.useEffect.interval"], 15000);
+                }["WorkShowcase.useEffect.interval"], 10000);
                 return ({
                     "WorkShowcase.useEffect": ()=>clearInterval(interval)
                 })["WorkShowcase.useEffect"];

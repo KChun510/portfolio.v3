@@ -55,7 +55,7 @@ const MusicCont = ({ id }: { id: string }) => {
                 ? playListSongs.map(({ song_name, song_url, album_cover, artists_data }) => (
                   <SongButton
                     key={song_name}
-                    className="py-2 px-2 break-words"
+                    className="py-2 px-2 break-words song_button"
                     song_name={song_name}
                     song_url={song_url}
                     album_cover={album_cover}
@@ -89,7 +89,7 @@ const MusicCont = ({ id }: { id: string }) => {
                     ? topItems.map((elem) => (
                       <TopItem
                         key={elem.name}
-                        className="w-full py-2 px-2 break-words"
+                        className="w-full py-2 px-2 break-words song_button"
                         {...elem}
                       />
                     ))
