@@ -127,9 +127,10 @@ __turbopack_context__.s({
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$spotify_utils$2f$json_actions$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/app/spotify_utils/json_actions.ts [app-route] (ecmascript)");
 ;
 const playlist_id = '1w7opBRG814H7CMZaMOCN7';
-async function add_track_to_playlist() {
+async function add_track_to_playlist(uri) {
     const token_data = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$spotify_utils$2f$json_actions$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["get_local_token"])();
     const url = new URL(`https://api.spotify.com/v1/playlists/${playlist_id}/tracks`);
+    console.log(uri);
     try {
         if (!token_data) {
             throw new Error("Unable to get access token from file");
@@ -142,7 +143,7 @@ async function add_track_to_playlist() {
             },
             body: JSON.stringify({
                 uris: [
-                    "spotify:track:4iV5W9uYEdYUVa79Axb7Rh"
+                    uri
                 ]
             })
         });
@@ -157,7 +158,7 @@ async function add_track_to_playlist() {
         return false;
     }
 }
-async function remove_track_from_playlist() {
+async function remove_track_from_playlist(uri) {
     const token_data = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$spotify_utils$2f$json_actions$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["get_local_token"])();
     const url = new URL(`https://api.spotify.com/v1/playlists/${playlist_id}/tracks`);
     try {
@@ -171,11 +172,7 @@ async function remove_track_from_playlist() {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                tracks: [
-                    {
-                        uri: "spotify:track:4iV5W9uYEdYUVa79Axb7Rh"
-                    }
-                ]
+                tracks: uri
             })
         });
         if (!res.ok) {
@@ -189,9 +186,9 @@ async function remove_track_from_playlist() {
         return false;
     }
 }
-async function search_spotify() {
+async function search_spotify(search_string) {
     const token_data = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$spotify_utils$2f$json_actions$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["get_local_token"])();
-    const search_q = 'gorillaz';
+    const search_q = search_string;
     const type = 'track';
     const market = 'US';
     const limit = '10';
@@ -255,7 +252,7 @@ async function get_playlist() {
                 album_cover: elem.track.album.images,
                 artists_data: elem.track.artists
             }));
-        return final_song_data;
+        return final_song_data.reverse();
     } catch (err) {
         console.error('Failed to fetch playlist: ', err);
         return null;
@@ -348,9 +345,7 @@ async function get_top_items() {
         return null;
     }
 }
-(async function main() {
-//console.log(await search_spotify())
-})();
+(async function main() {})();
 }}),
 "[project]/src/app/api/spotify/get_playlist/route.tsx [app-route] (ecmascript)": ((__turbopack_context__) => {
 "use strict";

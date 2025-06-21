@@ -1,6 +1,7 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
   "/api/readfile/route": "app/api/readfile/route.js",
+  "/api/spotify/add_track_to_playlist/route": "app/api/spotify/add_track_to_playlist/route.js",
   "/api/spotify/get_current_track/route": "app/api/spotify/get_current_track/route.js",
   "/api/spotify/get_playlist/route": "app/api/spotify/get_playlist/route.js",
   "/api/spotify/get_top_items/route": "app/api/spotify/get_top_items/route.js",

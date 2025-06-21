@@ -14,19 +14,38 @@ async function readJSONFile() {
   }
 }
 
-export const search_items = async () => {
+export const search_items = async (search_string) => {
   try {
     const res = await fetch('/api/spotify/search_spotify', {
       method: "POST",
       headers: {
         'Content-type': 'application/json'
       },
-      body: JSON.stringify("test")
+      body: JSON.stringify(search_string)
     })
     const data = await res.json()
     return data
   } catch (e) {
     console.error(e)
+  }
+}
+
+export const add_track = async (uri) => {
+  try {
+    const res = await fetch("/api/spotify/add_track_to_playlist", {
+      method: "POST",
+      headers: {
+        'Content-type': 'application/json'
+      },
+      body: JSON.stringify(uri)
+    })
+    if (!res.status === 200) {
+      throw new Error("Could not add track to playlist: ", res.status)
+    }
+    return true
+  } catch (e) {
+    console.error(e)
+    return false
   }
 }
 

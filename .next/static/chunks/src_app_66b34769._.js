@@ -1059,6 +1059,7 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_context__;
 {
 __turbopack_context__.s({
+    "add_track": (()=>add_track),
     "get_currTrack": (()=>get_currTrack),
     "get_playlist": (()=>get_playlist),
     "get_top_items": (()=>get_top_items),
@@ -1080,19 +1081,37 @@ async function readJSONFile() {
         throw error;
     }
 }
-const search_items = async ()=>{
+const search_items = async (search_string)=>{
     try {
         const res = await fetch('/api/spotify/search_spotify', {
             method: "POST",
             headers: {
                 'Content-type': 'application/json'
             },
-            body: JSON.stringify("test")
+            body: JSON.stringify(search_string)
         });
         const data = await res.json();
         return data;
     } catch (e) {
         console.error(e);
+    }
+};
+const add_track = async (uri)=>{
+    try {
+        const res = await fetch("/api/spotify/add_track_to_playlist", {
+            method: "POST",
+            headers: {
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify(uri)
+        });
+        if (!res.status === 200) {
+            throw new Error("Could not add track to playlist: ", res.status);
+        }
+        return true;
+    } catch (e) {
+        console.error(e);
+        return false;
     }
 };
 const get_top_items = async ()=>{

@@ -159,7 +159,12 @@
 
 @layer theme {
   :root, :host {
+    --color-red-50: oklch(97.1% .013 17.38);
+    --color-red-100: oklch(93.6% .032 17.717);
+    --color-red-400: oklch(70.4% .191 22.216);
+    --color-red-500: oklch(63.7% .237 25.331);
     --color-blue-500: oklch(62.3% .214 259.815);
+    --color-blue-600: oklch(54.6% .245 262.881);
     --color-gray-50: oklch(98.5% .002 247.839);
     --color-gray-100: oklch(96.7% .003 264.542);
     --color-gray-300: oklch(87.2% .01 258.338);
@@ -498,6 +503,10 @@
     margin-inline: calc(var(--spacing) * 6);
   }
 
+  .mx-auto {
+    margin-inline: auto;
+  }
+
   .mt-1 {
     margin-top: calc(var(--spacing) * 1);
   }
@@ -582,6 +591,10 @@
     height: calc(var(--spacing) * 10);
   }
 
+  .h-24 {
+    height: calc(var(--spacing) * 24);
+  }
+
   .h-48 {
     height: calc(var(--spacing) * 48);
   }
@@ -606,12 +619,24 @@
     height: 100%;
   }
 
+  .max-h-\[10vh\] {
+    max-height: 10vh;
+  }
+
+  .max-h-\[25vh\] {
+    max-height: 25vh;
+  }
+
   .max-h-\[60vh\] {
     max-height: 60vh;
   }
 
   .max-h-\[75vh\] {
     max-height: 75vh;
+  }
+
+  .min-h-\[60vh\] {
+    min-height: 60vh;
   }
 
   .min-h-\[75vh\] {
@@ -920,6 +945,10 @@
     text-align: center;
   }
 
+  .text-justify {
+    text-align: justify;
+  }
+
   .text-left {
     text-align: left;
   }
@@ -988,6 +1017,10 @@
     overflow-wrap: break-word;
   }
 
+  .text-blue-600\/100 {
+    color: var(--color-blue-600);
+  }
+
   .text-current {
     color: currentColor;
   }
@@ -1002,6 +1035,22 @@
 
   .text-gray-900 {
     color: var(--color-gray-900);
+  }
+
+  .text-red-50 {
+    color: var(--color-red-50);
+  }
+
+  .text-red-100 {
+    color: var(--color-red-100);
+  }
+
+  .text-red-400 {
+    color: var(--color-red-400);
+  }
+
+  .text-red-500 {
+    color: var(--color-red-500);
   }
 
   .text-white {

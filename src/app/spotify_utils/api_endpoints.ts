@@ -2,10 +2,11 @@ import { get_local_token } from './json_actions'
 import { CurrentSongData, filtered_search_data, filtered_top_data, SpotifyCurrentlyPlayingResponse, SpotifyPlaylist, topTracks } from './types';
 const playlist_id = '1w7opBRG814H7CMZaMOCN7'
 
-
-export async function add_track_to_playlist() {
+export async function add_track_to_playlist(uri: string) {
 	const token_data = await get_local_token();
 	const url = new URL(`https://api.spotify.com/v1/playlists/${playlist_id}/tracks`)
+
+	console.log(uri)
 	try {
 		if (!token_data) {
 			throw new Error("Unable to get access token from file")
@@ -18,7 +19,7 @@ export async function add_track_to_playlist() {
 				'Content-Type': 'application/json'
 			},
 			body: JSON.stringify({
-				uris: ["spotify:track:4iV5W9uYEdYUVa79Axb7Rh"]
+				uris: [uri]
 			})
 		})
 		if (!res.ok) {
@@ -35,7 +36,7 @@ export async function add_track_to_playlist() {
 	}
 }
 
-export async function remove_track_from_playlist() {
+export async function remove_track_from_playlist(uri: [{ uri: string }]) {
 	const token_data = await get_local_token();
 	const url = new URL(`https://api.spotify.com/v1/playlists/${playlist_id}/tracks`)
 	try {
@@ -49,11 +50,7 @@ export async function remove_track_from_playlist() {
 				'Content-Type': 'application/json'
 			},
 			body: JSON.stringify({
-				tracks: [
-					{
-						uri: "spotify:track:4iV5W9uYEdYUVa79Axb7Rh"
-					}
-				]
+				tracks: uri
 			})
 		})
 		if (!res.ok) {
@@ -68,9 +65,9 @@ export async function remove_track_from_playlist() {
 	}
 }
 
-export async function search_spotify(): Promise<filtered_search_data[] | null> {
+export async function search_spotify(search_string: string): Promise<filtered_search_data[] | null> {
 	const token_data = await get_local_token();
-	const search_q = 'gorillaz'
+	const search_q = search_string
 	const type = 'track'
 	const market = 'US'
 	const limit = '10'
@@ -135,7 +132,7 @@ export async function get_playlist() {
 			artists_data: elem.track.artists,
 		}))
 
-		return final_song_data
+		return final_song_data.reverse()
 
 	} catch (err) {
 		console.error('Failed to fetch playlist: ', err)
@@ -236,7 +233,6 @@ export async function get_top_items(): Promise<filtered_top_data[] | null> {
 }
 
 (async function main() {
-	//console.log(await search_spotify())
 })()
 
 

@@ -4,7 +4,7 @@ import { add_track_to_playlist } from '../../../spotify_utils/api_endpoints'
 export async function POST(req: NextRequest) {
 	const body = await req.json()
 	try {
-		const success = await add_track_to_playlist()
+		const success = await add_track_to_playlist(body)
 		if (!success) {
 			throw new Error("Failed to add track to playlist")
 		}

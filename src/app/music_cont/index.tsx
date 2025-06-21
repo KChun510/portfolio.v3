@@ -9,12 +9,11 @@ import CurrSongPreview from './components/currSongPreview';
 import TopItem from './components/topItem';
 import Modal from './components/search_modal';
 
-
 const MusicCont = ({ id }: { id: string }) => {
   const [input, setInput] = useState("")
   const [showModal, setModal] = useState(false)
 
-  const { data: playListSongs, isLoading: isLoadingPlaylist } = useQuery<filteredPlaylistData[]>({
+  const { data: playListSongs, isLoading: isLoadingPlaylist, refetch } = useQuery<filteredPlaylistData[]>({
     queryKey: ['playlistData'],
     queryFn: async () => await get_playlist()
   });
@@ -35,11 +34,8 @@ const MusicCont = ({ id }: { id: string }) => {
     } else {
       document.body.classList.remove('overflow-hidden');
     }
-
-    // Clean up if component unmounts
     return () => document.body.classList.remove('overflow-hidden');
   }, [showModal]);
-
 
   return (
     <div id={id} className="md:min-h-screen md:scroll-mt-32">
@@ -47,8 +43,8 @@ const MusicCont = ({ id }: { id: string }) => {
       <div className="flex flex-col md:flex-row flex-wrap mx-2 md:mx-6 rounded-lg">
         {/* Left column */}
         <div className="w-full w-1/2 md:w-4/6 flex flex-col max-h-[75vh]">
-          <SearchBar value={input} readonly={true} inputMode="none" className="w-full mb-2 cursor-pointer select-none" onChange={setInput} onClick={() => setModal(true)} />
-          {showModal ? <Modal value={input} onChange={setInput} onClick={() => setModal(false)} /> : null}
+          <SearchBar value={input} readonly={true} inputMode="none" className="w-full mb-2 cursor-pointer select-none" onChange1={setInput} onClick={() => setModal(true)} />
+          {showModal && playListSongs ? <Modal value={input} onChange={setInput} songData={playListSongs} onClick={() => setModal(false)} refetchFn={refetch} /> : null}
           <div className="songList custom_bg overflow-auto w-full border-2 border-transparent rounded-lg flex-1">
             <div className="list-group border-black">
               {!isLoadingPlaylist && playListSongs

@@ -157,8 +157,13 @@ export type CurrentSongData = {
 };
 
 export type songPickModalProps = {
+	backFnOnClick?: () => void;
+	closeModalFn?: () => void;
 	className?: string | null;
+	refetch?: () => void;
 	song_name: string | null;
+	songData?: filteredPlaylistData[];
+	uri?: string;
 	song_artists: {
 		external_urls: { spotify: string };
 		href: string;
