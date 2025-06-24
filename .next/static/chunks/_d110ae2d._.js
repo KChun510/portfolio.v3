@@ -10,7 +10,7 @@ __turbopack_context__.s({
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 ;
-const SearchBar = ({ className = '', readonly = false, inputMode = "text", value, onChange, onClick })=>{
+const SearchBar = ({ className = '', readonly = false, inputMode = "text", value, onChange1, onChange2, onClick, placeholderText })=>{
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
         className: `${className}`,
         children: [
@@ -20,7 +20,7 @@ const SearchBar = ({ className = '', readonly = false, inputMode = "text", value
                 children: "Search"
             }, void 0, false, {
                 fileName: "[project]/src/app/music_cont/components/searchBar/index.tsx",
-                lineNumber: 13,
+                lineNumber: 15,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -42,17 +42,17 @@ const SearchBar = ({ className = '', readonly = false, inputMode = "text", value
                                 d: "m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/music_cont/components/searchBar/index.tsx",
-                                lineNumber: 17,
+                                lineNumber: 19,
                                 columnNumber: 7
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/music_cont/components/searchBar/index.tsx",
-                            lineNumber: 16,
+                            lineNumber: 18,
                             columnNumber: 6
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/music_cont/components/searchBar/index.tsx",
-                        lineNumber: 15,
+                        lineNumber: 17,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -61,26 +61,31 @@ const SearchBar = ({ className = '', readonly = false, inputMode = "text", value
                         inputMode: inputMode,
                         id: "default-search",
                         className: "text-base block w-full p-4 ps-10 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500",
-                        placeholder: "Suggest a Song Here!",
+                        placeholder: placeholderText ?? "Suggest a Song Here!",
                         value: value,
-                        onChange: (e)=>onChange(e.target.value),
+                        onChange: (e)=>{
+                            onChange1(e.target.value);
+                            if (onChange2) {
+                                onChange2(e.target.value);
+                            }
+                        },
                         onClick: onClick,
                         required: true
                     }, void 0, false, {
                         fileName: "[project]/src/app/music_cont/components/searchBar/index.tsx",
-                        lineNumber: 20,
+                        lineNumber: 22,
                         columnNumber: 5
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/music_cont/components/searchBar/index.tsx",
-                lineNumber: 14,
+                lineNumber: 16,
                 columnNumber: 4
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/music_cont/components/searchBar/index.tsx",
-        lineNumber: 12,
+        lineNumber: 14,
         columnNumber: 3
     }, this);
 };
@@ -549,9 +554,10 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-client] (ecmascript)");
 ;
 ;
-function SearchItem({ className = '', name, album, artists, uri }) {
+function SearchItem({ className = '', name, album, artists, uri, onClick }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: `w-full ${className}`,
+        onClick: onClick,
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "flex items-center gap-4 p-2 hover:bg-[#4B5563] rounded-lg",
             children: [
@@ -564,12 +570,12 @@ function SearchItem({ className = '', name, album, artists, uri }) {
                         alt: "album logo"
                     }, void 0, false, {
                         fileName: "[project]/src/app/music_cont/components/searchItem/index.tsx",
-                        lineNumber: 14,
+                        lineNumber: 15,
                         columnNumber: 6
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/app/music_cont/components/searchItem/index.tsx",
-                    lineNumber: 13,
+                    lineNumber: 14,
                     columnNumber: 5
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -581,12 +587,12 @@ function SearchItem({ className = '', name, album, artists, uri }) {
                                 children: name
                             }, void 0, false, {
                                 fileName: "[project]/src/app/music_cont/components/searchItem/index.tsx",
-                                lineNumber: 17,
+                                lineNumber: 18,
                                 columnNumber: 9
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/music_cont/components/searchItem/index.tsx",
-                            lineNumber: 17,
+                            lineNumber: 18,
                             columnNumber: 6
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -597,12 +603,12 @@ function SearchItem({ className = '', name, album, artists, uri }) {
                                         children: name
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/music_cont/components/searchItem/index.tsx",
-                                        lineNumber: 19,
+                                        lineNumber: 20,
                                         columnNumber: 130
                                     }, this)
                                 }, name, false, {
                                     fileName: "[project]/src/app/music_cont/components/searchItem/index.tsx",
-                                    lineNumber: 19,
+                                    lineNumber: 20,
                                     columnNumber: 100
                                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                     target: "_blank",
@@ -613,40 +619,40 @@ function SearchItem({ className = '', name, album, artists, uri }) {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/music_cont/components/searchItem/index.tsx",
-                                        lineNumber: 19,
+                                        lineNumber: 20,
                                         columnNumber: 182
                                     }, this)
                                 }, name, false, {
                                     fileName: "[project]/src/app/music_cont/components/searchItem/index.tsx",
-                                    lineNumber: 19,
+                                    lineNumber: 20,
                                     columnNumber: 152
                                 }, this)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h5", {
                                 children: "No Artist"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/music_cont/components/searchItem/index.tsx",
-                                lineNumber: 19,
+                                lineNumber: 20,
                                 columnNumber: 207
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/music_cont/components/searchItem/index.tsx",
-                            lineNumber: 18,
+                            lineNumber: 19,
                             columnNumber: 6
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/music_cont/components/searchItem/index.tsx",
-                    lineNumber: 16,
+                    lineNumber: 17,
                     columnNumber: 5
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/music_cont/components/searchItem/index.tsx",
-            lineNumber: 12,
+            lineNumber: 13,
             columnNumber: 4
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/app/music_cont/components/searchItem/index.tsx",
-        lineNumber: 11,
+        lineNumber: 12,
         columnNumber: 3
     }, this);
 }
@@ -658,15 +664,173 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
     __turbopack_context__.k.registerExports(module, globalThis.$RefreshHelpers$);
 }
 }}),
-"[project]/src/app/music_cont/components/search_modal/index.tsx [app-client] (ecmascript)": (function(__turbopack_context__) {
+"[project]/src/app/music_cont/components/search_modal/index.tsx [app-client] (ecmascript)": ((__turbopack_context__) => {
+"use strict";
 
-var { g: global, __dirname, k: __turbopack_refresh__, m: module, e: exports } = __turbopack_context__;
+var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_context__;
 {
-const e = new Error(`Could not parse module '[project]/src/app/music_cont/components/search_modal/index.tsx'
-
-Unexpected token `div`. Expected jsx identifier`);
-e.code = 'MODULE_UNPARSEABLE';
-throw e;}}),
+__turbopack_context__.s({
+    "default": (()=>__TURBOPACK__default__export__)
+});
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$query$2f$es$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$module__evaluation$3e$__ = __turbopack_context__.i("[project]/node_modules/react-query/es/index.js [app-client] (ecmascript) <module evaluation>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$query$2f$es$2f$react$2f$useQuery$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react-query/es/react/useQuery.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$actions$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/app/actions.js [app-client] (ecmascript)");
+(()=>{
+    const e = new Error("Cannot find module './components/add_form'");
+    e.code = 'MODULE_NOT_FOUND';
+    throw e;
+})();
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$music_cont$2f$components$2f$searchBar$2f$index$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/app/music_cont/components/searchBar/index.tsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$music_cont$2f$components$2f$searchItem$2f$index$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/app/music_cont/components/searchItem/index.tsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+;
+var _s = __turbopack_context__.k.signature();
+;
+;
+;
+;
+;
+;
+;
+const Modal = ({ className, value, onChange, onClick, songData, refetchFn })=>{
+    _s();
+    const [formState, setFormState] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [formData, setFormData] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])({
+        song_artists: null,
+        song_cover_art: null,
+        song_name: null,
+        uri: ""
+    });
+    const [input, setInput] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(value);
+    const [debounceVal, setDebounceVal] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(input);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "Modal.useEffect": ()=>{
+            const handler = setTimeout({
+                "Modal.useEffect.handler": ()=>{
+                    setDebounceVal(input);
+                }
+            }["Modal.useEffect.handler"], 500);
+            return ({
+                "Modal.useEffect": ()=>clearTimeout(handler)
+            })["Modal.useEffect"];
+        }
+    }["Modal.useEffect"], [
+        input,
+        value
+    ]);
+    const { data, isLoading } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$query$2f$es$2f$react$2f$useQuery$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useQuery"])({
+        queryKey: [
+            'searchItems',
+            debounceVal
+        ],
+        queryFn: {
+            "Modal.useQuery": async ()=>(0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$actions$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["search_items"])(debounceVal)
+        }["Modal.useQuery"],
+        enabled: !!debounceVal
+    });
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "fixed h-[100dvh] inset-0 bg-black/50 flex items-center justify-center z-11",
+        onClick: onClick,
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "flex flex-col w-full max-w-lg space-y-2",
+            onClick: (e)=>e.stopPropagation(),
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$music_cont$2f$components$2f$searchBar$2f$index$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                    className: "",
+                    value: value,
+                    onChange1: onChange,
+                    onChange2: setInput,
+                    placeholderText: "Search for a song"
+                }, void 0, false, {
+                    fileName: "[project]/src/app/music_cont/components/search_modal/index.tsx",
+                    lineNumber: 43,
+                    columnNumber: 5
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "modal_songList flex-col overflow-y-auto bg-[#374151] text-white-400 rounded-xl shadow-lg p-6 w-full",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "flex max-h-[60vh] w-full justify-center",
+                        children: formState ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(AddForm, {
+                            song_artists: formData.song_artists,
+                            song_cover_art: formData.song_cover_art,
+                            song_name: formData.song_name,
+                            songData: songData,
+                            uri: formData.uri,
+                            backFnOnClick: ()=>setFormState(false),
+                            closeModalFn: onClick,
+                            refetch: refetchFn
+                        }, void 0, false, {
+                            fileName: "[project]/src/app/music_cont/components/search_modal/index.tsx",
+                            lineNumber: 47,
+                            columnNumber: 8
+                        }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            children: !isLoading && data ? data.map(({ name, album, artists, uri })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$music_cont$2f$components$2f$searchItem$2f$index$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                    className: "search_song_button",
+                                    name: name,
+                                    album: album,
+                                    artists: artists,
+                                    uri: uri,
+                                    onClick: ()=>{
+                                        setFormData({
+                                            song_artists: artists,
+                                            song_cover_art: album.images,
+                                            song_name: name,
+                                            uri: uri
+                                        });
+                                        setFormState(true);
+                                    }
+                                }, uri, false, {
+                                    fileName: "[project]/src/app/music_cont/components/search_modal/index.tsx",
+                                    lineNumber: 51,
+                                    columnNumber: 10
+                                }, this)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
+                                children: "No Recent Searches"
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/music_cont/components/search_modal/index.tsx",
+                                lineNumber: 56,
+                                columnNumber: 10
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "[project]/src/app/music_cont/components/search_modal/index.tsx",
+                            lineNumber: 49,
+                            columnNumber: 8
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/music_cont/components/search_modal/index.tsx",
+                        lineNumber: 45,
+                        columnNumber: 6
+                    }, this)
+                }, void 0, false, {
+                    fileName: "[project]/src/app/music_cont/components/search_modal/index.tsx",
+                    lineNumber: 44,
+                    columnNumber: 5
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "[project]/src/app/music_cont/components/search_modal/index.tsx",
+            lineNumber: 42,
+            columnNumber: 4
+        }, this)
+    }, void 0, false, {
+        fileName: "[project]/src/app/music_cont/components/search_modal/index.tsx",
+        lineNumber: 41,
+        columnNumber: 3
+    }, this);
+};
+_s(Modal, "2E6lOznRtDD0tqVMnVGXj9Qy6uI=", false, function() {
+    return [
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$query$2f$es$2f$react$2f$useQuery$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useQuery"]
+    ];
+});
+_c = Modal;
+const __TURBOPACK__default__export__ = Modal;
+var _c;
+__turbopack_context__.k.register(_c, "Modal");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(module, globalThis.$RefreshHelpers$);
+}
+}}),
 "[project]/src/app/music_cont/index.tsx [app-client] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
@@ -700,7 +864,7 @@ const MusicCont = ({ id })=>{
     _s();
     const [input, setInput] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
     const [showModal, setModal] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
-    const { data: playListSongs, isLoading: isLoadingPlaylist } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$query$2f$es$2f$react$2f$useQuery$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useQuery"])({
+    const { data: playListSongs, isLoading: isLoadingPlaylist, refetch } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$query$2f$es$2f$react$2f$useQuery$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useQuery"])({
         queryKey: [
             'playlistData'
         ],
@@ -731,7 +895,6 @@ const MusicCont = ({ id })=>{
             } else {
                 document.body.classList.remove('overflow-hidden');
             }
-            // Clean up if component unmounts
             return ({
                 "MusicCont.useEffect": ()=>document.body.classList.remove('overflow-hidden')
             })["MusicCont.useEffect"];
@@ -748,7 +911,7 @@ const MusicCont = ({ id })=>{
                 children: "Music ♫"
             }, void 0, false, {
                 fileName: "[project]/src/app/music_cont/index.tsx",
-                lineNumber: 46,
+                lineNumber: 42,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -762,21 +925,23 @@ const MusicCont = ({ id })=>{
                                 readonly: true,
                                 inputMode: "none",
                                 className: "w-full mb-2 cursor-pointer select-none",
-                                onChange: setInput,
+                                onChange1: setInput,
                                 onClick: ()=>setModal(true)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/music_cont/index.tsx",
-                                lineNumber: 50,
+                                lineNumber: 46,
                                 columnNumber: 11
                             }, this),
-                            showModal ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$music_cont$2f$components$2f$search_modal$2f$index$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                            showModal && playListSongs ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$music_cont$2f$components$2f$search_modal$2f$index$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                 value: input,
                                 onChange: setInput,
-                                onClick: ()=>setModal(false)
+                                songData: playListSongs,
+                                onClick: ()=>setModal(false),
+                                refetchFn: refetch
                             }, void 0, false, {
                                 fileName: "[project]/src/app/music_cont/index.tsx",
-                                lineNumber: 51,
-                                columnNumber: 24
+                                lineNumber: 47,
+                                columnNumber: 41
                             }, this) : null,
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "songList custom_bg overflow-auto w-full border-2 border-transparent rounded-lg flex-1",
@@ -790,23 +955,23 @@ const MusicCont = ({ id })=>{
                                             artists_data: artists_data
                                         }, song_name, false, {
                                             fileName: "[project]/src/app/music_cont/index.tsx",
-                                            lineNumber: 56,
+                                            lineNumber: 52,
                                             columnNumber: 19
                                         }, this)) : null
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/music_cont/index.tsx",
-                                    lineNumber: 53,
+                                    lineNumber: 49,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/music_cont/index.tsx",
-                                lineNumber: 52,
+                                lineNumber: 48,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/music_cont/index.tsx",
-                        lineNumber: 49,
+                        lineNumber: 45,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -821,7 +986,7 @@ const MusicCont = ({ id })=>{
                                         children: "In My Ears"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/music_cont/index.tsx",
-                                        lineNumber: 76,
+                                        lineNumber: 72,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -830,12 +995,12 @@ const MusicCont = ({ id })=>{
                                             ...currTrack
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/music_cont/index.tsx",
-                                            lineNumber: 80,
+                                            lineNumber: 76,
                                             columnNumber: 48
                                         }, this) : null
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/music_cont/index.tsx",
-                                        lineNumber: 79,
+                                        lineNumber: 75,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -843,7 +1008,7 @@ const MusicCont = ({ id })=>{
                                         children: "Top 10 Most Played"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/music_cont/index.tsx",
-                                        lineNumber: 83,
+                                        lineNumber: 79,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -855,49 +1020,49 @@ const MusicCont = ({ id })=>{
                                                     ...elem
                                                 }, elem.name, false, {
                                                     fileName: "[project]/src/app/music_cont/index.tsx",
-                                                    lineNumber: 90,
+                                                    lineNumber: 86,
                                                     columnNumber: 23
                                                 }, this)) : null
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/music_cont/index.tsx",
-                                            lineNumber: 87,
+                                            lineNumber: 83,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/music_cont/index.tsx",
-                                        lineNumber: 86,
+                                        lineNumber: 82,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/music_cont/index.tsx",
-                                lineNumber: 75,
+                                lineNumber: 71,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/music_cont/index.tsx",
-                            lineNumber: 74,
+                            lineNumber: 70,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/music_cont/index.tsx",
-                        lineNumber: 71,
+                        lineNumber: 67,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/music_cont/index.tsx",
-                lineNumber: 47,
+                lineNumber: 43,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/music_cont/index.tsx",
-        lineNumber: 45,
+        lineNumber: 41,
         columnNumber: 5
     }, this);
 };
-_s(MusicCont, "TLRFEqgqrwLWSKHFKYRW8ZqHC44=", false, function() {
+_s(MusicCont, "BKv8opfhKZQz9Ur4c9IEFCCDRYc=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$query$2f$es$2f$react$2f$useQuery$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useQuery"],
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$query$2f$es$2f$react$2f$useQuery$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useQuery"],

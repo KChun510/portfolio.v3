@@ -13,10 +13,11 @@ type ModalProps = {
 	onChange: (value: string) => void;
 	onClick?: () => void;
 	className?: string;
-	refetchFn: () => void;
+	refetchFn1: () => void;
+	refetchFn2: () => void;
 };
 
-const Modal = ({ className, value, onChange, onClick, songData, refetchFn }: ModalProps) => {
+const Modal = ({ className, value, onChange, onClick, songData, refetchFn1, refetchFn2 }: ModalProps) => {
 	const [formState, setFormState] = useState(false)
 	const [formData, setFormData] = useState<songPickModalProps>({ song_artists: null, song_cover_art: null, song_name: null, uri: "" })
 
@@ -44,7 +45,7 @@ const Modal = ({ className, value, onChange, onClick, songData, refetchFn }: Mod
 				<div className="modal_songList flex-col overflow-y-auto bg-[#374151] text-white-400 rounded-xl shadow-lg p-6 w-full">
 					<div className="flex max-h-[60vh] w-full justify-center">
 						{formState ?
-							<AddForm song_artists={formData.song_artists} song_cover_art={formData.song_cover_art} song_name={formData.song_name} songData={songData} uri={formData.uri} backFnOnClick={() => setFormState(false)} closeModalFn={onClick} refetch={refetchFn} />
+							<AddForm song_artists={formData.song_artists} song_cover_art={formData.song_cover_art} song_name={formData.song_name} songData={songData} uri={formData.uri} backFnOnClick={() => setFormState(false)} closeModalFn={onClick} refetch1={refetchFn1} refetch2={refetchFn2} />
 							:
 							<div>
 								{!isLoading && data ? data.map(({ name, album, artists, uri }) =>

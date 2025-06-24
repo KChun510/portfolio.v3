@@ -411,6 +411,26 @@
     margin-left: calc(var(--spacing) * 2.5);
   }
 
+  .ml-5 {
+    margin-left: calc(var(--spacing) * 5);
+  }
+
+  .ml-10 {
+    margin-left: calc(var(--spacing) * 10);
+  }
+
+  .ml-20 {
+    margin-left: calc(var(--spacing) * 20);
+  }
+
+  .ml-50 {
+    margin-left: calc(var(--spacing) * 50);
+  }
+
+  .ml-auto {
+    margin-left: auto;
+  }
+
   .block {
     display: block;
   }
@@ -433,6 +453,10 @@
 
   .inline-flex {
     display: inline-flex;
+  }
+
+  .table {
+    display: table;
   }
 
   .h-4 {

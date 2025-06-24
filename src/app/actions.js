@@ -92,6 +92,81 @@ export async function pullGitInfo() {
   return allGitInfo
 }
 
+export async function set_session(user_tag, song_names) {
+  try {
+    const res = await fetch("/api/session/set_session", {
+      method: "POST",
+      credentials: "include",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        user_tag,
+        song_names
+      })
+    })
+    const data = await res.json()
+    return data
+  } catch (err) {
+    console.error(err)
+  }
+}
+
+export async function get_session_browser() {
+  try {
+    const res = await fetch("/api/session/get_session", {
+      method: "GET",
+      credentials: "same-origin"
+    })
+    const data = await res.json()
+    return data
+  } catch (err) {
+    console.error(err)
+  }
+}
+
+export async function get_session_db(session) {
+  try {
+    const res = await fetch("/api/session/get_session_db", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(session)
+    })
+    const data = await res.json()
+    return data
+  } catch (err) {
+    console.error(err)
+  }
+}
+
+export async function update_session(session_id, user_tag, song_names) {
+  try {
+    await fetch("/api/session/update_session", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ session_id, user_tag, song_names })
+    })
+  } catch (err) {
+    console.error(err)
+  }
+}
+
+export async function select_all_session() {
+  try {
+    const res = await fetch("/api/session/select_all_session", {
+      method: "GET"
+    })
+    const data = await res.json()
+    return data
+  } catch (err) {
+    console.error(err)
+  }
+}
+
+
+
 
 
 

@@ -14,7 +14,13 @@ function TopItem({ className = '', name, external_urls, album, artists }: TopIte
 			<div className="flex items-center gap-4 py-2">
 				{/* Album Cover */}
 				<div className="relative w-[50px] h-[50px] md:w-[100px] md:h-[100px] shrink-0">
-					<Image className="rounded" src={album.images[1].url} fill alt="album logo" />
+					<Image
+						className="rounded"
+						src={album.images[1].url}
+						fill
+						sizes="(min-width: 768px) 100px, 50px"
+						alt="album logo"
+					/>
 				</div>
 				{/* Song Info */}
 				<div className="w-full">

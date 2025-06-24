@@ -9,11 +9,13 @@ import on_point from "./slide_images/onpointOakland.png"
 
 const slides: JSX.Element[] = [
 	<div key="mediaMind" className="relative w-full h-full">
-		<a href="https://github.com/KChun510/TermTris_Tetris-In-the-CLI" target="_blank">
+		<a href="https://github.com/KChun510/TermTris_Tetris-In-the-CLI" target="_blank" className="relative block w-full h-full">
 			<Image
 				src={tetris_gif}
 				alt="tetris_gif photo"
 				fill
+				sizes="(max-width: 800px) 100vw, 800px"
+
 				className="object-contain"
 			/>
 			<div className="absolute bottom-0 left-0 bg-[#332E2E]/80 text-white p-4 z-10 w-full">
@@ -24,11 +26,13 @@ const slides: JSX.Element[] = [
 	</div>
 	,
 	<div key="mediaMind" className="relative w-full h-full">
-		<a href="https://github.com/KChun510/MediaMind" target="_blank">
+		<a href="https://github.com/KChun510/MediaMind" target="_blank" className="relative block w-full h-full">
 			<Image
 				src={mediaMindpng}
 				alt="mediaMind photo"
 				fill
+				sizes="(max-width: 800px) 100vw, 800px"
+
 				className="object-contain"
 			/>
 			<div className="absolute bottom-0 left-0 bg-[#332E2E]/80 text-white p-4 z-10 w-full">
@@ -38,11 +42,13 @@ const slides: JSX.Element[] = [
 		</a>
 	</div>,
 	<div key="maiz.work" className="relative w-full h-full">
-		<a href="https://maiz.work/" target="_blank">
+		<a href="https://maiz.work/" target="_blank" className="relative block w-full h-full">
 			<Image
 				src={maizdotwork}
 				alt="maiz.work photo"
 				fill
+				sizes="(max-width: 800px) 100vw, 800px"
+
 				className="object-contain bg-[#150d03]"
 			/>
 			<div className="absolute bottom-0 left-0 bg-[#332E2E]/80 text-white p-4 z-10 w-full">
@@ -52,11 +58,13 @@ const slides: JSX.Element[] = [
 		</a>
 	</div>,
 	<div key="embedc" className="relative w-full h-full">
-		<a href="https://github.com/KChun510/Embedded_Software_c" target="_blank">
+		<a href="https://github.com/KChun510/Embedded_Software_c" target="_blank" className="relative block w-full h-full">
 			<Image
 				src={embedc}
 				alt="embedc photo"
 				fill
+				sizes="(max-width: 800px) 100vw, 800px"
+
 				className="object-contain bg-white"
 			/>
 			<div className="absolute bottom-0 left-0 bg-[#332E2E]/80 text-white p-4 z-10 w-full">
@@ -66,11 +74,13 @@ const slides: JSX.Element[] = [
 		</a>
 	</div>,
 	<div key="on_point" className="relative w-full h-full">
-		<a href="https://onpointoakland.com/" target="_blank">
+		<a href="https://onpointoakland.com/" target="_blank" className="relative block w-full h-full">
 			<Image
 				src={on_point}
 				alt="onpoint photo"
 				fill
+				sizes="(max-width: 800px) 100vw, 800px"
+
 				className="object-contain bg-white"
 			/>
 			<div className="absolute bottom-0 left-0 bg-[#332E2E]/80 text-white p-4 z-10 w-full">

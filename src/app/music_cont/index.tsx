@@ -1,5 +1,5 @@
 import './music_cont.css'
-import { get_currTrack, get_playlist, get_top_items } from '../actions';
+import { get_currTrack, get_playlist, get_session_browser, get_top_items, select_all_session } from '../actions';
 import { useQuery } from 'react-query';
 import { CurrentSongData, filtered_top_data, filteredPlaylistData } from '../spotify_utils/types';
 import { useEffect, useState } from 'react';
@@ -8,12 +8,13 @@ import SongButton from './components/songButton';
 import CurrSongPreview from './components/currSongPreview';
 import TopItem from './components/topItem';
 import Modal from './components/search_modal';
+import { import_session_data } from '../../../db_actions/types';
 
 const MusicCont = ({ id }: { id: string }) => {
   const [input, setInput] = useState("")
   const [showModal, setModal] = useState(false)
 
-  const { data: playListSongs, isLoading: isLoadingPlaylist, refetch } = useQuery<filteredPlaylistData[]>({
+  const { data: playListSongs, isLoading: isLoadingPlaylist, refetch: re_playlist } = useQuery<filteredPlaylistData[]>({
     queryKey: ['playlistData'],
     queryFn: async () => await get_playlist()
   });
@@ -27,6 +28,16 @@ const MusicCont = ({ id }: { id: string }) => {
     queryKey: ['topItemsData'],
     queryFn: async () => await get_top_items()
   });
+
+  const { data: dbData, isLoading: isDbDataLoading, refetch: re_dbData } = useQuery<import_session_data[]>({
+    queryKey: ['dbData'],
+    queryFn: async () => await select_all_session()
+  })
+
+  const { data: browserData, isLoading: isBrowserLoading } = useQuery({
+    queryKey: ['browserData'],
+    queryFn: async () => await get_session_browser()
+  })
 
   useEffect(() => {
     if (showModal) {
@@ -44,20 +55,30 @@ const MusicCont = ({ id }: { id: string }) => {
         {/* Left column */}
         <div className="w-full w-1/2 md:w-4/6 flex flex-col max-h-[75vh]">
           <SearchBar value={input} readonly={true} inputMode="none" className="w-full mb-2 cursor-pointer select-none" onChange1={setInput} onClick={() => setModal(true)} />
-          {showModal && playListSongs ? <Modal value={input} onChange={setInput} songData={playListSongs} onClick={() => setModal(false)} refetchFn={refetch} /> : null}
+          {showModal && playListSongs ? <Modal value={input} onChange={setInput} songData={playListSongs} onClick={() => setModal(false)} refetchFn1={re_playlist} refetchFn2={re_dbData} /> : null}
           <div className="songList custom_bg overflow-auto w-full border-2 border-transparent rounded-lg flex-1">
             <div className="list-group border-black">
-              {!isLoadingPlaylist && playListSongs
-                ? playListSongs.map(({ song_name, song_url, album_cover, artists_data }) => (
-                  <SongButton
-                    key={song_name}
-                    className="py-2 px-2 break-words song_button"
-                    song_name={song_name}
-                    song_url={song_url}
-                    album_cover={album_cover}
-                    artists_data={artists_data}
-                  />
-                ))
+              {!isLoadingPlaylist && playListSongs && !isDbDataLoading && dbData
+                ? playListSongs.map(({ song_name, song_url, album_cover, artists_data }) => {
+                  let user_tag = null
+                  for (const obj of dbData) {
+                    if (obj.song_names.includes(song_name)) {
+                      user_tag = obj.user_tag
+                      break
+                    }
+                  }
+                  return (
+                    <SongButton
+                      key={song_name}
+                      className="py-2 px-2 break-words song_button"
+                      song_name={song_name}
+                      song_url={song_url}
+                      album_cover={album_cover}
+                      artists_data={artists_data}
+                      user_tag={user_tag}
+                    />
+                  )
+                })
                 : null}
             </div>
           </div>

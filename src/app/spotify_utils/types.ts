@@ -160,7 +160,8 @@ export type songPickModalProps = {
 	backFnOnClick?: () => void;
 	closeModalFn?: () => void;
 	className?: string | null;
-	refetch?: () => void;
+	refetch1?: () => void;
+	refetch2?: () => void;
 	song_name: string | null;
 	songData?: filteredPlaylistData[];
 	uri?: string;

@@ -1,0 +1,26 @@
+I think all we need is a user sessions table. 
+
+When a user adds a song. 
+
+Sessions table:
+- Assign a userID PK.
+- Assign a userSession. Sessions key in DB, with sesssion in there browser. 
+
+UserInfo table:
+- userID, as PK and auto increment.
+- userTag, as Text.
+- song_name, that they added.
+
+Cookie flow:
+- option 1:
+  Only assign a user cookie, when a user suggest a song.
+  Schema:
+  - session_id, user_tag, song_name
+
+
+Plan:
+1) Set the new table up.
+2) Be able to set cookie in user browser ( On song creation ).
+3) Store cookie data in db.
+4) Check browser for cookie + check db.
+  - If cookie matches. Then you can edit the song you added. ( Via song name )
