@@ -162,6 +162,7 @@ export type songPickModalProps = {
 	className?: string | null;
 	refetch1?: () => void;
 	refetch2?: () => void;
+	refetch3?: () => void;
 	song_name: string | null;
 	songData?: filteredPlaylistData[];
 	uri?: string;

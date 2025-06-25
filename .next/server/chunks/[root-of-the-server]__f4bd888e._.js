@@ -110,8 +110,9 @@ function createSession(session_id, user_tag, song_names) {
 }
 function select_all_sessions() {
     const db = (0, __TURBOPACK__imported__module__$5b$project$5d2f$db_actions$2f$connection$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["openDB"])();
-    const data = db.prepare("SELECT user_tag, song_names FROM sessions WHERE user_tag IS NOT NULL").all();
-    const formatted_data = data.map(({ user_tag, song_names })=>({
+    const data = db.prepare("SELECT session_id, user_tag, song_names FROM sessions").all();
+    const formatted_data = data.map(({ session_id, user_tag, song_names })=>({
+            session: session_id,
             user_tag,
             song_names: JSON.parse(song_names)
         }));
@@ -129,10 +130,11 @@ function getSession(sessionId) {
 function deleteSession(sessionId) {
     const db = (0, __TURBOPACK__imported__module__$5b$project$5d2f$db_actions$2f$connection$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["openDB"])();
     db.prepare("DELETE FROM sessions WHERE session_id = ?").run(sessionId);
-}
+} /*
 (function main() {
-    console.log(select_all_sessions());
-})();
+	console.log(select_all_sessions())
+})()
+*/ 
 }}),
 "[externals]/crypto [external] (crypto, cjs)": (function(__turbopack_context__) {
 
@@ -158,10 +160,12 @@ var __TURBOPACK__imported__module__$5b$externals$5d2f$crypto__$5b$external$5d$__
 ;
 ;
 ;
+const isDev = ("TURBOPACK compile-time value", "development") === 'development';
 async function POST(req) {
     const body = await req.json();
     const { user_tag, song_names } = body;
     const session_id = __TURBOPACK__imported__module__$5b$externals$5d2f$crypto__$5b$external$5d$__$28$crypto$2c$__cjs$29$__["default"].randomBytes(32).toString("hex");
+    const song_count = 0;
     if ("TURBOPACK compile-time truthy", 1) {
         (0, __TURBOPACK__imported__module__$5b$project$5d2f$db_actions$2f$sessions$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["createSession"])(session_id, user_tag, song_names);
         const response = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({
@@ -170,10 +174,17 @@ async function POST(req) {
         });
         response.headers.set("Set-Cookie", (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$cookie$2f$dist$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["serialize"])("session", session_id, {
             httpOnly: true,
-            secure: true,
+            secure: !isDev,
             sameSite: "lax",
             path: "/",
-            maxAge: 3600
+            maxAge: 60 * 60 * 24 * 365 * 10
+        }));
+        response.headers.append("Set-Cookie", (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$cookie$2f$dist$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["serialize"])("song_count", song_count.toString(), {
+            httpOnly: true,
+            secure: !isDev,
+            sameSite: "lax",
+            path: "/",
+            maxAge: 60 * 60 * 24 * 365 * 10
         }));
         return response;
     } else {

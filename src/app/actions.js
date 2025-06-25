@@ -110,6 +110,23 @@ export async function set_session(user_tag, song_names) {
   }
 }
 
+export async function update_song_count_browser(count) {
+  try {
+    const res = await fetch("/api/session/update_session_song_count", {
+      method: "POST",
+      credentials: "include",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        count
+      })
+    })
+    const data = await res.json()
+    return data
+  } catch (err) {
+    console.error(err)
+  }
+}
+
 export async function get_session_browser() {
   try {
     const res = await fetch("/api/session/get_session", {
@@ -148,6 +165,18 @@ export async function update_session(session_id, user_tag, song_names) {
       },
       body: JSON.stringify({ session_id, user_tag, song_names })
     })
+  } catch (err) {
+    console.error(err)
+  }
+}
+
+export async function get_song_count_browser() {
+  try {
+    const res = await fetch("/api/session/get_session_song_count", {
+      method: "GET"
+    })
+    const data = await res.json()
+    return data
   } catch (err) {
     console.error(err)
   }

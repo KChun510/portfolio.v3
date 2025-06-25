@@ -1,4 +1,4 @@
-import { CurrSongProps, songPickModalProps } from "@/app/spotify_utils/types"
+import { songPickModalProps } from "@/app/spotify_utils/types"
 import blank_album_cover from "../blank_album_cover.png"
 import Image from "next/image"
 
@@ -6,7 +6,13 @@ const CurrSongPick_modal = ({ className = '', song_artists, song_cover_art, song
 	return (
 		<div className={`flex flex-row items-start gap-4 ${className}`}>
 			<div className="relative w-[50px] h-[50px] md:w-[100px] md:h-[100px] shrink-0">
-				<Image className="rounded" src={song_cover_art ? song_cover_art[1].url : blank_album_cover} fill alt="album logo" />
+				<Image
+					className="rounded"
+					src={song_cover_art ? song_cover_art[1].url : blank_album_cover}
+					fill
+					alt="album logo"
+					sizes="(min-width: 768px) 100px, 50px"
+				/>
 			</div>
 			<div className="w-full">
 				<a target="_blank" rel="noopener noreferrer">

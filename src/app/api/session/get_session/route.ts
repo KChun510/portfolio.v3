@@ -6,7 +6,7 @@ import { export_session_data } from "@/../db_actions/types"
 export async function GET(req: NextRequest) {
 	try {
 		const cookies = parse(req.headers.get("cookie") || "");
-		const browserSessionId = cookies.session;
+		const browserSessionId = cookies.session
 
 		if (!browserSessionId) {
 			return NextResponse.json({ hasCookie: false }, {

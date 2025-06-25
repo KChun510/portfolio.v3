@@ -4,11 +4,12 @@ import { User } from 'lucide-react';
 import { filteredPlaylistData } from '@/app/spotify_utils/types';
 
 type SongButtonProps = filteredPlaylistData & {
+	modify_avail?: boolean
 	user_tag?: string | null,
 	className?: string,
 }
 
-function SongButton({ className = '', song_name, song_url, album_cover, artists_data, user_tag }: SongButtonProps) {
+function SongButton({ className = '', song_name, song_url, album_cover, artists_data, user_tag, modify_avail }: SongButtonProps) {
 	return (
 		<div key={song_name} className={`flex flex-row items-center gap-4 ${className}`}>
 			{/* Album Cover */}
@@ -31,6 +32,8 @@ function SongButton({ className = '', song_name, song_url, album_cover, artists_
 					{artists_data ? artists_data.map(({ external_urls, name }, index) => (index === (artists_data.length - 1) ? <a href={external_urls.spotify} target='_blank' key={name}><h5>{name}</h5></a> : <a href={external_urls.spotify} target='_blank' key={name}><h5>{name},</h5></a>)) : <h5>No Artist</h5>}
 				</div>
 			</div>
+
+			{modify_avail ? <h1> Can modify MF </h1> : null}
 
 			{/* User Info */}
 			<div className="w-64 ml-auto">

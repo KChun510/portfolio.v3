@@ -1039,12 +1039,14 @@ __turbopack_context__.s({
     "get_playlist": (()=>get_playlist),
     "get_session_browser": (()=>get_session_browser),
     "get_session_db": (()=>get_session_db),
+    "get_song_count_browser": (()=>get_song_count_browser),
     "get_top_items": (()=>get_top_items),
     "pullGitInfo": (()=>pullGitInfo),
     "search_items": (()=>search_items),
     "select_all_session": (()=>select_all_session),
     "set_session": (()=>set_session),
-    "update_session": (()=>update_session)
+    "update_session": (()=>update_session),
+    "update_song_count_browser": (()=>update_song_count_browser)
 });
 async function readJSONFile() {
     try {
@@ -1150,6 +1152,24 @@ async function set_session(user_tag, song_names) {
         console.error(err);
     }
 }
+async function update_song_count_browser(count) {
+    try {
+        const res = await fetch("/api/session/update_session_song_count", {
+            method: "POST",
+            credentials: "include",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                count
+            })
+        });
+        const data = await res.json();
+        return data;
+    } catch (err) {
+        console.error(err);
+    }
+}
 async function get_session_browser() {
     try {
         const res = await fetch("/api/session/get_session", {
@@ -1190,6 +1210,17 @@ async function update_session(session_id, user_tag, song_names) {
                 song_names
             })
         });
+    } catch (err) {
+        console.error(err);
+    }
+}
+async function get_song_count_browser() {
+    try {
+        const res = await fetch("/api/session/get_session_song_count", {
+            method: "GET"
+        });
+        const data = await res.json();
+        return data;
     } catch (err) {
         console.error(err);
     }

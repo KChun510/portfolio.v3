@@ -1,22 +1,28 @@
-import { ReactHTMLElement, useState } from "react"
-import { add_track, set_session, get_session_db, update_session } from "@/app/actions"
+import { useState } from "react"
+import { add_track, set_session, get_session_db, update_session, get_song_count_browser, get_session_browser, update_song_count_browser } from "@/app/actions"
 import { songPickModalProps } from "@/app/spotify_utils/types"
 import { useQuery } from "react-query"
 import CurrSongPick_modal from "../../currSongPick_modal"
 import { Filter } from 'bad-words'
 
-
-const AddForm = ({ song_artists, song_cover_art, song_name, uri, backFnOnClick, closeModalFn, songData, refetch1, refetch2 }: songPickModalProps) => {
+const AddForm = ({ song_artists, song_cover_art, song_name, uri, backFnOnClick, closeModalFn, songData, refetch1, refetch2, refetch3 }: songPickModalProps) => {
 	const { data: browserData } = useQuery<any>({
-		queryKey: ['browserData']
+		queryKey: ['browserData'],
+		queryFn: async () => await get_session_browser()
 	})
+
+	const { data: session, isLoading: isSongCountLoading } = useQuery<{ song_count: number }>({
+		queryKey: ['song_count'],
+		queryFn: async () => await get_song_count_browser()
+	})
+
 	const [error, setError] = useState({ errorOn: false, errorMessage: "" })
 	const [userTag, setUserTag] = useState(browserData && browserData.user_tag ? browserData.user_tag : "")
 	const filter = new Filter()
 
 	const handle_form_submit = async () => {
 		if (filter.isProfane(userTag)) {
-			setError({ errorOn: true, errorMessage: `User Tag: "${userTag}" is not allowed.` })
+			setError({ errorOn: true, errorMessage: `User Tag: "${userTag}" is not allowed` })
 			return
 		}
 
@@ -27,23 +33,30 @@ const AddForm = ({ song_artists, song_cover_art, song_name, uri, backFnOnClick, 
 
 		for (const track of songData!) {
 			if (track.song_name == song_name) {
-				setError({ errorOn: true, errorMessage: `Song of: "${song_name}" already on playlist. ` })
+				setError({ errorOn: true, errorMessage: `Song of: "${song_name}" already on playlist` })
 				return
 			}
 		}
 
 		if (!browserData || !browserData.hasCookie) {
-			set_session(userTag === "" ? null : userTag, [song_name])
+			await set_session(userTag === "" ? null : userTag, [song_name])
 		} else {
 			/* Song-Update Logic */
-			const dbData = await get_session_db(browserData.session)
-			const song_arr: string[] = await JSON.parse(dbData.song_names)
-			song_arr.push(song_name!)
-			await update_session(dbData.session_id, userTag, song_arr)
+			if (session!.song_count < 2) {
+				const dbData = await get_session_db(browserData.session)
+				const song_arr: string[] = await JSON.parse(dbData.song_names)
+				song_arr.push(song_name!)
+				await update_session(dbData.session_id, userTag, song_arr)
+				update_song_count_browser(++session!.song_count)
+			} else {
+				setError({ errorOn: true, errorMessage: `You've added max of 3 songs` })
+				return
+			}
 		}
 
 		const res = await add_track(uri)
-		if (res && closeModalFn && refetch1 && refetch2) {
+		if (res && closeModalFn && refetch1 && refetch2 && refetch3) {
+			refetch3()
 			refetch2()
 			refetch1()
 			closeModalFn()

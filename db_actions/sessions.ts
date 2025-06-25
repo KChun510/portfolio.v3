@@ -9,8 +9,9 @@ export function createSession(session_id: string, user_tag: string, song_names: 
 
 export function select_all_sessions() {
 	const db = openDB()
-	const data: any = db.prepare("SELECT user_tag, song_names FROM sessions WHERE user_tag IS NOT NULL").all()
-	const formatted_data = data.map(({ user_tag, song_names }: any) => ({
+	const data: any = db.prepare("SELECT session_id, user_tag, song_names FROM sessions").all()
+	const formatted_data = data.map(({ session_id, user_tag, song_names }: any) => ({
+		session: session_id,
 		user_tag,
 		song_names: JSON.parse(song_names)
 	}));
@@ -37,9 +38,9 @@ export function deleteSession(sessionId: string) {
 	db.prepare("DELETE FROM sessions WHERE session_id = ?").run(sessionId)
 }
 
-
+/*
 (function main() {
 	console.log(select_all_sessions())
 })()
-
+*/
 

@@ -1,4 +1,5 @@
 export type import_session_data = {
+	session: string,
 	user_tag: string,
 	song_names: string[]
 }
