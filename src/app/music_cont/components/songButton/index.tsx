@@ -33,7 +33,7 @@ function SongButton({ className = '', song_name, song_url, album_cover, artists_
 			</div>
 
 			{/* User Info */}
-			<div className="w-64 ml-50">
+			<div className="w-64 ml-auto">
 				<div className="flex items-center">
 					<User className="w-10 h-10 md:w-20 md:h-20 stroke-[0.8]" />
 					<h5 className="text-sm md:text-base">Added By: {user_tag ?? " Un-named"}</h5>

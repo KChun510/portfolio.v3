@@ -27,7 +27,7 @@ const Modal = ({ className, value, onChange, onClick, songData, refetchFn1, refe
 	useEffect(() => {
 		const handler = setTimeout(() => {
 			setDebounceVal(input)
-		}, 500)
+		}, 250)
 
 		return () => clearTimeout(handler)
 	}, [input, value])
@@ -36,7 +36,7 @@ const Modal = ({ className, value, onChange, onClick, songData, refetchFn1, refe
 		queryKey: ['searchItems', debounceVal],
 		queryFn: async () => search_items(debounceVal),
 		enabled: !!debounceVal
-	});
+	})
 
 	return (
 		<div className="fixed h-[100dvh] inset-0 bg-black/50 flex items-center justify-center z-11" onClick={onClick}>

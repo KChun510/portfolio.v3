@@ -10,7 +10,7 @@ export async function GET(req: NextRequest) {
 
 		if (!browserSessionId) {
 			return NextResponse.json({ hasCookie: false }, {
-				status: 204,
+				status: 200,
 			});
 		}
 

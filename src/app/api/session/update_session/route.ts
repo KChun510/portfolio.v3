@@ -4,9 +4,7 @@ import { export_session_data } from "../../../../../db_actions/types";
 
 export async function POST(req: NextRequest) {
 	const body: export_session_data = await req.json()
-	console.log("Logging from the API", body)
 	try {
-
 		if (!body) {
 			return NextResponse.json({ message: "Error getting req body" }, {
 				status: 500,
