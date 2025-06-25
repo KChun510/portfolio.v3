@@ -140,7 +140,7 @@ function SongButton({ className = '', song_name, song_url, album_cover, artists_
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "w-64",
+                className: "w-64 flex flex-col",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                         href: song_url,
@@ -209,6 +209,31 @@ function SongButton({ className = '', song_name, song_url, album_cover, artists_
                         fileName: "[project]/src/app/music_cont/components/songButton/index.tsx",
                         lineNumber: 31,
                         columnNumber: 5
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "flex items-center",
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h5", {
+                                className: "text-sm md:text-base",
+                                children: [
+                                    "Added By: ",
+                                    user_tag ?? " Un-named"
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/app/music_cont/components/songButton/index.tsx",
+                                lineNumber: 36,
+                                columnNumber: 7
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "[project]/src/app/music_cont/components/songButton/index.tsx",
+                            lineNumber: 35,
+                            columnNumber: 6
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/music_cont/components/songButton/index.tsx",
+                        lineNumber: 34,
+                        columnNumber: 5
                     }, this)
                 ]
             }, void 0, true, {
@@ -220,7 +245,7 @@ function SongButton({ className = '', song_name, song_url, album_cover, artists_
                 children: " Can modify MF "
             }, void 0, false, {
                 fileName: "[project]/src/app/music_cont/components/songButton/index.tsx",
-                lineNumber: 36,
+                lineNumber: 42,
                 columnNumber: 20
             }, this) : null,
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -232,7 +257,7 @@ function SongButton({ className = '', song_name, song_url, album_cover, artists_
                             className: "w-10 h-10 md:w-20 md:h-20 stroke-[0.8]"
                         }, void 0, false, {
                             fileName: "[project]/src/app/music_cont/components/songButton/index.tsx",
-                            lineNumber: 41,
+                            lineNumber: 46,
                             columnNumber: 6
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h5", {
@@ -243,18 +268,18 @@ function SongButton({ className = '', song_name, song_url, album_cover, artists_
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/music_cont/components/songButton/index.tsx",
-                            lineNumber: 42,
+                            lineNumber: 47,
                             columnNumber: 6
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/music_cont/components/songButton/index.tsx",
-                    lineNumber: 40,
+                    lineNumber: 45,
                     columnNumber: 5
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/music_cont/components/songButton/index.tsx",
-                lineNumber: 39,
+                lineNumber: 44,
                 columnNumber: 4
             }, this)
         ]
