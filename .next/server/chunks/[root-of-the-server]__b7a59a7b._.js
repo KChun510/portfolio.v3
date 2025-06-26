@@ -248,6 +248,7 @@ async function get_playlist() {
         const song_data = data.tracks.items;
         const final_song_data = song_data.map((elem)=>({
                 song_name: elem.track.name,
+                uri: elem.track.uri,
                 song_url: elem.track.external_urls,
                 album_cover: elem.track.album.images,
                 artists_data: elem.track.artists

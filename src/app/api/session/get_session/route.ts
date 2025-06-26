@@ -26,7 +26,7 @@ export async function GET(req: NextRequest) {
 
 	} catch (err) {
 		return NextResponse.json({ hasCookie: false }, {
-			status: 401,
+			status: 202,
 			statusText: err as string
 		});
 	}

@@ -46,7 +46,7 @@ const MusicCont = ({ id }: { id: string }) => {
       document.body.classList.remove('overflow-hidden');
     }
     return () => document.body.classList.remove('overflow-hidden');
-  }, [showModal, dbData]);
+  }, [showModal, dbData, playListSongs]);
 
   return (
     <div id={id} className="md:min-h-screen md:scroll-mt-32">
@@ -59,12 +59,14 @@ const MusicCont = ({ id }: { id: string }) => {
           <div className="songList custom_bg overflow-auto w-full border-2 border-transparent rounded-lg flex-1">
             <div className="list-group border-black">
               {!isLoadingPlaylist && playListSongs && !isDbDataLoading && dbData
-                ? playListSongs.map(({ song_name, song_url, album_cover, artists_data }) => {
+                ? playListSongs.map(({ song_name, song_url, album_cover, artists_data, uri }) => {
                   let user_tag = null
                   let modify_avail = false
+                  let track_owner_session_id = null
                   for (const obj of dbData) {
                     if (obj.song_names.includes(song_name)) {
                       if (browserData.session === obj.session) { modify_avail = true }
+                      track_owner_session_id = obj.session
                       user_tag = obj.user_tag === "" ? null : obj.user_tag
                       break
                     }
@@ -79,6 +81,9 @@ const MusicCont = ({ id }: { id: string }) => {
                       artists_data={artists_data}
                       user_tag={user_tag}
                       modify_avail={modify_avail}
+                      uri={uri}
+                      refetch={re_playlist}
+                      sessionID={track_owner_session_id}
                     />
                   )
                 })

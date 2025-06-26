@@ -1,0 +1,3 @@
+{
+  "/api/spotify/remove_track_from_playlist/route": "app/api/spotify/remove_track_from_playlist/route.js"
+}

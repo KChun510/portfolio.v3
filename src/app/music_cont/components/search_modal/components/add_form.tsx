@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { add_track, set_session, get_session_db, update_session, get_song_count_browser, get_session_browser, update_song_count_browser } from "@/app/actions"
+import { add_track, set_session, get_session_db, update_session, get_song_count_browser, get_session_browser } from "@/app/actions"
 import { songPickModalProps } from "@/app/spotify_utils/types"
 import { useQuery } from "react-query"
 import CurrSongPick_modal from "../../currSongPick_modal"
@@ -38,16 +38,15 @@ const AddForm = ({ song_artists, song_cover_art, song_name, uri, backFnOnClick, 
 			}
 		}
 
-		if (!browserData || !browserData.hasCookie) {
+		const dbData = await get_session_db(browserData.session)
+		if (!browserData || dbData) {
 			await set_session(userTag === "" ? null : userTag, [song_name])
 		} else {
 			/* Song-Update Logic */
-			if (session!.song_count < 2) {
-				const dbData = await get_session_db(browserData.session)
-				const song_arr: string[] = await JSON.parse(dbData.song_names)
+			const song_arr: string[] = await JSON.parse(dbData.song_names)
+			if (song_arr.length < 3) {
 				song_arr.push(song_name!)
 				await update_session(dbData.session_id, userTag, song_arr)
-				update_song_count_browser(++session!.song_count)
 			} else {
 				setError({ errorOn: true, errorMessage: `You've added max of 3 songs` })
 				return

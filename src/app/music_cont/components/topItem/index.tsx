@@ -27,7 +27,7 @@ function TopItem({ className = '', name, external_urls, album, artists }: TopIte
 					<a href={external_urls.spotify} target="_blank" rel="noopener noreferrer">
 						<b><h1 className="text-xl">{name}</h1></b>
 					</a>
-					<div className="flex flex-row flex-wrap space-x-1">
+					<div className="flex flex-row flex-wrap space-x-1 text-gray-400">
 						{artists ? artists.map(({ external_urls, name }, index) => (index === (artists.length - 1) ? <a href={external_urls.spotify} target='_blank' key={name}><h5>{name}</h5></a> : <a href={external_urls.spotify} target='_blank' key={name}><h5>{name},</h5></a>)) : <h5>No Artist</h5>}
 					</div>
 				</div>

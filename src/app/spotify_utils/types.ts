@@ -127,6 +127,7 @@ export type SpotifyPlaylist = {
 export type filteredPlaylistData = {
 	song_name: string,
 	song_url: string,
+	uri: string,
 	album_cover: { url: string, width: number, height: number }[],
 	artists_data: { external_urls: { spotify: string }, name: string }[],
 }

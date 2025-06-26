@@ -1067,6 +1067,7 @@ __turbopack_context__.s({
     "get_song_count_browser": (()=>get_song_count_browser),
     "get_top_items": (()=>get_top_items),
     "pullGitInfo": (()=>pullGitInfo),
+    "remove_track_playlist": (()=>remove_track_playlist),
     "search_items": (()=>search_items),
     "select_all_session": (()=>select_all_session),
     "set_session": (()=>set_session),
@@ -1214,10 +1215,13 @@ async function get_session_db(session) {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(session)
+            body: JSON.stringify(session ?? null)
         });
-        const data = await res.json();
-        return data;
+        if (res) {
+            const data = await res.json();
+            return data;
+        }
+        return null;
     } catch (err) {
         console.error(err);
     }
@@ -1254,6 +1258,21 @@ async function select_all_session() {
     try {
         const res = await fetch("/api/session/select_all_session", {
             method: "GET"
+        });
+        const data = await res.json();
+        return data;
+    } catch (err) {
+        console.error(err);
+    }
+}
+async function remove_track_playlist(uri) {
+    try {
+        const res = await fetch("/api/spotify/remove_track_from_playlist", {
+            method: "POST",
+            headers: {
+                "Content-Type": "aplication/json"
+            },
+            body: JSON.stringify(uri)
         });
         const data = await res.json();
         return data;

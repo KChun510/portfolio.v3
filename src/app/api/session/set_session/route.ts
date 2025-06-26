@@ -24,16 +24,6 @@ export async function POST(req: NextRequest) {
 				maxAge: 60 * 60 * 24 * 365 * 10,
 			})
 		)
-		response.headers.append(
-			"Set-Cookie",
-			serialize("song_count", song_count.toString(), {
-				httpOnly: true,
-				secure: !isDev,
-				sameSite: "lax",
-				path: "/",
-				maxAge: 60 * 60 * 24 * 365 * 10,
-			})
-		)
 		return response
 	} else {
 		return NextResponse.json({ "valid": false, message: "Login failed" })

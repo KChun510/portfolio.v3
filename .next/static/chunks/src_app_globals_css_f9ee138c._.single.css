@@ -40,6 +40,7 @@
 @layer theme {
   :root, :host {
     --color-red-500: oklch(63.7% .237 25.331);
+    --color-green-500: oklch(72.3% .219 149.579);
     --color-blue-500: oklch(62.3% .214 259.815);
     --color-gray-50: oklch(98.5% .002 247.839);
     --color-gray-100: oklch(96.7% .003 264.542);
@@ -49,6 +50,7 @@
     --color-gray-600: oklch(44.6% .03 256.802);
     --color-gray-700: oklch(37.3% .034 259.733);
     --color-gray-900: oklch(21% .034 264.665);
+    --color-neutral-700: oklch(37.1% 0 0);
     --color-black: #000;
     --color-white: #fff;
     --spacing: .25rem;
@@ -304,12 +306,24 @@
     inset-inline-start: calc(var(--spacing) * 0);
   }
 
+  .-top-8 {
+    top: calc(var(--spacing) * -8);
+  }
+
+  .top-0 {
+    top: calc(var(--spacing) * 0);
+  }
+
   .right-0 {
     right: calc(var(--spacing) * 0);
   }
 
   .bottom-0 {
     bottom: calc(var(--spacing) * 0);
+  }
+
+  .-left-50 {
+    left: calc(var(--spacing) * -50);
   }
 
   .left-0 {
@@ -452,6 +466,10 @@
 
   .table {
     display: table;
+  }
+
+  .h-2 {
+    height: calc(var(--spacing) * 2);
   }
 
   .h-4 {
@@ -628,6 +646,10 @@
     overflow: hidden;
   }
 
+  .overflow-visible {
+    overflow: visible;
+  }
+
   .overflow-y-auto {
     overflow-y: auto;
   }
@@ -660,6 +682,10 @@
 
   .border-gray-300 {
     border-color: var(--color-gray-300);
+  }
+
+  .border-gray-500 {
+    border-color: var(--color-gray-500);
   }
 
   .border-transparent {
@@ -700,16 +726,20 @@
     background-color: var(--color-gray-50);
   }
 
+  .bg-green-500 {
+    background-color: var(--color-green-500);
+  }
+
+  .bg-neutral-700 {
+    background-color: var(--color-neutral-700);
+  }
+
   .bg-transparent {
     background-color: #0000;
   }
 
   .bg-white {
     background-color: var(--color-white);
-  }
-
-  .stroke-\[0\.8\] {
-    stroke-width: .8px;
   }
 
   .object-contain {
@@ -855,6 +885,10 @@
     color: currentColor;
   }
 
+  .text-gray-400 {
+    color: var(--color-gray-400);
+  }
+
   .text-gray-500 {
     color: var(--color-gray-500);
   }
@@ -918,8 +952,20 @@
   }
 
   @media (hover: hover) {
+    .hover\:bg-transparent:hover {
+      background-color: #0000;
+    }
+  }
+
+  @media (hover: hover) {
     .hover\:\[color\:\#332E2E\]:hover {
       color: #332e2e;
+    }
+  }
+
+  @media (hover: hover) {
+    .hover\:text-white:hover {
+      color: var(--color-white);
     }
   }
 
@@ -990,12 +1036,6 @@
   }
 
   @media (width >= 48rem) {
-    .md\:h-20 {
-      height: calc(var(--spacing) * 20);
-    }
-  }
-
-  @media (width >= 48rem) {
     .md\:h-\[100px\] {
       height: 100px;
     }
@@ -1020,8 +1060,8 @@
   }
 
   @media (width >= 48rem) {
-    .md\:w-20 {
-      width: calc(var(--spacing) * 20);
+    .md\:w-50 {
+      width: calc(var(--spacing) * 50);
     }
   }
 

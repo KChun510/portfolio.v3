@@ -1,5 +1,5 @@
 import { songPickModalProps } from "@/app/spotify_utils/types"
-import blank_album_cover from "../blank_album_cover.png"
+import blank_album_cover from "../assets/blank_album_cover.png"
 import Image from "next/image"
 
 const CurrSongPick_modal = ({ className = '', song_artists, song_cover_art, song_name }: songPickModalProps) => {

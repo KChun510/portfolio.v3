@@ -147,10 +147,13 @@ export async function get_session_db(session) {
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(session)
+      body: JSON.stringify(session ?? null)
     })
-    const data = await res.json()
-    return data
+    if (res) {
+      const data = await res.json()
+      return data
+    }
+    return null
   } catch (err) {
     console.error(err)
   }
@@ -186,6 +189,22 @@ export async function select_all_session() {
   try {
     const res = await fetch("/api/session/select_all_session", {
       method: "GET"
+    })
+    const data = await res.json()
+    return data
+  } catch (err) {
+    console.error(err)
+  }
+}
+
+export async function remove_track_playlist(uri) {
+  try {
+    const res = await fetch("/api/spotify/remove_track_from_playlist", {
+      method: "POST",
+      headers: {
+        "Content-Type": "aplication/json"
+      },
+      body: JSON.stringify(uri)
     })
     const data = await res.json()
     return data
