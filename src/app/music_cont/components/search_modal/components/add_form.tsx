@@ -6,9 +6,11 @@ import CurrSongPick_modal from "../../currSongPick_modal"
 import { Filter } from 'bad-words'
 
 const AddForm = ({ song_artists, song_cover_art, song_name, uri, backFnOnClick, closeModalFn, songData, refetch1, refetch2, refetch3 }: songPickModalProps) => {
+	const max_song_count = 4
 	const { data: browserData } = useQuery<any>({
 		queryKey: ['browserData'],
-		queryFn: async () => await get_session_browser()
+		queryFn: async () => await get_session_browser(),
+		initialData: undefined
 	})
 
 	const { data: session, isLoading: isSongCountLoading } = useQuery<{ song_count: number }>({
@@ -39,16 +41,16 @@ const AddForm = ({ song_artists, song_cover_art, song_name, uri, backFnOnClick, 
 		}
 
 		const dbData = await get_session_db(browserData.session)
-		if (!browserData || dbData) {
+		if (!browserData.session || !dbData.song_names) {
 			await set_session(userTag === "" ? null : userTag, [song_name])
 		} else {
 			/* Song-Update Logic */
 			const song_arr: string[] = await JSON.parse(dbData.song_names)
-			if (song_arr.length < 3) {
+			if (song_arr.length < max_song_count) {
 				song_arr.push(song_name!)
 				await update_session(dbData.session_id, userTag, song_arr)
 			} else {
-				setError({ errorOn: true, errorMessage: `You've added max of 3 songs` })
+				setError({ errorOn: true, errorMessage: `You've added max of ${max_song_count} songs` })
 				return
 			}
 		}

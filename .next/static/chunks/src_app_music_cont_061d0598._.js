@@ -266,10 +266,10 @@ function SongButton({ className = '', song_name, song_url, album_cover, artists_
                 columnNumber: 4
             }, this),
             modify_avail ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "w-64 ml-auto",
+                className: "ml-auto md:w-64",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                     onClick: ()=>handleDelete(uri, refetch, sessionID, song_name),
-                    className: "md:w-50 bg-transparent text-red-500 font-semibold hover:text-white py-2 px-4 border border-gray-500 hover:bg-transparent rounded",
+                    className: "md:w-50 bg-transparent text-[#8746ff] font-semibold hover:text-white py-2 px-4 border border-gray-500 hover:bg-transparent rounded",
                     children: "Delete "
                 }, void 0, false, {
                     fileName: "[project]/src/app/music_cont/components/songButton/index.tsx",
@@ -907,13 +907,15 @@ var _s = __turbopack_context__.k.signature();
 ;
 const AddForm = ({ song_artists, song_cover_art, song_name, uri, backFnOnClick, closeModalFn, songData, refetch1, refetch2, refetch3 })=>{
     _s();
+    const max_song_count = 4;
     const { data: browserData } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$query$2f$es$2f$react$2f$useQuery$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useQuery"])({
         queryKey: [
             'browserData'
         ],
         queryFn: {
             "AddForm.useQuery": async ()=>await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$actions$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["get_session_browser"])()
-        }["AddForm.useQuery"]
+        }["AddForm.useQuery"],
+        initialData: undefined
     });
     const { data: session, isLoading: isSongCountLoading } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$query$2f$es$2f$react$2f$useQuery$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useQuery"])({
         queryKey: [
@@ -954,19 +956,19 @@ const AddForm = ({ song_artists, song_cover_art, song_name, uri, backFnOnClick, 
             }
         }
         const dbData = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$actions$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["get_session_db"])(browserData.session);
-        if (!browserData || dbData) {
+        if (!browserData.session || !dbData.song_names) {
             await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$actions$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["set_session"])(userTag === "" ? null : userTag, [
                 song_name
             ]);
         } else {
             /* Song-Update Logic */ const song_arr = await JSON.parse(dbData.song_names);
-            if (song_arr.length < 3) {
+            if (song_arr.length < max_song_count) {
                 song_arr.push(song_name);
                 await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$actions$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["update_session"])(dbData.session_id, userTag, song_arr);
             } else {
                 setError({
                     errorOn: true,
-                    errorMessage: `You've added max of 3 songs`
+                    errorMessage: `You've added max of ${max_song_count} songs`
                 });
                 return;
             }
@@ -999,12 +1001,12 @@ const AddForm = ({ song_artists, song_cover_art, song_name, uri, backFnOnClick, 
                     children: "Song Selected:"
                 }, void 0, false, {
                     fileName: "[project]/src/app/music_cont/components/search_modal/components/add_form.tsx",
-                    lineNumber: 78,
+                    lineNumber: 80,
                     columnNumber: 29
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/music_cont/components/search_modal/components/add_form.tsx",
-                lineNumber: 78,
+                lineNumber: 80,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$music_cont$2f$components$2f$currSongPick_modal$2f$index$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -1013,7 +1015,7 @@ const AddForm = ({ song_artists, song_cover_art, song_name, uri, backFnOnClick, 
                 song_cover_art: song_cover_art
             }, void 0, false, {
                 fileName: "[project]/src/app/music_cont/components/search_modal/components/add_form.tsx",
-                lineNumber: 80,
+                lineNumber: 82,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -1022,12 +1024,12 @@ const AddForm = ({ song_artists, song_cover_art, song_name, uri, backFnOnClick, 
                     children: "Added by:"
                 }, void 0, false, {
                     fileName: "[project]/src/app/music_cont/components/search_modal/components/add_form.tsx",
-                    lineNumber: 82,
+                    lineNumber: 84,
                     columnNumber: 29
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/music_cont/components/search_modal/components/add_form.tsx",
-                lineNumber: 82,
+                lineNumber: 84,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1040,7 +1042,7 @@ const AddForm = ({ song_artists, song_cover_art, song_name, uri, backFnOnClick, 
                 onChange: (e)=>setUserTag(e.target.value)
             }, void 0, false, {
                 fileName: "[project]/src/app/music_cont/components/search_modal/components/add_form.tsx",
-                lineNumber: 83,
+                lineNumber: 85,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1052,7 +1054,7 @@ const AddForm = ({ song_artists, song_cover_art, song_name, uri, backFnOnClick, 
                         children: " Back "
                     }, void 0, false, {
                         fileName: "[project]/src/app/music_cont/components/search_modal/components/add_form.tsx",
-                        lineNumber: 86,
+                        lineNumber: 88,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1061,13 +1063,13 @@ const AddForm = ({ song_artists, song_cover_art, song_name, uri, backFnOnClick, 
                         children: " Submit "
                     }, void 0, false, {
                         fileName: "[project]/src/app/music_cont/components/search_modal/components/add_form.tsx",
-                        lineNumber: 88,
+                        lineNumber: 90,
                         columnNumber: 5
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/music_cont/components/search_modal/components/add_form.tsx",
-                lineNumber: 84,
+                lineNumber: 86,
                 columnNumber: 4
             }, this),
             error.errorOn ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h5", {
@@ -1075,13 +1077,13 @@ const AddForm = ({ song_artists, song_cover_art, song_name, uri, backFnOnClick, 
                 children: error.errorMessage
             }, void 0, false, {
                 fileName: "[project]/src/app/music_cont/components/search_modal/components/add_form.tsx",
-                lineNumber: 90,
+                lineNumber: 92,
                 columnNumber: 21
             }, this) : null
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/music_cont/components/search_modal/components/add_form.tsx",
-        lineNumber: 77,
+        lineNumber: 79,
         columnNumber: 3
     }, this);
 };

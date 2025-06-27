@@ -38,9 +38,7 @@ export function deleteSession(sessionId: string) {
 	db.prepare("DELETE FROM sessions WHERE session_id = ?").run(sessionId)
 }
 
-/*
-(function main() {
-	console.log(select_all_sessions())
+(async function main() {
+	console.log(await getSession(""))
 })()
-*/
 

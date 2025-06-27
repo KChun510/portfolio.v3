@@ -82,7 +82,7 @@ var __TURBOPACK__imported__module__$5b$externals$5d2f$path__$5b$external$5d$__$2
 ;
 ;
 function openDB() {
-    //	const dbPath = path.join(process.cwd(), "user_info.db");
+    //const dbPath = path.join(process.cwd(), "user_info.db");
     const dbPath = __TURBOPACK__imported__module__$5b$externals$5d2f$path__$5b$external$5d$__$28$path$2c$__cjs$29$__["default"].join(process.cwd(), "db_actions", "user_info.db");
     return new __TURBOPACK__imported__module__$5b$externals$5d2f$better$2d$sqlite3__$5b$external$5d$__$28$better$2d$sqlite3$2c$__cjs$29$__["default"](dbPath, {
         verbose: ()=>{}
@@ -130,11 +130,10 @@ function getSession(sessionId) {
 function deleteSession(sessionId) {
     const db = (0, __TURBOPACK__imported__module__$5b$project$5d2f$db_actions$2f$connection$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["openDB"])();
     db.prepare("DELETE FROM sessions WHERE session_id = ?").run(sessionId);
-} /*
-(function main() {
-	console.log(select_all_sessions())
-})()
-*/ 
+}
+(async function main() {
+    console.log(await getSession(""));
+})();
 }}),
 "[project]/src/app/api/session/get_session_db/route.ts [app-route] (ecmascript)": ((__turbopack_context__) => {
 "use strict";

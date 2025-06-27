@@ -51,8 +51,8 @@ function SongButton({ className = '', song_name, song_url, album_cover, artists_
 
 			{
 				modify_avail ?
-					<div className="w-64 ml-auto">
-						<button onClick={() => handleDelete(uri, refetch, sessionID, song_name)} className="md:w-50 bg-transparent text-red-500 font-semibold hover:text-white py-2 px-4 border border-gray-500 hover:bg-transparent rounded">
+					<div className="ml-auto md:w-64">
+						<button onClick={() => handleDelete(uri, refetch, sessionID, song_name)} className="md:w-50 bg-transparent text-[#8746ff] font-semibold hover:text-white py-2 px-4 border border-gray-500 hover:bg-transparent rounded">
 							Delete </button>
 					</div > : null
 			}

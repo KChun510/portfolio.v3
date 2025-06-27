@@ -1080,6 +1080,10 @@
     white-space: nowrap;
   }
 
+  .text-\[\#8746ff\] {
+    color: #8746ff;
+  }
+
   .text-current {
     color: currentColor;
   }
@@ -1285,6 +1289,12 @@
   @media (width >= 48rem) {
     .md\:w-50 {
       width: calc(var(--spacing) * 50);
+    }
+  }
+
+  @media (width >= 48rem) {
+    .md\:w-64 {
+      width: calc(var(--spacing) * 64);
     }
   }
 
