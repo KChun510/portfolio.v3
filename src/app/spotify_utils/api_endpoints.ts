@@ -203,7 +203,7 @@ export async function get_top_items(): Promise<filtered_top_data[] | null> {
 	const token_data = await get_local_token();
 	const url = new URL(`https://api.spotify.com/v1/me/top/tracks`)
 	url.searchParams.append("type", "tracks")
-	url.searchParams.append("time_range", "medium_term")
+	url.searchParams.append("time_range", "long_term")
 	url.searchParams.append("limit", "10")
 
 	try {

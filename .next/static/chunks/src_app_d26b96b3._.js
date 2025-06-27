@@ -25,8 +25,8 @@ __turbopack_context__.v((parentImport) => {
       "[project]/src/app/music_cont/music_cont.css [app-client] (css)"
     ]
   },
-  "static/chunks/src_app_music_cont_45ac5e03._.js",
-  "static/chunks/node_modules_9f9e6f5d._.js",
+  "static/chunks/src_app_music_cont_061d0598._.js",
+  "static/chunks/node_modules_c05a2f13._.js",
   "static/chunks/src_app_music_cont_index_tsx_75ee56c0._.js"
 ].map((chunk) => __turbopack_context__.l(chunk))).then(() => {
         return parentImport("[project]/src/app/music_cont/index.tsx [app-client] (ecmascript, next/dynamic entry)");

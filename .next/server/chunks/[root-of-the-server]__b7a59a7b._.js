@@ -317,7 +317,7 @@ async function get_top_items() {
     const token_data = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$spotify_utils$2f$json_actions$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["get_local_token"])();
     const url = new URL(`https://api.spotify.com/v1/me/top/tracks`);
     url.searchParams.append("type", "tracks");
-    url.searchParams.append("time_range", "medium_term");
+    url.searchParams.append("time_range", "long_term");
     url.searchParams.append("limit", "10");
     try {
         if (!token_data) {

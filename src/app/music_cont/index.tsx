@@ -19,9 +19,10 @@ const MusicCont = ({ id }: { id: string }) => {
     queryFn: async () => await get_playlist()
   })
 
-  const { data: currTrack, isLoading: isLoadingCurr } = useQuery<CurrentSongData>({
+  const { data: currTrack, isLoading: isLoadingCurr, refetch: re_currTrack } = useQuery<CurrentSongData>({
     queryKey: ['currTrackData'],
-    queryFn: async () => await get_currTrack()
+    queryFn: async () => await get_currTrack(),
+    refetchInterval: 15000, // Refetch every 5 seconds
   })
 
   const { data: topItems, isLoading: isLoadingTopItems } = useQuery<filtered_top_data[]>({
@@ -51,7 +52,7 @@ const MusicCont = ({ id }: { id: string }) => {
   return (
     <div id={id} className="md:min-h-screen md:scroll-mt-32">
       <h1 className="text-6xl font-bold mx-2 mb-1 md:ml-6">Music ♫</h1>
-      <div className="flex flex-col md:flex-row flex-wrap mx-2 md:mx-6 rounded-lg">
+      <div className="flex flex-col flex-wrap mx-2 gap-y-4 md:flex-row md:mx-6 rounded-lg">
         {/* Left column */}
         <div className="w-full w-1/2 md:w-4/6 flex flex-col max-h-[75vh]">
           <SearchBar value={input} readonly={true} inputMode="none" className="w-full mb-2 cursor-pointer select-none" onChange1={setInput} onClick={() => setModal(true)} />
@@ -91,21 +92,18 @@ const MusicCont = ({ id }: { id: string }) => {
             </div>
           </div>
         </div>
-
         {/* Right column */}
         <div className="w-full md:w-2/6 md:pl-4 mb-6 flex flex-col h-[75vh]">
-
           {/* Make sure this fills available height */}
           <div className="flex flex-col flex-1 h-full">
             <div className="py-2 flex flex-col flex-1 h-full md:px-2 md:py-0">
-              <h2 className="text-4xl font-bold mb-1">In My Ears</h2>
-
+              <h2 className="text-3xl font-bold mb-1">In My Ears</h2>
               {/* First content block */}
               <div className="rounded-lg custom_bg w-full p-4 mb-4 text-white">
-                {!isLoadingCurr && currTrack ? <CurrSongPreview {...currTrack} /> : null}
+                {!isLoadingCurr && currTrack ? <CurrSongPreview {...currTrack} refetchFn={re_currTrack} /> : null}
               </div>
 
-              <h2 className="text-4xl font-bold mb-2">Top 10 Most Played</h2>
+              <h2 className="text-3xl font-bold mb-2">Top 10 Most Played</h2>
 
               {/* Second block: make scrollable if long */}
               <div className="topTenList custom_bg border-transparent border-2 rounded-lg w-full text-white overflow-auto flex-1 mb-1">
