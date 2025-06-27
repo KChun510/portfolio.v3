@@ -1,17 +1,11 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
   "/api/readfile/route": "app/api/readfile/route.js",
   "/api/session/get_session/route": "app/api/session/get_session/route.js",
-  "/api/session/get_session_db/route": "app/api/session/get_session_db/route.js",
   "/api/session/get_session_song_count/route": "app/api/session/get_session_song_count/route.js",
   "/api/session/select_all_session/route": "app/api/session/select_all_session/route.js",
-  "/api/session/set_session/route": "app/api/session/set_session/route.js",
-  "/api/session/update_session/route": "app/api/session/update_session/route.js",
-  "/api/spotify/add_track_to_playlist/route": "app/api/spotify/add_track_to_playlist/route.js",
   "/api/spotify/get_current_track/route": "app/api/spotify/get_current_track/route.js",
   "/api/spotify/get_playlist/route": "app/api/spotify/get_playlist/route.js",
   "/api/spotify/get_top_items/route": "app/api/spotify/get_top_items/route.js",
-  "/api/spotify/remove_track_from_playlist/route": "app/api/spotify/remove_track_from_playlist/route.js",
   "/api/spotify/search_spotify/route": "app/api/spotify/search_spotify/route.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
   "/page": "app/page.js"

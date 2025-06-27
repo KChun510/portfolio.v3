@@ -40,7 +40,7 @@ const Progress_Bar = ({ className, duration, progress_ms, isPlaying, refetchFn }
 
 			if (percent < 1) {
 				animationFrame = requestAnimationFrame(animate);
-			} else {
+			} else if (percent > 1 || timestamp >= duration) {
 				refetchFn();
 			}
 		};

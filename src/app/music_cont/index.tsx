@@ -52,7 +52,7 @@ const MusicCont = ({ id }: { id: string }) => {
   return (
     <div id={id} className="md:min-h-screen md:scroll-mt-32">
       <h1 className="text-6xl font-bold mx-2 mb-1 md:ml-6">Music ♫</h1>
-      <div className="flex flex-col flex-wrap mx-2 gap-y-4 md:flex-row md:mx-6 rounded-lg">
+      <div className="flex flex-col flex-wrap mx-2 gap-y-4 sm:flex-row sm:mx-6 rounded-lg">
         {/* Left column */}
         <div className="w-full w-1/2 md:w-4/6 flex flex-col max-h-[75vh]">
           <SearchBar value={input} readonly={true} inputMode="none" className="w-full mb-2 cursor-pointer select-none" onChange1={setInput} onClick={() => setModal(true)} />
@@ -102,9 +102,10 @@ const MusicCont = ({ id }: { id: string }) => {
               <div className="rounded-lg custom_bg w-full p-4 mb-4 text-white">
                 {!isLoadingCurr && currTrack ? <CurrSongPreview {...currTrack} refetchFn={re_currTrack} /> : null}
               </div>
-
-              <h2 className="text-3xl font-bold mb-2">Top 10 Most Played</h2>
-
+              <div className="flex flex-row items-center gap-x-4">
+                <h2 className="text-3xl font-bold mb-2">Top 10 Most Played</h2>
+                <p>(Monthly)</p>
+              </div>
               {/* Second block: make scrollable if long */}
               <div className="topTenList custom_bg border-transparent border-2 rounded-lg w-full text-white overflow-auto flex-1 mb-1">
                 <div className="list-group w-full">

@@ -6,6 +6,7 @@ import CurrSongPick_modal from "../../currSongPick_modal"
 import { Filter } from 'bad-words'
 
 const AddForm = ({ song_artists, song_cover_art, song_name, uri, backFnOnClick, closeModalFn, songData, refetch1, refetch2, refetch3 }: songPickModalProps) => {
+	const [disabled, setDisabled] = useState(false)
 	const max_song_count = 4
 	const { data: browserData } = useQuery<any>({
 		queryKey: ['browserData'],
@@ -23,19 +24,23 @@ const AddForm = ({ song_artists, song_cover_art, song_name, uri, backFnOnClick, 
 	const filter = new Filter()
 
 	const handle_form_submit = async () => {
+		setDisabled(true)
 		if (filter.isProfane(userTag)) {
 			setError({ errorOn: true, errorMessage: `User Tag: "${userTag}" is not allowed` })
+			setDisabled(false)
 			return
 		}
 
 		if (userTag.length > 15) {
 			setError({ errorOn: true, errorMessage: `User Tag: "${userTag}" is too long. Max Len 15` })
+			setDisabled(false)
 			return
 		}
 
 		for (const track of songData!) {
 			if (track.song_name == song_name) {
 				setError({ errorOn: true, errorMessage: `Song of: "${song_name}" already on playlist` })
+				setDisabled(false)
 				return
 			}
 		}
@@ -51,6 +56,7 @@ const AddForm = ({ song_artists, song_cover_art, song_name, uri, backFnOnClick, 
 				await update_session(dbData.session_id, userTag, song_arr)
 			} else {
 				setError({ errorOn: true, errorMessage: `You've added max of ${max_song_count} songs` })
+				setDisabled(false)
 				return
 			}
 		}
@@ -61,11 +67,13 @@ const AddForm = ({ song_artists, song_cover_art, song_name, uri, backFnOnClick, 
 			refetch2()
 			refetch1()
 			closeModalFn()
+			setDisabled(false)
 			return
 		}
 		setError({
 			errorOn: true, errorMessage: 'Error in adding to "Flavor Town" playlist try again later -or- ping me ;)'
 		})
+		setDisabled(false)
 		return
 	}
 
@@ -87,7 +95,7 @@ const AddForm = ({ song_artists, song_cover_art, song_name, uri, backFnOnClick, 
 				{/* Back button here */}
 				<button className="w-24 bg-[#302c2c] hover:bg-[#4a4545] text-white font-bold py-2 px-4 rounded text-sm md:text-base" onClick={backFnOnClick}> Back </button>
 				{/* Submit button here */}
-				<button onClick={() => handle_form_submit()} className="w-24 bg-[#302c2c] hover:bg-[#4a4545] text-white font-bold py-2 px-4 rounded text-sm md:text-base"> Submit </button>
+				<button onClick={() => handle_form_submit()} className="w-24 bg-[#302c2c] hover:bg-[#4a4545] text-white font-bold py-2 px-4 rounded text-sm md:text-base" disabled={disabled}> Submit </button>
 			</div>
 			{error.errorOn ? <h5 className="text-sm text-red-500 flex flex-row justify-center">{error.errorMessage}</h5> : null}
 		</div>

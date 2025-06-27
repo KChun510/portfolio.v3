@@ -14,14 +14,13 @@ type CurrSongProps = CurrentSongData & {
 const CurrSongPreview = ({ className = '', is_playing, progress_ms, song_artists, song_cover_art, song_duration, song_name, song_direct_link, refetchFn
 }: CurrSongProps) => {
 	return (
-		<div className={`flex flex-row justify-center items-center gap-4 ${className}`}>
-
+		<div className={`flex flex-row justify-center items-center gap-4 ${className} overflow-hidden`}>
 			<div className="relative w-[50px] h-[50px] md:w-[100px] md:h-[100px] shrink-0">
 				<Image
 					className="rounded"
 					src={song_cover_art ? song_cover_art[1].url : blank_album_cover}
 					fill
-					sizes="(min-width: 768px) 100px, 50px"
+					sizes="(min-width: 100px) 100px, 50px"
 					alt="album logo"
 				/>
 			</div>

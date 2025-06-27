@@ -6,7 +6,6 @@ export async function add_track_to_playlist(uri: string) {
 	const token_data = await get_local_token();
 	const url = new URL(`https://api.spotify.com/v1/playlists/${playlist_id}/tracks`)
 
-	console.log(uri)
 	try {
 		if (!token_data) {
 			throw new Error("Unable to get access token from file")
@@ -203,7 +202,7 @@ export async function get_top_items(): Promise<filtered_top_data[] | null> {
 	const token_data = await get_local_token();
 	const url = new URL(`https://api.spotify.com/v1/me/top/tracks`)
 	url.searchParams.append("type", "tracks")
-	url.searchParams.append("time_range", "long_term")
+	url.searchParams.append("time_range", "short_term")
 	url.searchParams.append("limit", "10")
 
 	try {
