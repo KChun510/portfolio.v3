@@ -1,47 +1,42 @@
 # Stage 1: Build
-FROM node:18-slim AS builder
+FROM node:20-slim AS builder
 
-# Install build tools for native modules
 RUN apt-get update && apt-get install -y python3 make g++ && rm -rf /var/lib/apt/lists/*
 
-# Set working directory
 WORKDIR /app
 
-# Copy next.config.js and package info first
+# Copy package files first
 COPY package*.json next.config.ts ./
-RUN npm install
 
-# Copy the rest of the source
+RUN npm install --omit=dev
+
 COPY . .
 
-# Build the Next.js app
+# Build Next.js
 WORKDIR /app/src/app
 RUN npm run build
 
 # Stage 2: Production container
-FROM node:18-slim
+FROM node:20-slim
 
 WORKDIR /app
 
-# Install cron and clean up
-RUN apt-get update && apt-get install -y cron vim && rm -rf /var/lib/apt/lists/*
+# Install runtime tools
+RUN apt-get update && apt-get install -y cron vim python3 make g++ && rm -rf /var/lib/apt/lists/*
 
-# Create cron log file
-RUN touch /var/log/cron.log
+# Copy package files and install dependencies inside final image
+COPY package*.json next.config.ts ./
+RUN npm install --omit=dev
 
 # Copy production build artifacts
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/package.json ./package.json
-COPY --from=builder /app/next.config.ts ./next.config.ts
 COPY --from=builder /app/src /app/src
 
-# Copy cron and startup scripts
+# Cron setup
 COPY ./docker_scripts/crontab.txt /etc/cron.d/my-cron
 COPY ./docker_scripts/entrypoint.sh /entrypoint.sh
 
-# Set permissions
 RUN chmod 0644 /etc/cron.d/my-cron && crontab /etc/cron.d/my-cron
 RUN chmod +x /entrypoint.sh
 
