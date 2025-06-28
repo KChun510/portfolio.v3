@@ -432,7 +432,7 @@ const Progress_Bar = ({ className, duration, progress_ms, isPlaying, refetchFn }
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "text-sm",
-                        children: `${display_duration_min}:${display_duration_sec_rem < 10 ? `0${curr_timeStamp.sec}` : display_duration_sec_rem}`
+                        children: `${display_duration_min}:${display_duration_sec_rem < 10 ? `0${display_duration_sec_rem}` : display_duration_sec_rem}`
                     }, void 0, false, {
                         fileName: "[project]/src/app/music_cont/components/progress_bar/index.tsx",
                         lineNumber: 64,

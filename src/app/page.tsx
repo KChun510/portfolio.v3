@@ -7,6 +7,7 @@ import './Home.css';
 import AboutMeCont from './aboutMe_cont'
 import FirstCont from './first_cont'
 import HeroCont from './hero_cont';
+import Image from 'next/image';
 const MusicCont = dynamic(() => import('./music_cont'), { ssr: false });
 
 const queryClient = new QueryClient()
@@ -14,6 +15,24 @@ const queryClient = new QueryClient()
 const Home = () => {
   return (
     <div className="Home flex flex-col relative overflow-hidden">
+      {/* 
+      <Image
+        src="/better_better_dark_city.png"
+        alt="City Background"
+        fill
+        className="z-[-1]"
+        style={{
+          objectFit: 'cover',         // Equivalent to background-size: cover
+          objectPosition: '50% 20%',  // Equivalent to background-position: 50% 20%
+          imageRendering: 'pixelated',
+          textAlign: 'center',        // Not really meaningful on <img>, but included per request
+          padding: 0,
+          margin: 0
+        }}
+        priority
+      />
+      */}
+
       <QueryClientProvider client={queryClient}>
         <NavBar />
 

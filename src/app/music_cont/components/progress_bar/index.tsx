@@ -62,7 +62,7 @@ const Progress_Bar = ({ className, duration, progress_ms, isPlaying, refetchFn }
 					{`${curr_timeStamp.min}:${curr_timeStamp.sec < 10 ? `0${curr_timeStamp.sec}` : curr_timeStamp.sec}`}
 				</div>
 				<div className="text-sm">
-					{`${display_duration_min}:${display_duration_sec_rem < 10 ? `0${curr_timeStamp.sec}` : display_duration_sec_rem}`}
+					{`${display_duration_min}:${display_duration_sec_rem < 10 ? `0${display_duration_sec_rem}` : display_duration_sec_rem}`}
 				</div>
 			</div>
 		</div>
