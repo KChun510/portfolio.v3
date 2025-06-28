@@ -32,7 +32,6 @@ const Home = () => {
         priority
       />
       */}
-
       <QueryClientProvider client={queryClient}>
         <NavBar />
 

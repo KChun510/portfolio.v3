@@ -157,6 +157,8 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$first_cont$2f$
 ;
 ;
 ;
+const title_style = "text-md md:text-xl font-bold";
+const text_style = "text-sm md:text-lg";
 const slides = [
     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "relative w-full h-full",
@@ -173,42 +175,43 @@ const slides = [
                     className: "object-contain"
                 }, void 0, false, {
                     fileName: "[project]/src/app/first_cont/components/work_showcase/slides.tsx",
-                    lineNumber: 13,
+                    lineNumber: 16,
                     columnNumber: 4
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "absolute bottom-0 left-0 bg-[#332E2E]/80 text-white p-4 z-10 w-full",
+                    className: "absolute bottom-0 left-0 bg-[#332E2E]/80 text-white px-4 py-2 md:p-4 z-10 w-full",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                            className: "text-xl font-bold",
+                            className: title_style,
                             children: "TermTris"
                         }, void 0, false, {
                             fileName: "[project]/src/app/first_cont/components/work_showcase/slides.tsx",
-                            lineNumber: 22,
+                            lineNumber: 25,
                             columnNumber: 5
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            className: text_style,
                             children: "A recreation of Tetris that runs in the Terminal/Command Prompt!"
                         }, void 0, false, {
                             fileName: "[project]/src/app/first_cont/components/work_showcase/slides.tsx",
-                            lineNumber: 23,
+                            lineNumber: 26,
                             columnNumber: 5
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/first_cont/components/work_showcase/slides.tsx",
-                    lineNumber: 21,
+                    lineNumber: 24,
                     columnNumber: 4
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/first_cont/components/work_showcase/slides.tsx",
-            lineNumber: 12,
+            lineNumber: 15,
             columnNumber: 3
         }, this)
     }, "mediaMind", false, {
         fileName: "[project]/src/app/first_cont/components/work_showcase/slides.tsx",
-        lineNumber: 11,
+        lineNumber: 14,
         columnNumber: 2
     }, this),
     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -226,42 +229,43 @@ const slides = [
                     className: "object-contain"
                 }, void 0, false, {
                     fileName: "[project]/src/app/first_cont/components/work_showcase/slides.tsx",
-                    lineNumber: 30,
+                    lineNumber: 33,
                     columnNumber: 4
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "absolute bottom-0 left-0 bg-[#332E2E]/80 text-white p-4 z-10 w-full",
+                    className: "absolute bottom-0 left-0 bg-[#332E2E]/80 text-white px-4 py-2 md:p-4 z-10 w-full",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                            className: "text-xl font-bold",
+                            className: title_style,
                             children: "MediaMind"
                         }, void 0, false, {
                             fileName: "[project]/src/app/first_cont/components/work_showcase/slides.tsx",
-                            lineNumber: 39,
+                            lineNumber: 42,
                             columnNumber: 5
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            children: "An automated system used for content generation and posting, using AI."
+                            className: text_style,
+                            children: "An automated system built for content generation and posting using AI."
                         }, void 0, false, {
                             fileName: "[project]/src/app/first_cont/components/work_showcase/slides.tsx",
-                            lineNumber: 40,
+                            lineNumber: 43,
                             columnNumber: 5
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/first_cont/components/work_showcase/slides.tsx",
-                    lineNumber: 38,
+                    lineNumber: 41,
                     columnNumber: 4
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/first_cont/components/work_showcase/slides.tsx",
-            lineNumber: 29,
+            lineNumber: 32,
             columnNumber: 3
         }, this)
     }, "mediaMind", false, {
         fileName: "[project]/src/app/first_cont/components/work_showcase/slides.tsx",
-        lineNumber: 28,
+        lineNumber: 31,
         columnNumber: 2
     }, this),
     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -279,42 +283,43 @@ const slides = [
                     className: "object-contain bg-[#150d03]"
                 }, void 0, false, {
                     fileName: "[project]/src/app/first_cont/components/work_showcase/slides.tsx",
-                    lineNumber: 46,
+                    lineNumber: 49,
                     columnNumber: 4
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "absolute bottom-0 left-0 bg-[#332E2E]/80 text-white p-4 z-10 w-full",
+                    className: "absolute bottom-0 left-0 bg-[#332E2E]/80 text-white px-4 py-2 md:p-4 z-10 w-full",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                            className: "text-xl font-bold",
+                            className: title_style,
                             children: "Maiz.Work"
                         }, void 0, false, {
                             fileName: "[project]/src/app/first_cont/components/work_showcase/slides.tsx",
-                            lineNumber: 55,
+                            lineNumber: 59,
                             columnNumber: 5
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            className: text_style,
                             children: "Online shop front for a local Oakland clothing brand."
                         }, void 0, false, {
                             fileName: "[project]/src/app/first_cont/components/work_showcase/slides.tsx",
-                            lineNumber: 56,
+                            lineNumber: 60,
                             columnNumber: 5
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/first_cont/components/work_showcase/slides.tsx",
-                    lineNumber: 54,
+                    lineNumber: 57,
                     columnNumber: 4
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/first_cont/components/work_showcase/slides.tsx",
-            lineNumber: 45,
+            lineNumber: 48,
             columnNumber: 3
         }, this)
     }, "maiz.work", false, {
         fileName: "[project]/src/app/first_cont/components/work_showcase/slides.tsx",
-        lineNumber: 44,
+        lineNumber: 47,
         columnNumber: 2
     }, this),
     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -332,42 +337,43 @@ const slides = [
                     className: "object-contain bg-white"
                 }, void 0, false, {
                     fileName: "[project]/src/app/first_cont/components/work_showcase/slides.tsx",
-                    lineNumber: 62,
+                    lineNumber: 66,
                     columnNumber: 4
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "absolute bottom-0 left-0 bg-[#332E2E]/80 text-white p-4 z-10 w-full",
+                    className: "absolute bottom-0 left-0 bg-[#332E2E]/80 text-white px-4 py-2 md:p-4 z-10 w-full",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                            className: "text-xl font-bold",
+                            className: title_style,
                             children: "Embedded Systems"
                         }, void 0, false, {
                             fileName: "[project]/src/app/first_cont/components/work_showcase/slides.tsx",
-                            lineNumber: 71,
+                            lineNumber: 75,
                             columnNumber: 5
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            className: text_style,
                             children: "A collection of my embedded systems work while attending UC Irvine. "
                         }, void 0, false, {
                             fileName: "[project]/src/app/first_cont/components/work_showcase/slides.tsx",
-                            lineNumber: 72,
+                            lineNumber: 76,
                             columnNumber: 5
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/first_cont/components/work_showcase/slides.tsx",
-                    lineNumber: 70,
+                    lineNumber: 74,
                     columnNumber: 4
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/first_cont/components/work_showcase/slides.tsx",
-            lineNumber: 61,
+            lineNumber: 65,
             columnNumber: 3
         }, this)
     }, "embedc", false, {
         fileName: "[project]/src/app/first_cont/components/work_showcase/slides.tsx",
-        lineNumber: 60,
+        lineNumber: 64,
         columnNumber: 2
     }, this),
     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -385,56 +391,91 @@ const slides = [
                     className: "object-contain bg-white"
                 }, void 0, false, {
                     fileName: "[project]/src/app/first_cont/components/work_showcase/slides.tsx",
-                    lineNumber: 78,
+                    lineNumber: 82,
                     columnNumber: 4
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "absolute bottom-0 left-0 bg-[#332E2E]/80 text-white p-4 z-10 w-full",
+                    className: "absolute bottom-0 left-0 bg-[#332E2E]/80 text-white px-4 py-2 md:p-4 z-10 w-full",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                            className: "text-xl font-bold",
+                            className: title_style,
                             children: "OnPoint Oakland"
                         }, void 0, false, {
                             fileName: "[project]/src/app/first_cont/components/work_showcase/slides.tsx",
-                            lineNumber: 87,
+                            lineNumber: 91,
                             columnNumber: 5
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            className: text_style,
                             children: "Buisness Profile for a local Oakland document outsourcing buisness. "
                         }, void 0, false, {
                             fileName: "[project]/src/app/first_cont/components/work_showcase/slides.tsx",
-                            lineNumber: 88,
+                            lineNumber: 92,
                             columnNumber: 5
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/first_cont/components/work_showcase/slides.tsx",
-                    lineNumber: 86,
+                    lineNumber: 90,
                     columnNumber: 4
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/first_cont/components/work_showcase/slides.tsx",
-            lineNumber: 77,
+            lineNumber: 81,
             columnNumber: 3
         }, this)
     }, "on_point", false, {
         fileName: "[project]/src/app/first_cont/components/work_showcase/slides.tsx",
-        lineNumber: 76,
+        lineNumber: 80,
         columnNumber: 2
     }, this),
-    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("iframe", {
-        title: "my_video",
-        src: "https://drive.google.com/file/d/1ylyMX7dNSRdGZ4AtAJ6ucKKws4FhTnG4/preview",
-        allowFullScreen: true,
-        style: {
-            width: '100%',
-            height: '100%',
-            border: 'none'
-        }
-    }, "video", false, {
+    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "relative w-full h-full",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("iframe", {
+                title: "my_video",
+                src: "https://drive.google.com/file/d/1ylyMX7dNSRdGZ4AtAJ6ucKKws4FhTnG4/preview",
+                allowFullScreen: true,
+                style: {
+                    width: '100%',
+                    height: '100%',
+                    border: 'none'
+                }
+            }, "video", false, {
+                fileName: "[project]/src/app/first_cont/components/work_showcase/slides.tsx",
+                lineNumber: 98,
+                columnNumber: 3
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "absolute bottom-0 left-0 bg-[#332E2E]/90 text-white px-4 py-2 md:p-4 z-10 w-full",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                        className: title_style,
+                        children: "Automatic Light Switch V.3"
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/first_cont/components/work_showcase/slides.tsx",
+                        lineNumber: 106,
+                        columnNumber: 4
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        className: text_style,
+                        children: 'A 2020 throwback. One of the first "embedded systems" I made before UNI.'
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/first_cont/components/work_showcase/slides.tsx",
+                        lineNumber: 107,
+                        columnNumber: 4
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/app/first_cont/components/work_showcase/slides.tsx",
+                lineNumber: 105,
+                columnNumber: 3
+            }, this)
+        ]
+    }, "on_point", true, {
         fileName: "[project]/src/app/first_cont/components/work_showcase/slides.tsx",
-        lineNumber: 92,
+        lineNumber: 96,
         columnNumber: 2
     }, this)
 ];

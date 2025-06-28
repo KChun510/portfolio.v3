@@ -2,85 +2,70 @@ import '../../aboutMe_cont.css'
 
 function Resume() {
 	return (
-		<div className="pt-5 pb-5">
-			<b>Credit Karma</b> - IT Engineer Intern&nbsp;(May 2023 - Aug 2023)
-			<br />
+		<div className="pt-6 pb-6 space-y-8">
 
-			<svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 inline-block text-current">
-				<path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
-			</svg>
-			Collect data on 200+ terminated employees, using a web crawler built with Python.
-			<br />
+			{/* Credit Karma - SWE Intern */}
+			<div>
+				<p className="font-bold">Credit Karma</p>
+				<p className="italic">Software Engineer Intern (May 2024 - Sep 2024)</p>
+				<ul className="list-disc list-inside mt-2 space-y-1">
+					<li>Designed and developed an End-to-End Notification Service to improve event management and communication.</li>
+				</ul>
+			</div>
 
-			<svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 inline-block text-current">
-				<path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
-			</svg>
-			Data cleanup on Inventory & device management systems on 4500+ machines, automation built in Python.
-			<br />
+			{/* Credit Karma - IT Engineer */}
+			<div>
+				<p className="font-bold">Credit Karma</p>
+				<p className="italic">IT Engineer (Aug 2023 - May 2024)</p>
+				<ul className="list-disc list-inside mt-2 space-y-1">
+					<li>Expanded automation initiatives across IT processes and device management.</li>
+				</ul>
+			</div>
 
-			<svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 inline-block text-current">
-				<path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
-			</svg>
-			Automate Inventory system using the Oomnitza API and barcode scanners.
-			<br />
-			<br />
+			{/* Credit Karma - IT Engineer Intern */}
+			<div>
+				<p className="font-bold">Credit Karma</p>
+				<p className="italic">IT Engineer Intern (May 2023 - Aug 2023)</p>
+				<ul className="list-disc list-inside mt-2 space-y-1">
+					<li>Collected data on 200+ terminated employees using a Python web crawler.</li>
+					<li>Automated cleanup of inventory & device management systems for 4,500+ machines.</li>
+					<li>Streamlined inventory tracking with Oomnitza API and barcode scanners.</li>
+				</ul>
+			</div>
 
-			<b>OnPoint Document Outsourcing</b> - IT Consultant&nbsp;(Oct 2020 - Sep 2021)
-			<br />
+			{/* OnPoint */}
+			<div>
+				<p className="font-bold">OnPoint Document Outsourcing</p>
+				<p className="italic">IT Consultant (Oct 2020 - Sep 2021)</p>
+				<ul className="list-disc list-inside mt-2 space-y-1">
+					<li>Secured local network and improved system security to meet industry standards.</li>
+					<li>Conducted penetration testing to identify and address cybersecurity threats.</li>
+					<li>Implemented quarterly security checks to identify new vulnerabilities.</li>
+				</ul>
+			</div>
 
-			<svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 inline-block text-current">
-				<path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
-			</svg>
-			Responsible for securing local network and improving its security to meet industry standards.
-			<br />
+			{/* Technical Skills */}
+			<div>
+				<p className="font-bold">Technical Skills:</p>
+				<p className="mt-1">Proficient in C++, Python, HTML, JavaScript, TypeScript</p>
+				<p>Physical server assembly/maintenance, computer assembly, networking, and more.</p>
+			</div>
 
-			<svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 inline-block text-current">
-				<path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
-			</svg>
-			Conduct penetration testing on association&apos;s network to identify and address cybersecurity threats.
-			<br />
-
-			<svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 inline-block text-current">
-				<path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
-			</svg>
-			Implemented quarterly security checks to identify and address new possible vulnerabilities.
-			<br />
-			<br />
-
-			<b>Technical skills:</b>
-			<br />
-
-			<svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 inline-block text-current">
-				<path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
-			</svg>
-			Proficient: C++, Python, HTML, JavaScript
-			<br />
-
-			<svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 inline-block text-current">
-				<path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
-			</svg>
-			Physical Server Assembly/Maintenance, Computer Assembly
-			<br />
-
-			<svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 inline-block text-current">
-				<path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
-			</svg>
-			Cybersecurity, Networking, Penetration Testing, Network Security
-			<br />
-			<br />
-
-			<div className="w-full h-6 text-center">
+			{/* Resume Link */}
+			<div className="w-full text-center mt-4">
 				<a
 					href="https://docs.google.com/document/d/1fzqxueGqjhMUBqfE1Q12z9S2X3bAPbeKIDESDi2UlE4/edit?usp=sharing"
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					<button type="button" className="btn btn-outline-primary btn-sm">
-						View full resume
+					<button type="button" className="border border-white text-white py-1 px-4 rounded hover:bg-white hover:text-black transition">
+						View Full Resume
 					</button>
 				</a>
 			</div>
-		</div>)
-}
 
+		</div>
+
+	)
+}
 export default Resume

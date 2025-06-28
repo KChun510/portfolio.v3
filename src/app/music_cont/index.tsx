@@ -55,41 +55,46 @@ const MusicCont = ({ id }: { id: string }) => {
       <div className="flex flex-col flex-wrap mx-2 gap-y-4 sm:flex-row sm:mx-6 rounded-lg">
         {/* Left column */}
         <div className="w-full w-1/2 md:w-4/6 flex flex-col max-h-[75vh]">
-          <SearchBar value={input} readonly={true} inputMode="none" className="w-full mb-2 cursor-pointer select-none" onChange1={setInput} onClick={() => setModal(true)} />
-          {showModal && playListSongs ? <Modal value={input} onChange={setInput} songData={playListSongs} onClick={() => setModal(false)} refetchFn1={re_playlist} refetchFn2={re_dbData} refetchFn3={re_browserData} /> : null}
-          <div className="songList custom_bg overflow-auto w-full border-2 border-transparent rounded-lg flex-1">
-            <div className="list-group border-black">
-              {!isLoadingPlaylist && playListSongs && !isDbDataLoading && dbData
-                ? playListSongs.map(({ song_name, song_url, album_cover, artists_data, uri }) => {
-                  let user_tag = null
-                  let modify_avail = false
-                  let track_owner_session_id = null
-                  for (const obj of dbData) {
-                    if (obj.song_names.includes(song_name)) {
-                      if (browserData.session === obj.session) { modify_avail = true }
-                      track_owner_session_id = obj.session
-                      user_tag = obj.user_tag === "" ? null : obj.user_tag
-                      break
+          <div className="border-b border-gray-700 sm:border-none pb-4">
+            <SearchBar value={input} readonly={true} inputMode="none" className="w-full mb-2 cursor-pointer select-none" onChange1={setInput} onClick={() => setModal(true)} />
+            {showModal && playListSongs ? <Modal value={input} onChange={setInput} songData={playListSongs} onClick={() => setModal(false)} refetchFn1={re_playlist} refetchFn2={re_dbData} refetchFn3={re_browserData} /> : null}
+            <div className="songList custom_bg overflow-auto w-full border-2 border-transparent rounded-lg flex-1 max-h-[66vh]">
+              <div className="list-group border-black">
+                {!isLoadingPlaylist && playListSongs && !isDbDataLoading && dbData
+                  ? playListSongs.map(({ song_name, song_url, album_cover, artists_data, uri }) => {
+                    let user_tag = null
+                    let modify_avail = false
+                    let track_owner_session_id = null
+                    for (const obj of dbData) {
+                      if (obj.song_names.includes(song_name)) {
+                        if (browserData.session === obj.session) { modify_avail = true }
+                        track_owner_session_id = obj.session
+                        user_tag = obj.user_tag === "" ? null : obj.user_tag
+                        break
+                      }
                     }
-                  }
-                  return (
-                    <SongButton
-                      key={song_name}
-                      className="py-2 px-2 break-words song_button"
-                      song_name={song_name}
-                      song_url={song_url}
-                      album_cover={album_cover}
-                      artists_data={artists_data}
-                      user_tag={user_tag}
-                      modify_avail={modify_avail}
-                      uri={uri}
-                      refetch={re_playlist}
-                      sessionID={track_owner_session_id}
-                    />
-                  )
-                })
-                : null}
+                    return (
+                      <SongButton
+                        key={song_name}
+                        className="py-2 px-2 break-words song_button"
+                        song_name={song_name}
+                        song_url={song_url}
+                        album_cover={album_cover}
+                        artists_data={artists_data}
+                        user_tag={user_tag}
+                        modify_avail={modify_avail}
+                        uri={uri}
+                        refetch={re_playlist}
+                        sessionID={track_owner_session_id}
+                      />
+                    )
+                  })
+                  : null}
+              </div>
             </div>
+            <p className="mt-2 text-sm text-gray-300">
+              Playlist: <a href="https://open.spotify.com/playlist/1w7opBRG814H7CMZaMOCN7?si=670ec78074f942ac" target='_blank' className="text-[#8746ff] underline font-semibold">Flavor Town</a>
+            </p>
           </div>
         </div>
         {/* Right column */}
@@ -97,17 +102,21 @@ const MusicCont = ({ id }: { id: string }) => {
           {/* Make sure this fills available height */}
           <div className="flex flex-col flex-1 h-full">
             <div className="py-2 flex flex-col flex-1 h-full md:px-2 md:py-0">
-              <h2 className="text-3xl font-bold mb-1">In My Ears</h2>
-              {/* First content block */}
-              <div className="rounded-lg custom_bg w-full p-4 mb-4 text-white">
-                {!isLoadingCurr && currTrack ? <CurrSongPreview {...currTrack} refetchFn={re_currTrack} /> : null}
+
+              <div className="border-b border-gray-700 sm:border-none pb-4">
+                <h2 className="text-3xl font-bold mb-1">In My Ears</h2>
+                {/* First content block */}
+                <div className="rounded-lg custom_bg w-full p-4 mb-4 text-white">
+                  {!isLoadingCurr && currTrack ? <CurrSongPreview {...currTrack} refetchFn={re_currTrack} /> : null}
+                </div>
               </div>
-              <div className="flex flex-row items-center gap-x-4">
+
+              <div className="flex flex-row items-center pt-4 md:pt-0 gap-x-4">
                 <h2 className="text-3xl font-bold mb-2">Top 10 Most Played</h2>
                 <p>(Monthly)</p>
               </div>
               {/* Second block: make scrollable if long */}
-              <div className="topTenList custom_bg border-transparent border-2 rounded-lg w-full text-white overflow-auto flex-1 mb-1">
+              <div className="topTenList custom_bg border-transparent border-2 rounded-lg w-full text-white overflow-auto flex-1 mb-1 max-h-[45.4vh]">
                 <div className="list-group w-full">
                   {!isLoadingTopItems && topItems
                     ? topItems.map((elem) => (

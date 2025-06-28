@@ -4,11 +4,20 @@ import Image from 'next/image';
 
 function Info() {
 	return (
-		<div className='flex flex-row'>
+		<div className='flex flex-row items-center'>
 			<div className='hidden md:block w-1/12'></div>
 			<div className='flex-1' id='info_cont'>
 				<h5 className="text-lg font-semibold">Summary :</h5>
-				A college student who fell in love with coding. I was born and raised in Oakland, CA, and my in-person mannerisms will reflect that. Growing up, piecing together legos from an enormous miscellaneous bin took hold of my entire childhood. Coding has drawn me in the same way and has replaced my Lego obsession. Instead of picking up random blocks from a bin, I'm now picking up languages, libraries, and frameworks to build my next creation!! Constantly pushing myself to learn new computer science skills to extend my capabilities.
+				I’m a systems‑minded engineer who’s been building since I could reach the Lego bin.
+				<br />
+				<br />
+				Back then, I raided an overflowing box of mismatched bricks to create battle‑ready vehicles and fortified bunkers guided only by imagination, curiosity, and the determination to finish what I started. Today, the pieces are skills, patterns, and platforms spread across the tech stack. But the operating mode is identical: start with a vision, thrive in ambiguity, and architect the solution into reality.
+				<br />
+				<br />
+				In combination with this mindset is my background. I’m not your typical “prepped” person/student who dreamed of a prestigious school. I’m self‑built and self‑prepared through life experience. Oakland and the Bay Area are known for producing hustlers and creators and I’m proud to be a product of that environment. I carry that internal pace every single day.
+				<br />
+				<br />
+				I’m a unique mix of street and book smarts. I don’t shy away from “intelligent” environments. I contribute confidently. And I never back down under pressure, knowing I’ve already overcome everything else life threw my way.
 				<br />
 				<br />
 				<h6 className="text-md font-medium">Personal Interest :</h6>

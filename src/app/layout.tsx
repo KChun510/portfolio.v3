@@ -18,8 +18,11 @@ const SoraFont = Sora({
 });
 
 export const metadata: Metadata = {
-  title: "Construction in Progress 🚧",
+  title: "Welcome!",
   description: "Portfolio.v3",
+  icons: {
+    icon: "/favicon.gif",
+  },
 };
 
 export default function RootLayout({

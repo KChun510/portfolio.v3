@@ -6,6 +6,9 @@ import maizdotwork from "./slide_images/maiz.work.front.png"
 import embedc from "./slide_images/embed_c.png"
 import on_point from "./slide_images/onpointOakland.png"
 
+const title_style: string = "text-md md:text-xl font-bold"
+const text_style: string = "text-sm md:text-lg"
+
 
 const slides: JSX.Element[] = [
 	<div key="mediaMind" className="relative w-full h-full">
@@ -18,9 +21,9 @@ const slides: JSX.Element[] = [
 
 				className="object-contain"
 			/>
-			<div className="absolute bottom-0 left-0 bg-[#332E2E]/80 text-white p-4 z-10 w-full">
-				<h2 className="text-xl font-bold">TermTris</h2>
-				<p>A recreation of Tetris that runs in the Terminal/Command Prompt!</p>
+			<div className="absolute bottom-0 left-0 bg-[#332E2E]/80 text-white px-4 py-2 md:p-4 z-10 w-full">
+				<h2 className={title_style}>TermTris</h2>
+				<p className={text_style}>A recreation of Tetris that runs in the Terminal/Command Prompt!</p>
 			</div>
 		</a>
 	</div>
@@ -35,9 +38,9 @@ const slides: JSX.Element[] = [
 
 				className="object-contain"
 			/>
-			<div className="absolute bottom-0 left-0 bg-[#332E2E]/80 text-white p-4 z-10 w-full">
-				<h2 className="text-xl font-bold">MediaMind</h2>
-				<p>An automated system used for content generation and posting, using AI.</p>
+			<div className="absolute bottom-0 left-0 bg-[#332E2E]/80 text-white px-4 py-2 md:p-4 z-10 w-full">
+				<h2 className={title_style}>MediaMind</h2>
+				<p className={text_style}>An automated system built for content generation and posting using AI.</p>
 			</div>
 		</a>
 	</div>,
@@ -51,9 +54,10 @@ const slides: JSX.Element[] = [
 
 				className="object-contain bg-[#150d03]"
 			/>
-			<div className="absolute bottom-0 left-0 bg-[#332E2E]/80 text-white p-4 z-10 w-full">
-				<h2 className="text-xl font-bold">Maiz.Work</h2>
-				<p>Online shop front for a local Oakland clothing brand.</p>
+			<div className="absolute bottom-0 left-0 bg-[#332E2E]/80 text-white px-4 py-2 md:p-4 z-10 w-full">
+
+				<h2 className={title_style}>Maiz.Work</h2>
+				<p className={text_style}>Online shop front for a local Oakland clothing brand.</p>
 			</div>
 		</a>
 	</div>,
@@ -67,9 +71,9 @@ const slides: JSX.Element[] = [
 
 				className="object-contain bg-white"
 			/>
-			<div className="absolute bottom-0 left-0 bg-[#332E2E]/80 text-white p-4 z-10 w-full">
-				<h2 className="text-xl font-bold">Embedded Systems</h2>
-				<p>A collection of my embedded systems work while attending UC Irvine. </p>
+			<div className="absolute bottom-0 left-0 bg-[#332E2E]/80 text-white px-4 py-2 md:p-4 z-10 w-full">
+				<h2 className={title_style}>Embedded Systems</h2>
+				<p className={text_style}>A collection of my embedded systems work while attending UC Irvine. </p>
 			</div>
 		</a>
 	</div>,
@@ -83,19 +87,27 @@ const slides: JSX.Element[] = [
 
 				className="object-contain bg-white"
 			/>
-			<div className="absolute bottom-0 left-0 bg-[#332E2E]/80 text-white p-4 z-10 w-full">
-				<h2 className="text-xl font-bold">OnPoint Oakland</h2>
-				<p>Buisness Profile for a local Oakland document outsourcing buisness. </p>
+			<div className="absolute bottom-0 left-0 bg-[#332E2E]/80 text-white px-4 py-2 md:p-4 z-10 w-full">
+				<h2 className={title_style}>OnPoint Oakland</h2>
+				<p className={text_style}>Buisness Profile for a local Oakland document outsourcing buisness. </p>
 			</div>
 		</a>
 	</div>,
-	<iframe
-		key="video"
-		title='my_video'
-		src="https://drive.google.com/file/d/1ylyMX7dNSRdGZ4AtAJ6ucKKws4FhTnG4/preview"
-		allowFullScreen
-		style={{ width: '100%', height: '100%', border: 'none' }}
-	></iframe>,
+	<div key="on_point" className="relative w-full h-full">
+
+		<iframe
+			key="video"
+			title='my_video'
+			src="https://drive.google.com/file/d/1ylyMX7dNSRdGZ4AtAJ6ucKKws4FhTnG4/preview"
+			allowFullScreen
+			style={{ width: '100%', height: '100%', border: 'none' }}
+		></iframe>
+		<div className="absolute bottom-0 left-0 bg-[#332E2E]/90 text-white px-4 py-2 md:p-4 z-10 w-full">
+			<h2 className={title_style}>Automatic Light Switch V.3</h2>
+			<p className={text_style}>A 2020 throwback. One of the first "embedded systems" I made before UNI.</p>
+		</div>
+	</div>
+	,
 ]
 
 export default slides
