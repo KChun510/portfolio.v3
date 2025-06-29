@@ -5,6 +5,7 @@ import mediaMindpng from "./slide_images/mediaMind.png"
 import maizdotwork from "./slide_images/maiz.work.front.png"
 import embedc from "./slide_images/embed_c.png"
 import on_point from "./slide_images/onpointOakland.png"
+import infraDiagram from "./slide_images/infra_diagram.png"
 
 const title_style: string = "text-md md:text-xl font-bold"
 const text_style: string = "text-sm md:text-lg"
@@ -35,7 +36,6 @@ const slides: JSX.Element[] = [
 				alt="mediaMind photo"
 				fill
 				sizes="(max-width: 800px) 100vw, 800px"
-
 				className="object-contain"
 			/>
 			<div className="absolute bottom-0 left-0 bg-[#332E2E]/80 text-white px-4 py-2 md:p-4 z-10 w-full">
@@ -51,13 +51,29 @@ const slides: JSX.Element[] = [
 				alt="maiz.work photo"
 				fill
 				sizes="(max-width: 800px) 100vw, 800px"
-
 				className="object-contain bg-[#150d03]"
 			/>
 			<div className="absolute bottom-0 left-0 bg-[#332E2E]/80 text-white px-4 py-2 md:p-4 z-10 w-full">
 
 				<h2 className={title_style}>Maiz.Work</h2>
 				<p className={text_style}>Online shop front for a local Oakland clothing brand.</p>
+			</div>
+		</a>
+	</div>,
+	<div key="portfolio.v3" className="relative w-full h-full">
+		<a href="https://github.com/KChun510/portfolio.v3" target="_blank" className="relative block w-full h-full">
+			<div className="bg-[#121212]">
+				<Image
+					src={infraDiagram}
+					alt="portfolio.v3 photo"
+					sizes="(max-width: 800px) 100vw, 800px"
+					className="block mx-auto"
+
+				/>
+			</div>
+			<div className="absolute bottom-0 left-0 bg-[#332E2E]/80 text-white px-4 py-2 md:p-4 z-10 w-full">
+				<h2 className={title_style}>Portfolio.v3 <small>( This Website )</small></h2>
+				<p className={text_style}>A fully customizable, over-engineered personal website built for portfolio showcase and backend infrastructure practice.</p>
 			</div>
 		</a>
 	</div>,
@@ -68,7 +84,6 @@ const slides: JSX.Element[] = [
 				alt="embedc photo"
 				fill
 				sizes="(max-width: 800px) 100vw, 800px"
-
 				className="object-contain bg-white"
 			/>
 			<div className="absolute bottom-0 left-0 bg-[#332E2E]/80 text-white px-4 py-2 md:p-4 z-10 w-full">
@@ -84,7 +99,6 @@ const slides: JSX.Element[] = [
 				alt="onpoint photo"
 				fill
 				sizes="(max-width: 800px) 100vw, 800px"
-
 				className="object-contain bg-white"
 			/>
 			<div className="absolute bottom-0 left-0 bg-[#332E2E]/80 text-white px-4 py-2 md:p-4 z-10 w-full">
