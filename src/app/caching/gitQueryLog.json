@@ -1,5 +1,17 @@
 [
   {
+    "name": "portfolio.v3",
+    "des": "V3 Reason: New stage of life, time to mature a bit. ",
+    "url": "https://github.com/KChun510/portfolio.v3",
+    "lang": {
+      "TypeScript": 67341,
+      "JavaScript": 27933,
+      "CSS": 3655,
+      "Dockerfile": 1056,
+      "Shell": 134
+    }
+  },
+  {
     "name": "MediaMind",
     "des": "An automated system used for content generation and posting. ",
     "url": "https://github.com/KChun510/MediaMind",

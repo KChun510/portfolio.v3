@@ -14,6 +14,11 @@ async function readJSONFile() {
   }
 }
 
+export async function pullGitInfo() {
+  const allGitInfo = await readJSONFile()
+  return allGitInfo
+}
+
 export const search_items = async (search_string) => {
   try {
     const res = await fetch('/api/spotify/search_spotify', {
@@ -85,11 +90,6 @@ export const get_currTrack = async () => {
   } catch (e) {
     console.error(e)
   }
-}
-
-export async function pullGitInfo() {
-  const allGitInfo = await readJSONFile()
-  return allGitInfo
 }
 
 export async function set_session(user_tag, song_names) {

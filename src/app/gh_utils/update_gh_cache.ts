@@ -70,6 +70,8 @@ export const writeJSONFile = async () => {
 	writeFile(repoArr)
 };
 
+
 (function main() {
 	writeJSONFile()
 })()
+
