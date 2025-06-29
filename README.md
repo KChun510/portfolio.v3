@@ -57,10 +57,3 @@ The project serves both as a personal showcase and a technical exercise, incorpo
 
 ![Architecture Diagram](diagrams/infra_diagram.png)
 
----
-
-## License
-
-This project is for personal use and demonstration purposes.
-
-
