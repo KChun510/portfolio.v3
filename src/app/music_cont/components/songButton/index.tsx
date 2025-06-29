@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 import { filteredPlaylistData } from '@/app/spotify_utils/types';
 import { remove_track_playlist, get_session_db, update_session } from '@/app/actions';
@@ -22,7 +22,6 @@ async function handleDelete(uri: string, refetchFn: () => void, sessionID: strin
 }
 
 function SongButton({ className = '', song_name, song_url, album_cover, artists_data, user_tag, modify_avail, uri, refetch, sessionID }: SongButtonProps) {
-
 	return (
 		<div key={song_name} className={`flex flex-row items-center gap-4 ${className}`}>
 			<div className="relative w-[50px] h-[50px] md:w-[100px] md:h-[100px] shrink-0">
@@ -34,12 +33,19 @@ function SongButton({ className = '', song_name, song_url, album_cover, artists_
 					className="object-cover rounded"
 				/>
 			</div>
-
-			<div className="w-64 flex flex-col"> <a href={song_url} target="_blank" rel="noopener noreferrer"> <b><h1 className="md:text-xl">{song_name}</h1></b>
-			</a>
+			<div className="w-64 flex flex-col">
+				<a href={song_url.spotify} target="_blank" rel="noopener noreferrer">
+					<b><h1 className="md:text-xl">{song_name}</h1></b>
+				</a>
 				<div className="text-gray-400">
 					<div className="flex flex-row flex-wrap space-x-1">
-						{artists_data ? artists_data.map(({ external_urls, name }, index) => (index === (artists_data.length - 1) ? <a href={external_urls.spotify} target='_blank' key={name}><h5>{name}</h5></a> : <a href={external_urls.spotify} target='_blank' key={name}><h5>{name},</h5></a>)) : <h5>No Artist</h5>}
+						{artists_data ?
+							artists_data.map(({ external_urls, name }, index) => (index === (artists_data.length - 1) ? <a href={external_urls.spotify} target='_blank' key={name}><h5>{name}</h5></a>
+								:
+								<a href={external_urls.spotify} target='_blank' key={name}><h5>{name},</h5></a>))
+
+							: <h5>No Artist</h5>
+						}
 					</div>
 					<div className="">
 						<div className="flex items-center">

@@ -1,11 +1,11 @@
 import { useState } from "react"
-import { add_track, set_session, get_session_db, update_session, get_song_count_browser, get_session_browser } from "@/app/actions"
+import { add_track, set_session, get_session_db, update_session, get_song_count_browser, get_session_browser, eval_userTag } from "@/app/actions"
 import { songPickModalProps } from "@/app/spotify_utils/types"
 import { useQuery } from "react-query"
 import CurrSongPick_modal from "../../currSongPick_modal"
 import { Filter } from 'bad-words'
 
-const AddForm = ({ song_artists, song_cover_art, song_name, uri, backFnOnClick, closeModalFn, songData, refetch1, refetch2, refetch3 }: songPickModalProps) => {
+const AddForm = ({ song_artists, song_cover_art, song_name, uri, backFnOnClick, closeModalFn, songData, refetch1, refetch2, refetch3, setSongAdded }: songPickModalProps) => {
 	const [disabled, setDisabled] = useState(false)
 	const max_song_count = 4
 	const { data: browserData } = useQuery<any>({
@@ -21,20 +21,31 @@ const AddForm = ({ song_artists, song_cover_art, song_name, uri, backFnOnClick, 
 
 	const [error, setError] = useState({ errorOn: false, errorMessage: "" })
 	const [userTag, setUserTag] = useState(browserData && browserData.user_tag ? browserData.user_tag : "")
-	const filter = new Filter()
 
 	const handle_form_submit = async () => {
 		setDisabled(true)
-		if (filter.isProfane(userTag)) {
-			setError({ errorOn: true, errorMessage: `User Tag: "${userTag}" is not allowed` })
-			setDisabled(false)
-			return
-		}
-
-		if (userTag.length > 15) {
-			setError({ errorOn: true, errorMessage: `User Tag: "${userTag}" is too long. Max Len 15` })
-			setDisabled(false)
-			return
+		if (userTag !== "") {
+			const filter = new Filter()
+			if (userTag.length > 15) {
+				setError({ errorOn: true, errorMessage: `User Tag: "${userTag}" is too long. Max Len 15` })
+				setDisabled(false)
+				return
+			}
+			if (filter.isProfane(userTag)) {
+				setError({ errorOn: true, errorMessage: `User Tag: "${userTag}" is not allowed` })
+				setDisabled(false)
+				return
+			}
+			const eval_value = await eval_userTag(userTag)
+			if (eval_value === false) {
+				setError({ errorOn: true, errorMessage: `User Tag: "${userTag}" is not allowed` })
+				setDisabled(false)
+				return
+			} else if (eval_value === undefined) {
+				setError({ errorOn: true, errorMessage: `User Tag: "${userTag}, openai error. Add later."` })
+				setDisabled(false)
+				return
+			}
 		}
 
 		for (const track of songData!) {
@@ -62,7 +73,8 @@ const AddForm = ({ song_artists, song_cover_art, song_name, uri, backFnOnClick, 
 		}
 
 		const res = await add_track(uri)
-		if (res && closeModalFn && refetch1 && refetch2 && refetch3) {
+		if (res && closeModalFn && refetch1 && refetch2 && refetch3 && setSongAdded) {
+			setSongAdded()
 			refetch3()
 			refetch2()
 			refetch1()

@@ -1,0 +1,3 @@
+{
+  "/api/openai/analyze_userTag/route": "app/api/openai/analyze_userTag/route.js"
+}

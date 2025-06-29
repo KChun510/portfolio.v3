@@ -13,10 +13,15 @@ import { import_session_data } from '../../../db_actions/types';
 const MusicCont = ({ id }: { id: string }) => {
   const [input, setInput] = useState("")
   const [showModal, setModal] = useState(false)
+  const [songAdded, setSongAdded] = useState(false)
 
   const { data: playListSongs, isLoading: isLoadingPlaylist, refetch: re_playlist } = useQuery<filteredPlaylistData[]>({
-    queryKey: ['playlistData'],
-    queryFn: async () => await get_playlist()
+    queryKey: ['playlistData', songAdded],
+    queryFn: async () => {
+      let data = await get_playlist()
+      if (!songAdded) return data.reverse()
+      return data
+    }
   })
 
   const { data: currTrack, isLoading: isLoadingCurr, refetch: re_currTrack } = useQuery<CurrentSongData>({
@@ -57,7 +62,7 @@ const MusicCont = ({ id }: { id: string }) => {
         <div className="w-full w-1/2 md:w-4/6 flex flex-col max-h-[75vh]">
           <div className="border-b border-gray-700 sm:border-none pb-4">
             <SearchBar value={input} readonly={true} inputMode="none" className="w-full mb-2 cursor-pointer select-none" onChange1={setInput} onClick={() => setModal(true)} />
-            {showModal && playListSongs ? <Modal value={input} onChange={setInput} songData={playListSongs} onClick={() => setModal(false)} refetchFn1={re_playlist} refetchFn2={re_dbData} refetchFn3={re_browserData} /> : null}
+            {showModal && playListSongs ? <Modal value={input} setSongAdded={() => setSongAdded(true)} onChange={setInput} songData={playListSongs} onClick={() => setModal(false)} refetchFn1={re_playlist} refetchFn2={re_dbData} refetchFn3={re_browserData} /> : null}
             <div className="songList custom_bg overflow-auto w-full border-2 border-transparent rounded-lg flex-1 max-h-[66vh]">
               <div className="list-group border-black">
                 {!isLoadingPlaylist && playListSongs && !isDbDataLoading && dbData

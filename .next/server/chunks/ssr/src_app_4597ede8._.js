@@ -1144,6 +1144,7 @@ var { g: global, __dirname } = __turbopack_context__;
 {
 __turbopack_context__.s({
     "add_track": (()=>add_track),
+    "eval_userTag": (()=>eval_userTag),
     "get_currTrack": (()=>get_currTrack),
     "get_playlist": (()=>get_playlist),
     "get_session_browser": (()=>get_session_browser),
@@ -1359,6 +1360,21 @@ async function remove_track_playlist(uri) {
             body: JSON.stringify(uri)
         });
         const data = await res.json();
+        return data;
+    } catch (err) {
+        console.error(err);
+    }
+}
+async function eval_userTag(userTag) {
+    try {
+        const res = await fetch("/api/openai/analyze_userTag", {
+            method: "POST",
+            headers: {
+                "Content-Type": "aplication/json"
+            },
+            body: JSON.stringify(userTag)
+        });
+        const data = (await res.json()).data;
         return data;
     } catch (err) {
         console.error(err);

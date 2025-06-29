@@ -213,6 +213,23 @@ export async function remove_track_playlist(uri) {
   }
 }
 
+export async function eval_userTag(userTag) {
+  try {
+    const res = await fetch("/api/openai/analyze_userTag", {
+      method: "POST",
+      headers: {
+        "Content-Type": "aplication/json"
+      },
+      body: JSON.stringify(userTag)
+    })
+    const data = (await res.json()).data
+    return data
+  } catch (err) {
+    console.error(err)
+  }
+}
+
+
 
 
 

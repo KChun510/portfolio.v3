@@ -126,7 +126,7 @@ export type SpotifyPlaylist = {
 
 export type filteredPlaylistData = {
 	song_name: string,
-	song_url: string,
+	song_url: { spotify: string },
 	uri: string,
 	album_cover: { url: string, width: number, height: number }[],
 	artists_data: { external_urls: { spotify: string }, name: string }[],
@@ -164,6 +164,7 @@ export type songPickModalProps = {
 	refetch1?: () => void;
 	refetch2?: () => void;
 	refetch3?: () => void;
+	setSongAdded?: () => void;
 	song_name: string | null;
 	songData?: filteredPlaylistData[];
 	uri?: string;
