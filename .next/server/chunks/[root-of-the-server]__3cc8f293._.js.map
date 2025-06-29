@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
-    {"offset": {"line": 60, "column": 0}, "map": {"version":3,"sources":["file:///home/toastycommand/Desktop/portfolio.v3/src/app/api/session/get_session_song_count/route.ts"],"sourcesContent":["import { NextRequest, NextResponse } from \"next/server\";\nimport { parse } from \"cookie\";\n\nexport async function GET(req: NextRequest) {\n\ttry {\n\t\tconst cookies = parse(req.headers.get(\"cookie\") || \"\");\n\t\tconst song_count = cookies.song_count;\n\n\t\tif (!song_count) {\n\t\t\treturn NextResponse.json({ hasCookie: false }, {\n\t\t\t\tstatus: 200,\n\t\t\t});\n\t\t}\n\n\t\treturn NextResponse.json({ hasCookie: true, song_count }, {\n\t\t\tstatus: 200,\n\t\t});\n\n\t} catch (err) {\n\t\treturn NextResponse.json({ hasCookie: false }, {\n\t\t\tstatus: 401,\n\t\t\tstatusText: err as string\n\t\t});\n\t}\n}\n"],"names":[],"mappings":";;;AAAA;AACA;;;AAEO,eAAe,IAAI,GAAgB;IACzC,IAAI;QACH,MAAM,UAAU,CAAA,GAAA,yIAAA,CAAA,QAAK,AAAD,EAAE,IAAI,OAAO,CAAC,GAAG,CAAC,aAAa;QACnD,MAAM,aAAa,QAAQ,UAAU;QAErC,IAAI,CAAC,YAAY;YAChB,OAAO,gIAAA,CAAA,eAAY,CAAC,IAAI,CAAC;gBAAE,WAAW;YAAM,GAAG;gBAC9C,QAAQ;YACT;QACD;QAEA,OAAO,gIAAA,CAAA,eAAY,CAAC,IAAI,CAAC;YAAE,WAAW;YAAM;QAAW,GAAG;YACzD,QAAQ;QACT;IAED,EAAE,OAAO,KAAK;QACb,OAAO,gIAAA,CAAA,eAAY,CAAC,IAAI,CAAC;YAAE,WAAW;QAAM,GAAG;YAC9C,QAAQ;YACR,YAAY;QACb;IACD;AACD","debugId":null}}]
-}
