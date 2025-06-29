@@ -1,10 +1,10 @@
-import '../../aboutMe_cont.css'
+import '../../aboutMe_cont.css';
 import selfPortrait from '../self_portrait.png'
 import Image from 'next/image';
 
 function Info() {
 	return (
-		<div className='flex flex-row items-center'>
+		<div className={`flex flex-row items-center`}>
 			<div className='hidden md:block w-1/12'></div>
 			<div className='flex-1' id='info_cont'>
 				<h5 className="text-lg font-semibold">Summary :</h5>

@@ -39,7 +39,7 @@
 }
 
 /* Button styles */
-button:hover {
+.aboutMe_button:hover {
     background-color: rgba(51, 46, 46, 0.5);
 }
 

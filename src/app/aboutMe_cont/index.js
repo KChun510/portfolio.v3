@@ -20,19 +20,19 @@ const AboutMeCont = ({ id }) => {
             {/* Tabs */}
             <div className="flex flex-row space-x-3 md:space-x-20 m-10 md:m-10 justify-center">
                 <button
-                    className={`flex-items ${activeTab === 'creds' ? 'activeButton' : ''}`}
+                    className={`aboutMe_button flex-items ${activeTab === 'creds' ? 'activeButton' : ''}`}
                     onClick={() => handleTabClick('creds')}
                 >
                     <h5>Credentials</h5>
                 </button>
                 <button
-                    className={`flex-items ${activeTab === 'info' ? 'activeButton' : ''}`}
+                    className={`aboutMe_button flex-items ${activeTab === 'info' ? 'activeButton' : ''}`}
                     onClick={() => handleTabClick('info')}
                 >
                     <h5>Information</h5>
                 </button>
                 <button
-                    className={`flex-items ${activeTab === 'resume' ? 'activeButton' : ''}`}
+                    className={`aboutMe_button flex-items ${activeTab === 'resume' ? 'activeButton' : ''}`}
                     onClick={() => handleTabClick('resume')}
                 >
                     <h5>Resume</h5>

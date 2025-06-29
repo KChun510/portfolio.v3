@@ -29,7 +29,7 @@ const WorkShowcase = () => {
 				</button>
 				{slides.map((item, i) => <button className="cursor-pointer" key={`dots + ${i}`} onClick={() => setIndex(i)}> <Dot className="hover:[color:#332E2E]" color={index === i ? "#332E2E" : "white"} /> </button>)}
 				<button onClick={next} className="cursor-pointer">
-					<ArrowRight className='hover:[color:#332E2E]' />
+					<ArrowRight className='hover:text-[#332E2E] hover:bg-transparent' />
 				</button>
 			</div>
 		</div >

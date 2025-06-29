@@ -1,8 +1,9 @@
-import '../../aboutMe_cont.css'
+import '../../aboutMe_cont.css';
+
 
 function Resume() {
 	return (
-		<div className="pt-6 pb-6 space-y-8">
+		<div className={`pt-6 pb-6 space-y-8`}>
 
 			{/* Credit Karma - SWE Intern */}
 			<div>
