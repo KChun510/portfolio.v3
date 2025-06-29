@@ -1,5 +1,7 @@
 # Personal Website — Portfolio.v3
 
+**Live Site:** [https://bayareacoder.dev](https://bayareacoder.dev)
+
 ## Overview
 
 This is the third major iteration of my personal website, designed to mature the structure, improve maintainability, and intentionally **over-engineer the backend** to maximize customization and real-world infrastructure practice.
