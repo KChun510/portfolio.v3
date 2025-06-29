@@ -53,8 +53,7 @@ The project serves both as a personal showcase and a technical exercise, incorpo
 
 ## Screenshots & Architecture
 
-![Architecture Diagram](https://raw.githubusercontent.com/KChun510/portfolio.v3/main/diagrams/infra_diagram.png
-)
+![Architecture Diagram](diagrams/infra_diagram.png)
 
 ---
 
