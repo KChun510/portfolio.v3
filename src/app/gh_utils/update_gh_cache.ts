@@ -1,29 +1,30 @@
 import { Octokit } from "octokit"
 import { repo_obj } from "./types";
-import dotenv from 'dotenv'
+import { fileURLToPath } from 'url';
 import fs from 'fs';
 import path from 'path';
-dotenv.config({ path: path.resolve(__dirname, '../../../.env') })
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 const octokit = new Octokit({
 	auth: process.env.GH_Token
 })
 
 const writeFile = async (repoArr: repo_obj[]) => {
 	try {
-		const filePath = path.join(process.cwd(), '../', 'caching', 'gitQueryLog.json');
+		const filePath = path.join(__dirname, '../', 'caching', 'gitQueryLog.json');
 		const dirPath = path.dirname(filePath);
-		// Ensure the directory exists (if not, create it)
+
 		if (!fs.existsSync(dirPath)) {
-			fs.mkdirSync(dirPath, { recursive: true }); // Create directory if it doesn't exist
+			fs.mkdirSync(dirPath, { recursive: true });
 		}
-		// Write the JSON data to the file
+
 		fs.writeFileSync(filePath, JSON.stringify(repoArr, null, 2));
-		console.log("Success writing to json (GitHub)")
+		console.log("Success writing to json (GitHub)");
 	} catch (err) {
-		console.error("Error writing to json file (GitHub): ", err)
+		console.error("Error writing to json file (GitHub): ", err);
 	}
-}
+};
 
 const pullAllGitReposInfo = async () => {
 	try {
@@ -73,6 +74,7 @@ export const writeJSONFile = async () => {
 (async function main() {
 	try {
 		await writeJSONFile()
+		console.log("Success updating gh_cache")
 	} catch (err) {
 		console.log("Failed writing to gh_cache: ", err)
 	}
