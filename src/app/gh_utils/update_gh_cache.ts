@@ -70,8 +70,11 @@ export const writeJSONFile = async () => {
 	writeFile(repoArr)
 };
 
-
-(function main() {
-	writeJSONFile()
+(async function main() {
+	try {
+		await writeJSONFile()
+	} catch (err) {
+		console.log("Failed writing to gh_cache: ", err)
+	}
 })()
 

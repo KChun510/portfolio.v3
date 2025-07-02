@@ -1,14 +1,24 @@
 [
   {
+    "name": "zot_plug_firmware",
+    "des": "Firmware for our ZotPlug embedded system. ( Senior Project )",
+    "url": "https://github.com/KChun510/zot_plug_firmware",
+    "lang": {
+      "C++": 1993,
+      "TypeScript": 502,
+      "C": 106
+    }
+  },
+  {
     "name": "portfolio.v3",
-    "des": "V3 Reason: New stage of life, time to mature a bit. ",
+    "des": "A fully customizable, over-engineered personal website built for portfolio showcase and back-end infrastructure practice.",
     "url": "https://github.com/KChun510/portfolio.v3",
     "lang": {
-      "TypeScript": 67341,
+      "TypeScript": 67343,
       "JavaScript": 27933,
       "CSS": 3655,
       "Dockerfile": 1056,
-      "Shell": 134
+      "Shell": 305
     }
   },
   {
