@@ -3,7 +3,7 @@ import '../../aboutMe_cont.css';
 
 function Resume() {
 	return (
-		<div className={`pt-6 pb-6 space-y-8`}>
+		<div className={`text-white pt-6 pb-6 space-y-8`}>
 
 			{/* Credit Karma - SWE Intern */}
 			<div>

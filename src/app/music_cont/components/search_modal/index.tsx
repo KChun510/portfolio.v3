@@ -56,7 +56,7 @@ const Modal = ({ className, setSongAdded, value, onChange, onClick, songData, re
 										setFormState(true)
 									}} />)
 									:
-									<h1>No Recent Searches</h1>
+									<h1 className="text-white">No Recent Searches</h1>
 								}
 							</div>
 						}

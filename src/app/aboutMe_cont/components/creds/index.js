@@ -2,7 +2,7 @@ import styles from '../../aboutMe_cont.css';
 
 function Creds() {
 	return (
-		<div className={`pt-6 pb-6 space-y-8`}>
+		<div className={`text-white pt-6 pb-6 space-y-8`}>
 			{/* UC Irvine Section */}
 			<div>
 				<h5 className="font-bold text-lg">School Courses — UC Irvine:</h5>

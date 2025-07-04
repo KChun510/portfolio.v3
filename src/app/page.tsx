@@ -14,24 +14,7 @@ const queryClient = new QueryClient()
 
 const Home = () => {
   return (
-    <div className="Home flex flex-col relative overflow-hidden">
-      {/* 
-      <Image
-        src="/better_better_dark_city.png"
-        alt="City Background"
-        fill
-        className="z-[-1]"
-        style={{
-          objectFit: 'cover',         // Equivalent to background-size: cover
-          objectPosition: '50% 20%',  // Equivalent to background-position: 50% 20%
-          imageRendering: 'pixelated',
-          textAlign: 'center',        // Not really meaningful on <img>, but included per request
-          padding: 0,
-          margin: 0
-        }}
-        priority
-      />
-      */}
+    <div className="Home flex flex-col relative">
       <QueryClientProvider client={queryClient}>
         <NavBar />
 
@@ -54,10 +37,8 @@ const Home = () => {
         <div className="py-24 md:min-h-screen md:py-0">
           <AboutMeCont id="aboutMe_cont" />
         </div>
-
       </QueryClientProvider>
     </div>
-
   );
 }
 

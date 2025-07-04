@@ -35,7 +35,7 @@ function SongButton({ className = '', song_name, song_url, album_cover, artists_
 			</div>
 			<div className="w-64 flex flex-col">
 				<a href={song_url.spotify} target="_blank" rel="noopener noreferrer">
-					<b><h1 className="md:text-xl">{song_name}</h1></b>
+					<b><h1 className="text-white md:text-xl">{song_name}</h1></b>
 				</a>
 				<div className="text-gray-400">
 					<div className="flex flex-row flex-wrap space-x-1">

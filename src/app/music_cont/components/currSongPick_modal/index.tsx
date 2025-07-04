@@ -4,7 +4,7 @@ import Image from "next/image"
 
 const CurrSongPick_modal = ({ className = '', song_artists, song_cover_art, song_name }: songPickModalProps) => {
 	return (
-		<div className={`flex flex-row items-start gap-4 ${className}`}>
+		<div className={`flex flex-row items-start gap-4 text-white ${className}`}>
 			<div className="relative w-[50px] h-[50px] md:w-[100px] md:h-[100px] shrink-0">
 				<Image
 					className="rounded"

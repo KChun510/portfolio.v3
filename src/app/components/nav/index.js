@@ -6,7 +6,7 @@ import { useState } from 'react';
 const NavBar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false)
   return (
-    <div className="flex justify-between items-center mb-1 mt-3 mx-5">
+    <div className="text-white flex justify-between items-center mb-1 mt-3 mx-2 md:mx-5">
       <div className="mr-auto p-2 mt-2">
         <svg xmlns="http://www.w3.org/2000/svg" width={40} height={40} id="icons" fill="currentColor" className="bi bi-cup-hot-fill"
           viewBox="0 0 16 16">

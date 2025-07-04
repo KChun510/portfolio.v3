@@ -59,8 +59,6 @@ const AboutMeCont = ({ id }) => {
     );
 };
 
-
-
 export default AboutMeCont;
 
 
