@@ -1,12 +1,21 @@
 [
   {
-    "name": "zot_plug_firmware",
-    "des": "Firmware for our ZotPlug embedded system. ( Senior Project )",
-    "url": "https://github.com/KChun510/zot_plug_firmware",
+    "name": "nvim",
+    "des": "Personal NeoVim Config",
+    "url": "https://github.com/KChun510/nvim",
     "lang": {
-      "C++": 5019,
-      "TypeScript": 3976,
-      "C": 703
+      "Lua": 44036
+    }
+  },
+  {
+    "name": "LeetCode_Solutions",
+    "des": "A collection of all my leet code solved problems.",
+    "url": "https://github.com/KChun510/LeetCode_Solutions",
+    "lang": {
+      "Python": 43542,
+      "TypeScript": 9569,
+      "C++": 2943,
+      "JavaScript": 1059
     }
   },
   {
@@ -37,24 +46,6 @@
     "url": "https://github.com/KChun510/Embedded_Software_c",
     "lang": {
       "C": 77266
-    }
-  },
-  {
-    "name": "LeetCode_Solutions",
-    "des": "A collection of all my leet code solved problems.",
-    "url": "https://github.com/KChun510/LeetCode_Solutions",
-    "lang": {
-      "Python": 40531,
-      "C++": 2943,
-      "JavaScript": 1059
-    }
-  },
-  {
-    "name": "nvim",
-    "des": "Personal NeoVim Config",
-    "url": "https://github.com/KChun510/nvim",
-    "lang": {
-      "Lua": 43707
     }
   },
   {
