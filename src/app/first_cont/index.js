@@ -1,6 +1,6 @@
 'use client'
 import './first_cont.css';
-import { useQuery } from 'react-query';
+import { useQuery } from '@tanstack/react-query';
 import { pullGitInfo } from '../actions';
 import dynamic from 'next/dynamic';
 import RepoButton from './components/repoButton';

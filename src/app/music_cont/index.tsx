@@ -1,6 +1,6 @@
 import './music_cont.css'
 import { get_currTrack, get_playlist, get_session_browser, get_session_db, get_top_items, select_all_session } from '../actions';
-import { useQuery } from 'react-query';
+import { useQuery } from '@tanstack/react-query';
 import { CurrentSongData, filtered_top_data, filteredPlaylistData } from '../spotify_utils/types';
 import { useEffect, useState } from 'react';
 import SearchBar from './components/searchBar'

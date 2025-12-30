@@ -1,4 +1,4 @@
-import { useQuery } from "react-query";
+import { useQuery } from "@tanstack/react-query";
 import { search_items } from "@/app/actions";
 import { CurrSongProps, filteredPlaylistData, songPickModalProps, topTracks } from "@/app/spotify_utils/types";
 import AddForm from "./components/add_form";

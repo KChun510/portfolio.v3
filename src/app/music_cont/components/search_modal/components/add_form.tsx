@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { add_track, set_session, get_session_db, update_session, get_song_count_browser, get_session_browser, eval_userTag } from "@/app/actions"
 import { songPickModalProps } from "@/app/spotify_utils/types"
-import { useQuery } from "react-query"
+import { useQuery } from "@tanstack/react-query"
 import CurrSongPick_modal from "../../currSongPick_modal"
 import { Filter } from 'bad-words'
 

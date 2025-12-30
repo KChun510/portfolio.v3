@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@tanstack/react-query": "^4.36.1",
+    "@tanstack/react-query": "^4.42.0",
     "bad-words": "^4.0.0",
     "better-sqlite3": "^12.1.0",
     "cookie": "^1.0.2",
@@ -17,12 +17,12 @@
     "fs": "^0.0.1-security",
     "lottie-react": "^2.4.1",
     "lucide-react": "^0.515.0",
-    "next": "15.3.6",
+    "next": "^16.1.1",
     "octokit": "^3.2.2",
     "openai": "^5.8.2",
     "query-string": "^9.2.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

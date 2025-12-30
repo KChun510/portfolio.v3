@@ -1,7 +1,7 @@
 'use client'
 import React from "react";
 import dynamic from 'next/dynamic';
-import { QueryClient, QueryClientProvider } from 'react-query';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import NavBar from './components/nav'
 import './Home.css';
 import AboutMeCont from './aboutMe_cont'
