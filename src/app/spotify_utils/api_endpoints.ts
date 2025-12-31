@@ -155,6 +155,11 @@ export async function get_current_track(): Promise<CurrentSongData | null> {
 				'Authorization': 'Bearer ' + token_data.access_token
 			},
 		})
+
+		if (res.status === 204) return null;
+
+		if (res.status === 202) return null;
+
 		if (!res.ok) {
 			console.error(`Error: ${res.status} ${res.statusText}`)
 			return null
