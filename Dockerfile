@@ -8,7 +8,7 @@ WORKDIR /app
 # Copy package files first
 COPY package*.json next.config.ts ./
 
-RUN npm install --omit=dev
+RUN npm ci
 
 COPY . .
 
