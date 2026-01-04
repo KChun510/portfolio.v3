@@ -26,7 +26,7 @@ RUN apt-get update && apt-get install -y cron vim python3 make g++ && rm -rf /va
 
 # Copy package files and install dependencies inside final image
 COPY package*.json next.config.ts ./
-RUN npm install --omit=dev
+RUN npm ci
 
 # Copy production build artifacts
 COPY --from=builder /app/public ./public
