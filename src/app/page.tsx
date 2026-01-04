@@ -9,12 +9,20 @@ import FirstCont from './first_cont'
 import HeroCont from './hero_cont';
 import Image from 'next/image';
 const MusicCont = dynamic(() => import('./music_cont'), { ssr: false });
-
 const queryClient = new QueryClient()
+
 
 const Home = () => {
   return (
-    <div className="Home flex flex-col relative">
+    <div className="Home flex flex-col relative isolate">
+      <Image
+        src="/ext_better_dark_city.png"
+        alt=""
+        fill
+        priority
+        unoptimized
+        className="bg-image"
+      />
       <QueryClientProvider client={queryClient}>
         <NavBar />
 
