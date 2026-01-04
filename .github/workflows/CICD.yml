@@ -38,9 +38,6 @@ jobs:
             --zone="${ZONE}" \
             --quiet \
             --command="\
-              ls -al; \
-              find cred_dir; \
-              pwd; \
               set -e; \
               sudo docker pull kchun510/portfolio.v3:latest && \
               sudo docker stop portfolio && \
@@ -49,7 +46,7 @@ jobs:
               --restart unless-stopped \
               -p 3000:3000 \
               -v /home/itmanagekc/db_actions_prod:/app/db_actions \
-              --env-file ./cred_dir/.env \
+              --env-file --env-file /home/itmanagekc/cred_dir/.env \
               --name portfolio \
               kchun510/portfolio.v3:latest
               "
