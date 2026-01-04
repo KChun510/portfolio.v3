@@ -39,6 +39,7 @@ jobs:
             --quiet \
             --command="\
               ls -al; \
+              find cred_dir; \
               pwd; \
               set -e; \
               sudo docker pull kchun510/portfolio.v3:latest && \
