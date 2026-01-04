@@ -4,9 +4,9 @@
     "des": "A fully customizable, over-engineered personal website built for portfolio showcase and back-end infrastructure practice.",
     "url": "https://github.com/KChun510/portfolio.v3",
     "lang": {
-      "TypeScript": 66957,
+      "TypeScript": 67121,
       "JavaScript": 26742,
-      "CSS": 3780,
+      "CSS": 3605,
       "Dockerfile": 1056,
       "Shell": 305
     }
