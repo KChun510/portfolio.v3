@@ -15,7 +15,7 @@ jobs:
     env:
       PROJECT_ID: personal-website-460204
       SA_EMAIL: github-actions-deployer@personal-website-460204.iam.gserviceaccount.com
-      WIF_PROVIDER: projects/175734553952/locations/global/workloadIdentityPools/github
+      WIF_PROVIDER: projects/175734553952/locations/global/workloadIdentityPools/github/providers/my-repo
       INSTANCE: instance-20250518-050907
       ZONE: us-central1-c
 
