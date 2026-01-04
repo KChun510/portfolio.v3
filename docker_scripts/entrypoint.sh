@@ -13,6 +13,9 @@ cron
 
 echo "Cron started..."
 
+# Renew spotify PAT, on first run.
+npx tsx ./src/app/spotify_utils/refresh_token.ts
+
 # Start Next.js app
-npx next start -H 0.0.0.0
+exec npx next start -H 0.0.0.0
 
