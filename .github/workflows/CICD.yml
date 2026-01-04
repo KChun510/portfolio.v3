@@ -46,7 +46,7 @@ jobs:
               --restart unless-stopped \
               -p 3000:3000 \
               -v /home/itmanagekc/db_actions_prod:/app/db_actions \
-              --env-file --env-file /home/itmanagekc/cred_dir/.env \
+              --env-file /home/itmanagekc/cred_dir/.env \
               --name portfolio \
               kchun510/portfolio.v3:latest
               "
