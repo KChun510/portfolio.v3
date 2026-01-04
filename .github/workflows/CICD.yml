@@ -3,6 +3,7 @@ name: CI/CD Build Steps
 on:
   push:
     branches: [ main ,CI/CD_Plus_Spotify_PAT_addition ]
+  workflow_dispatch: 
 
 permissions:
   contents: read
