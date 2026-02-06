@@ -50,12 +50,12 @@ jobs:
           gcloud compute ssh "${INSTANCE}" \
             --zone="${ZONE}" \
             --quiet \
-            --command="\
-              set -e; \
-              sudo docker pull kchun510/portfolio.v3:latest && \
-              sudo docker stop portfolio && \
-              sudo docker rm portfolio && \
-              sudo docker run \
+           --command="\
+            set -e; \
+            sudo docker pull kchun510/portfolio.v3:latest && \
+            sudo docker stop portfolio || true; \
+            sudo docker rm portfolio || true; \
+            sudo docker run \
               --restart unless-stopped \
               -d \
               -p 3000:3000 \
@@ -63,5 +63,4 @@ jobs:
               --env-file /home/itmanagekc/cred_dir/.env \
               --name portfolio \
               kchun510/portfolio.v3:latest
-              "
-
+          "
