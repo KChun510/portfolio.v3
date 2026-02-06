@@ -10,6 +10,17 @@ import TopItem from './components/topItem';
 import Modal from './components/search_modal';
 import { import_session_data } from '../../../db_actions/types';
 
+export const initialCurrentSongData: CurrentSongData = {
+  progress_ms: null,
+  is_playing: false,
+  item_data: undefined,
+  song_artists: null,
+  song_cover_art: null,
+  song_duration: null,
+  song_name: null,
+  song_direct_link: null,
+};
+
 const MusicCont = ({ id }: { id: string }) => {
   const [input, setInput] = useState("")
   const [showModal, setModal] = useState(false)
@@ -112,7 +123,7 @@ const MusicCont = ({ id }: { id: string }) => {
                 <h2 className="text-white text-3xl font-bold mb-1">In My Ears</h2>
                 {/* First content block */}
                 <div className="rounded-lg custom_bg w-full p-4 mb-4 text-white">
-                  {!isLoadingCurr && currTrack ? <CurrSongPreview {...currTrack} refetchFn={re_currTrack} /> : null}
+                  {!isLoadingCurr && currTrack ? <CurrSongPreview {...currTrack} refetchFn={re_currTrack} /> : <CurrSongPreview {...initialCurrentSongData} refetchFn={re_currTrack} />}
                 </div>
               </div>
 
