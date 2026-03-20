@@ -1,5 +1,6 @@
 import { JSX } from "react"
 import Image from 'next/image';
+import ZotPlugBoard from "./slide_images/zotplug_png.png"
 import tetris_gif from "./slide_images/newest_termtris.gif"
 import mediaMindpng from "./slide_images/mediaMind.png"
 import maizdotwork from "./slide_images/maiz.work.front.png"
@@ -12,7 +13,22 @@ const text_style: string = "text-sm md:text-lg"
 
 
 const slides: JSX.Element[] = [
-	<div key="mediaMind" className="relative w-full h-full">
+	<div key="ZotPlug ( Senior Design Project ) " className="relative w-full h-full">
+		<a href="https://github.com/ZotPlug" target="_blank" className="relative block w-full h-full">
+			<Image
+				src={ZotPlugBoard}
+				alt="ZotPlug Overview"
+				fill
+				sizes="(max-width: 800px) 100vw, 800px"
+				className="object-contain bg-white"
+			/>
+			<div className="absolute bottom-0 left-0 bg-[#332E2E]/80 text-white px-4 py-2 md:p-4 z-10 w-full">
+				<h2 className={title_style}>ZotPlug ( Senior Design Project )</h2>
+				<p className={text_style}> Developed an end-to-end IoT platform combining embedded systems and cloud infrastructure to deliver scalable, real-time energy monitoring. </p>
+			</div>
+		</a>
+	</div>,
+	<div key="TermTris" className="relative w-full h-full">
 		<a href="https://github.com/KChun510/TermTris_Tetris-In-the-CLI" target="_blank" className="relative block w-full h-full">
 			<Image
 				src={tetris_gif}
@@ -27,8 +43,7 @@ const slides: JSX.Element[] = [
 				<p className={text_style}>A recreation of Tetris that runs in the Terminal/Command Prompt!</p>
 			</div>
 		</a>
-	</div>
-	,
+	</div>,
 	<div key="mediaMind" className="relative w-full h-full">
 		<a href="https://github.com/KChun510/MediaMind" target="_blank" className="relative block w-full h-full">
 			<Image
