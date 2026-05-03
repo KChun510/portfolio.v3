@@ -12,7 +12,7 @@ const HeroCont = () => {
 			<div className="mx-6 pt-55 sm:w-full lg:w-1/3 flex flex-col text-left mb-5">
 				<div>
 					<h1 className="text-white text-6xl font-bold mb-5">Kyle Chun</h1>
-					<h6 className="text-white text-2xl">Oakland Born engineer. Building for purpose & resiliency.</h6>
+					<h6 className="text-white text-2xl">Oakland Born engineer building with purpose and resilience. </h6>
 				</div>
 			</div>
 			<div className="mx-6 flex space-x-4">
